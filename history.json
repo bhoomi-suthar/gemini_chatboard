@@ -300,6 +300,8 @@
         "text": "<p>Python is a high-level, interpreted programming language known for its clear syntax and readability. It is widely used in web development, data science, artificial intelligence, and automation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Interpreted:</strong> Code is executed line-by-line, which simplifies debugging.</li>\n<li><strong>Dynamically Typed:</strong> Variable types are determined at runtime rather than during compilation.</li>\n<li><strong>Extensive Libraries:</strong> A vast ecosystem of modules supports tasks ranging from web scraping to machine learning.</li>\n<li><strong>Cross-platform:</strong> Python scripts run on Windows, macOS, and Linux without modification.</li>\n</ul>\n<h3>Code Example</h3>\n<p>This example demonstrates a basic function in <strong>Python 3.x</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Function to calculate the square of a number\ndef square(number):\n    return number ** 2\n\n# Calling the function and printing the result\nresult = square(5)\nprint(f&quot;The result is: {result}&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Indentation Errors:</strong> Python relies on whitespace to define blocks of code; inconsistent tabs or spaces will cause a <code>IndentationError</code>.</li>\n<li><strong>Mutable Default Arguments:</strong> Using lists or dictionaries as default arguments in a function definition can lead to unexpected persistent state across multiple calls.</li>\n</ul>"
       }
     ],
-    "topic": ""
+    "topic": "",
+    "shared": true,
+    "share_id": "c925f4aa01"
   }
 }

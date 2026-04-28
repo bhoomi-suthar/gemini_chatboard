@@ -1100,5 +1100,28 @@
         "text": "<p>iPhones are often distinguished from other smartphones by their integration and performance. Here are the primary factors that set them apart:</p>\n<ul>\n<li><strong>Ecosystem Integration:</strong> Apple devices (iPhone, Mac, iPad, Apple Watch) work together seamlessly via features like AirDrop, Handoff, and iCloud synchronization.</li>\n<li><strong>iOS Optimization:</strong> Because Apple develops both the hardware and the software, the operating system is highly optimized, leading to smooth performance and longevity.</li>\n<li><strong>Long-term Software Support:</strong> Apple consistently provides major iOS updates for older devices for 5\u20137 years, ensuring current security and features.</li>\n<li><strong>Privacy and Security:</strong> Apple implements strict privacy controls, such as App Tracking Transparency, and offers a highly secure App Store ecosystem.</li>\n<li><strong>Hardware Resale Value:</strong> iPhones generally retain their monetary value significantly better than Android devices over time.</li>\n</ul>\n<h3>Comparison: iPhone vs. Android</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">iPhone (iOS)</th>\n<th style=\"text-align: left;\">Android</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>System Control</strong></td>\n<td style=\"text-align: left;\">Closed (Strict)</td>\n<td style=\"text-align: left;\">Open (Flexible)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Software Updates</strong></td>\n<td style=\"text-align: left;\">Uniform and long-term</td>\n<td style=\"text-align: left;\">Fragmented by manufacturer</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>App Ecosystem</strong></td>\n<td style=\"text-align: left;\">Apple App Store (Curated)</td>\n<td style=\"text-align: left;\">Google Play/Sideloading (Varied)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Hardware Variety</strong></td>\n<td style=\"text-align: left;\">Limited (Specific models)</td>\n<td style=\"text-align: left;\">Extensive (Wide range of prices)</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose an <strong>iPhone</strong> if you value a seamless user experience, long-term software support, and integration within the Apple ecosystem. <br />\n*   Choose an <strong>Android</strong> if you prefer hardware variety, deep customization options, and the flexibility to install software from outside the official store.</p>"
       }
     ]
+  },
+  "c925f4aa01": {
+    "title": "Title: Network topic restriction notific",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline about  java",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>network</strong>. Please ask something related to selected topic <strong>network</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is python",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python is a high-level, interpreted programming language known for its clear syntax and readability. It is widely used in web development, data science, artificial intelligence, and automation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Interpreted:</strong> Code is executed line-by-line, which simplifies debugging.</li>\n<li><strong>Dynamically Typed:</strong> Variable types are determined at runtime rather than during compilation.</li>\n<li><strong>Extensive Libraries:</strong> A vast ecosystem of modules supports tasks ranging from web scraping to machine learning.</li>\n<li><strong>Cross-platform:</strong> Python scripts run on Windows, macOS, and Linux without modification.</li>\n</ul>\n<h3>Code Example</h3>\n<p>This example demonstrates a basic function in <strong>Python 3.x</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Function to calculate the square of a number\ndef square(number):\n    return number ** 2\n\n# Calling the function and printing the result\nresult = square(5)\nprint(f&quot;The result is: {result}&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Indentation Errors:</strong> Python relies on whitespace to define blocks of code; inconsistent tabs or spaces will cause a <code>IndentationError</code>.</li>\n<li><strong>Mutable Default Arguments:</strong> Using lists or dictionaries as default arguments in a function definition can lead to unexpected persistent state across multiple calls.</li>\n</ul>"
+      }
+    ]
   }
 }

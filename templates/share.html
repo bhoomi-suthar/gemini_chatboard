@@ -378,6 +378,21 @@
       align-items: flex-end;
     }
 
+    .msg-row.user .bubble {
+      max-width: 68%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.93rem;
+      line-height: 1.6;
+      background: var(--bubble-user-bg);
+      color: var(--bubble-user-text);
+    }
+
+    .msg-row.user .msg-label {
+      text-align: right;
+      color: var(--msg-label);
+    }
+
     .msg-row.gemini {
       align-items: flex-start;
     }
@@ -1285,7 +1300,7 @@
         row.appendChild(label);
         row.appendChild(bubble);
         msgs.appendChild(row);
-        // now execute scripts (canvas must be in DOM first)
+        // now execute scripts 
         bubble.querySelectorAll('script').forEach(oldScript => {
           const newScript = document.createElement('script');
           newScript.textContent = oldScript.textContent;
