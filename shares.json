@@ -1,0 +1,1104 @@
+{
+  "27ab9c9285": {
+    "title": "Title: Topic restriction regarding food ",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the vmware",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>food</strong>. Please ask something related to selected topic <strong>food</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "list of best food items",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of popular and highly-regarded food items across different categories, known for their versatility and nutritional value:</p>\n<ul>\n<li><strong>Whole Grains:</strong> Quinoa, oats, and brown rice. These are excellent sources of complex carbohydrates and fiber.</li>\n<li><strong>Lean Proteins:</strong> Salmon, chicken breast, lentils, and Greek yogurt. These support muscle repair and satiety.</li>\n<li><strong>Leafy Greens:</strong> Spinach, kale, and arugula. These are packed with essential vitamins like A, C, and K.</li>\n<li><strong>Healthy Fats:</strong> Avocados, walnuts, chia seeds, and extra virgin olive oil. These are vital for brain health and nutrient absorption.</li>\n<li><strong>Berries:</strong> Blueberries, strawberries, and raspberries. These are rich in antioxidants and low in sugar.</li>\n</ul>\n<h3>Comparison of Popular Protein Sources</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Salmon</th>\n<th style=\"text-align: left;\">Chicken Breast</th>\n<th style=\"text-align: left;\">Lentils</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Protein Type</strong></td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Plant-based</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fat Content</strong></td>\n<td style=\"text-align: left;\">High (Omega-3s)</td>\n<td style=\"text-align: left;\">Very Low</td>\n<td style=\"text-align: left;\">Minimal</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fiber</strong></td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Baking/Grilling</td>\n<td style=\"text-align: left;\">Poaching/Grilling</td>\n<td style=\"text-align: left;\">Boiling/Stewing</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThere is no single \"best\" item, as it depends on your dietary goals. <strong>Salmon</strong> is superior for heart health due to Omega-3s, <strong>Chicken Breast</strong> is ideal for low-calorie muscle building, and <strong>Lentils</strong> are the best choice for fiber intake and budget-friendly plant-based nutrition. A balanced diet incorporating all three is generally recommended.</p>"
+      },
+      {
+        "role": "user",
+        "text": "only vagitaran ",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of highly-regarded vegetarian food items, categorized by their nutritional profile:</p>\n<ul>\n<li><strong>Plant-Based Proteins</strong>: <ul>\n<li><strong>Lentils</strong>: Excellent source of protein and iron.</li>\n<li><strong>Chickpeas</strong>: Versatile legume used in salads, curries, and hummus.</li>\n<li><strong>Tofu</strong>: A soy-based protein that absorbs flavors well; ideal for stir-fries.</li>\n</ul>\n</li>\n<li><strong>Whole Grains</strong>: <ul>\n<li><strong>Quinoa</strong>: A complete protein containing all nine essential amino acids.</li>\n<li><strong>Farro</strong>: Provides a chewy texture and is rich in fiber and magnesium.</li>\n</ul>\n</li>\n<li><strong>Healthy Fats</strong>: <ul>\n<li><strong>Avocados</strong>: Rich in monounsaturated fats and potassium.</li>\n<li><strong>Walnuts</strong>: High in omega-3 fatty acids and antioxidants.</li>\n</ul>\n</li>\n<li><strong>Nutrient-Dense Vegetables</strong>:<ul>\n<li><strong>Spinach</strong>: High in vitamins A, C, and K.</li>\n<li><strong>Sweet Potatoes</strong>: An excellent source of beta-carotene and fiber.</li>\n</ul>\n</li>\n</ul>\n<h3>Example: Simple Vegetarian Meal</h3>\n<p>A balanced vegetarian meal could be a <strong>Quinoa and Chickpea Salad</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Example ingredients (Pseudocode for recipe composition)\nmeal = {\n    &quot;base&quot;: &quot;Quinoa&quot;,          # Complex carbohydrate\n    &quot;protein&quot;: &quot;Chickpeas&quot;,    # Plant-based protein\n    &quot;fat&quot;: &quot;Avocado slices&quot;,   # Healthy fats\n    &quot;greens&quot;: &quot;Spinach&quot;,       # Vitamins/Minerals\n    &quot;dressing&quot;: &quot;Olive oil&quot;    # Healthy monounsaturated fat\n}\n</code></pre>\n\n<p><strong>Common Mistake to Avoid</strong>: When transitioning to a vegetarian diet, ensure you are getting enough <strong>Vitamin B12</strong>, as it is primarily found in animal products. Consider fortified foods or supplements if you are strictly vegan.</p>"
+      },
+      {
+        "role": "user",
+        "text": "more food item ideas",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>anime</strong>. Please ask something related to selected topic <strong>anime</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ]
+  },
+  "e5d77c955f": {
+    "title": "Title: Topic restriction regarding food ",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the vmware",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>food</strong>. Please ask something related to selected topic <strong>food</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "list of best food items",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of popular and highly-regarded food items across different categories, known for their versatility and nutritional value:</p>\n<ul>\n<li><strong>Whole Grains:</strong> Quinoa, oats, and brown rice. These are excellent sources of complex carbohydrates and fiber.</li>\n<li><strong>Lean Proteins:</strong> Salmon, chicken breast, lentils, and Greek yogurt. These support muscle repair and satiety.</li>\n<li><strong>Leafy Greens:</strong> Spinach, kale, and arugula. These are packed with essential vitamins like A, C, and K.</li>\n<li><strong>Healthy Fats:</strong> Avocados, walnuts, chia seeds, and extra virgin olive oil. These are vital for brain health and nutrient absorption.</li>\n<li><strong>Berries:</strong> Blueberries, strawberries, and raspberries. These are rich in antioxidants and low in sugar.</li>\n</ul>\n<h3>Comparison of Popular Protein Sources</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Salmon</th>\n<th style=\"text-align: left;\">Chicken Breast</th>\n<th style=\"text-align: left;\">Lentils</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Protein Type</strong></td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Plant-based</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fat Content</strong></td>\n<td style=\"text-align: left;\">High (Omega-3s)</td>\n<td style=\"text-align: left;\">Very Low</td>\n<td style=\"text-align: left;\">Minimal</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fiber</strong></td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Baking/Grilling</td>\n<td style=\"text-align: left;\">Poaching/Grilling</td>\n<td style=\"text-align: left;\">Boiling/Stewing</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThere is no single \"best\" item, as it depends on your dietary goals. <strong>Salmon</strong> is superior for heart health due to Omega-3s, <strong>Chicken Breast</strong> is ideal for low-calorie muscle building, and <strong>Lentils</strong> are the best choice for fiber intake and budget-friendly plant-based nutrition. A balanced diet incorporating all three is generally recommended.</p>"
+      },
+      {
+        "role": "user",
+        "text": "only vagitaran ",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of highly-regarded vegetarian food items, categorized by their nutritional profile:</p>\n<ul>\n<li><strong>Plant-Based Proteins</strong>: <ul>\n<li><strong>Lentils</strong>: Excellent source of protein and iron.</li>\n<li><strong>Chickpeas</strong>: Versatile legume used in salads, curries, and hummus.</li>\n<li><strong>Tofu</strong>: A soy-based protein that absorbs flavors well; ideal for stir-fries.</li>\n</ul>\n</li>\n<li><strong>Whole Grains</strong>: <ul>\n<li><strong>Quinoa</strong>: A complete protein containing all nine essential amino acids.</li>\n<li><strong>Farro</strong>: Provides a chewy texture and is rich in fiber and magnesium.</li>\n</ul>\n</li>\n<li><strong>Healthy Fats</strong>: <ul>\n<li><strong>Avocados</strong>: Rich in monounsaturated fats and potassium.</li>\n<li><strong>Walnuts</strong>: High in omega-3 fatty acids and antioxidants.</li>\n</ul>\n</li>\n<li><strong>Nutrient-Dense Vegetables</strong>:<ul>\n<li><strong>Spinach</strong>: High in vitamins A, C, and K.</li>\n<li><strong>Sweet Potatoes</strong>: An excellent source of beta-carotene and fiber.</li>\n</ul>\n</li>\n</ul>\n<h3>Example: Simple Vegetarian Meal</h3>\n<p>A balanced vegetarian meal could be a <strong>Quinoa and Chickpea Salad</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Example ingredients (Pseudocode for recipe composition)\nmeal = {\n    &quot;base&quot;: &quot;Quinoa&quot;,          # Complex carbohydrate\n    &quot;protein&quot;: &quot;Chickpeas&quot;,    # Plant-based protein\n    &quot;fat&quot;: &quot;Avocado slices&quot;,   # Healthy fats\n    &quot;greens&quot;: &quot;Spinach&quot;,       # Vitamins/Minerals\n    &quot;dressing&quot;: &quot;Olive oil&quot;    # Healthy monounsaturated fat\n}\n</code></pre>\n\n<p><strong>Common Mistake to Avoid</strong>: When transitioning to a vegetarian diet, ensure you are getting enough <strong>Vitamin B12</strong>, as it is primarily found in animal products. Consider fortified foods or supplements if you are strictly vegan.</p>"
+      },
+      {
+        "role": "user",
+        "text": "more food item ideas",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>anime</strong>. Please ask something related to selected topic <strong>anime</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ]
+  },
+  "1960de36a9": {
+    "title": "Title: Topic restriction regarding food ",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the vmware",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>food</strong>. Please ask something related to selected topic <strong>food</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "list of best food items",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of popular and highly-regarded food items across different categories, known for their versatility and nutritional value:</p>\n<ul>\n<li><strong>Whole Grains:</strong> Quinoa, oats, and brown rice. These are excellent sources of complex carbohydrates and fiber.</li>\n<li><strong>Lean Proteins:</strong> Salmon, chicken breast, lentils, and Greek yogurt. These support muscle repair and satiety.</li>\n<li><strong>Leafy Greens:</strong> Spinach, kale, and arugula. These are packed with essential vitamins like A, C, and K.</li>\n<li><strong>Healthy Fats:</strong> Avocados, walnuts, chia seeds, and extra virgin olive oil. These are vital for brain health and nutrient absorption.</li>\n<li><strong>Berries:</strong> Blueberries, strawberries, and raspberries. These are rich in antioxidants and low in sugar.</li>\n</ul>\n<h3>Comparison of Popular Protein Sources</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Salmon</th>\n<th style=\"text-align: left;\">Chicken Breast</th>\n<th style=\"text-align: left;\">Lentils</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Protein Type</strong></td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Plant-based</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fat Content</strong></td>\n<td style=\"text-align: left;\">High (Omega-3s)</td>\n<td style=\"text-align: left;\">Very Low</td>\n<td style=\"text-align: left;\">Minimal</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fiber</strong></td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Baking/Grilling</td>\n<td style=\"text-align: left;\">Poaching/Grilling</td>\n<td style=\"text-align: left;\">Boiling/Stewing</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThere is no single \"best\" item, as it depends on your dietary goals. <strong>Salmon</strong> is superior for heart health due to Omega-3s, <strong>Chicken Breast</strong> is ideal for low-calorie muscle building, and <strong>Lentils</strong> are the best choice for fiber intake and budget-friendly plant-based nutrition. A balanced diet incorporating all three is generally recommended.</p>"
+      },
+      {
+        "role": "user",
+        "text": "only vagitaran ",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of highly-regarded vegetarian food items, categorized by their nutritional profile:</p>\n<ul>\n<li><strong>Plant-Based Proteins</strong>: <ul>\n<li><strong>Lentils</strong>: Excellent source of protein and iron.</li>\n<li><strong>Chickpeas</strong>: Versatile legume used in salads, curries, and hummus.</li>\n<li><strong>Tofu</strong>: A soy-based protein that absorbs flavors well; ideal for stir-fries.</li>\n</ul>\n</li>\n<li><strong>Whole Grains</strong>: <ul>\n<li><strong>Quinoa</strong>: A complete protein containing all nine essential amino acids.</li>\n<li><strong>Farro</strong>: Provides a chewy texture and is rich in fiber and magnesium.</li>\n</ul>\n</li>\n<li><strong>Healthy Fats</strong>: <ul>\n<li><strong>Avocados</strong>: Rich in monounsaturated fats and potassium.</li>\n<li><strong>Walnuts</strong>: High in omega-3 fatty acids and antioxidants.</li>\n</ul>\n</li>\n<li><strong>Nutrient-Dense Vegetables</strong>:<ul>\n<li><strong>Spinach</strong>: High in vitamins A, C, and K.</li>\n<li><strong>Sweet Potatoes</strong>: An excellent source of beta-carotene and fiber.</li>\n</ul>\n</li>\n</ul>\n<h3>Example: Simple Vegetarian Meal</h3>\n<p>A balanced vegetarian meal could be a <strong>Quinoa and Chickpea Salad</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Example ingredients (Pseudocode for recipe composition)\nmeal = {\n    &quot;base&quot;: &quot;Quinoa&quot;,          # Complex carbohydrate\n    &quot;protein&quot;: &quot;Chickpeas&quot;,    # Plant-based protein\n    &quot;fat&quot;: &quot;Avocado slices&quot;,   # Healthy fats\n    &quot;greens&quot;: &quot;Spinach&quot;,       # Vitamins/Minerals\n    &quot;dressing&quot;: &quot;Olive oil&quot;    # Healthy monounsaturated fat\n}\n</code></pre>\n\n<p><strong>Common Mistake to Avoid</strong>: When transitioning to a vegetarian diet, ensure you are getting enough <strong>Vitamin B12</strong>, as it is primarily found in animal products. Consider fortified foods or supplements if you are strictly vegan.</p>"
+      },
+      {
+        "role": "user",
+        "text": "more food item ideas",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>anime</strong>. Please ask something related to selected topic <strong>anime</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ]
+  },
+  "f956605e27": {
+    "title": "Title: Topic restriction regarding food ",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the vmware",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>food</strong>. Please ask something related to selected topic <strong>food</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "list of best food items",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of popular and highly-regarded food items across different categories, known for their versatility and nutritional value:</p>\n<ul>\n<li><strong>Whole Grains:</strong> Quinoa, oats, and brown rice. These are excellent sources of complex carbohydrates and fiber.</li>\n<li><strong>Lean Proteins:</strong> Salmon, chicken breast, lentils, and Greek yogurt. These support muscle repair and satiety.</li>\n<li><strong>Leafy Greens:</strong> Spinach, kale, and arugula. These are packed with essential vitamins like A, C, and K.</li>\n<li><strong>Healthy Fats:</strong> Avocados, walnuts, chia seeds, and extra virgin olive oil. These are vital for brain health and nutrient absorption.</li>\n<li><strong>Berries:</strong> Blueberries, strawberries, and raspberries. These are rich in antioxidants and low in sugar.</li>\n</ul>\n<h3>Comparison of Popular Protein Sources</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Salmon</th>\n<th style=\"text-align: left;\">Chicken Breast</th>\n<th style=\"text-align: left;\">Lentils</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Protein Type</strong></td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Animal-based</td>\n<td style=\"text-align: left;\">Plant-based</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fat Content</strong></td>\n<td style=\"text-align: left;\">High (Omega-3s)</td>\n<td style=\"text-align: left;\">Very Low</td>\n<td style=\"text-align: left;\">Minimal</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Fiber</strong></td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">None</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Baking/Grilling</td>\n<td style=\"text-align: left;\">Poaching/Grilling</td>\n<td style=\"text-align: left;\">Boiling/Stewing</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThere is no single \"best\" item, as it depends on your dietary goals. <strong>Salmon</strong> is superior for heart health due to Omega-3s, <strong>Chicken Breast</strong> is ideal for low-calorie muscle building, and <strong>Lentils</strong> are the best choice for fiber intake and budget-friendly plant-based nutrition. A balanced diet incorporating all three is generally recommended.</p>"
+      },
+      {
+        "role": "user",
+        "text": "only vagitaran ",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Here is a list of highly-regarded vegetarian food items, categorized by their nutritional profile:</p>\n<ul>\n<li><strong>Plant-Based Proteins</strong>: <ul>\n<li><strong>Lentils</strong>: Excellent source of protein and iron.</li>\n<li><strong>Chickpeas</strong>: Versatile legume used in salads, curries, and hummus.</li>\n<li><strong>Tofu</strong>: A soy-based protein that absorbs flavors well; ideal for stir-fries.</li>\n</ul>\n</li>\n<li><strong>Whole Grains</strong>: <ul>\n<li><strong>Quinoa</strong>: A complete protein containing all nine essential amino acids.</li>\n<li><strong>Farro</strong>: Provides a chewy texture and is rich in fiber and magnesium.</li>\n</ul>\n</li>\n<li><strong>Healthy Fats</strong>: <ul>\n<li><strong>Avocados</strong>: Rich in monounsaturated fats and potassium.</li>\n<li><strong>Walnuts</strong>: High in omega-3 fatty acids and antioxidants.</li>\n</ul>\n</li>\n<li><strong>Nutrient-Dense Vegetables</strong>:<ul>\n<li><strong>Spinach</strong>: High in vitamins A, C, and K.</li>\n<li><strong>Sweet Potatoes</strong>: An excellent source of beta-carotene and fiber.</li>\n</ul>\n</li>\n</ul>\n<h3>Example: Simple Vegetarian Meal</h3>\n<p>A balanced vegetarian meal could be a <strong>Quinoa and Chickpea Salad</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Example ingredients (Pseudocode for recipe composition)\nmeal = {\n    &quot;base&quot;: &quot;Quinoa&quot;,          # Complex carbohydrate\n    &quot;protein&quot;: &quot;Chickpeas&quot;,    # Plant-based protein\n    &quot;fat&quot;: &quot;Avocado slices&quot;,   # Healthy fats\n    &quot;greens&quot;: &quot;Spinach&quot;,       # Vitamins/Minerals\n    &quot;dressing&quot;: &quot;Olive oil&quot;    # Healthy monounsaturated fat\n}\n</code></pre>\n\n<p><strong>Common Mistake to Avoid</strong>: When transitioning to a vegetarian diet, ensure you are getting enough <strong>Vitamin B12</strong>, as it is primarily found in animal products. Consider fortified foods or supplements if you are strictly vegan.</p>"
+      },
+      {
+        "role": "user",
+        "text": "more food item ideas",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>anime</strong>. Please ask something related to selected topic <strong>anime</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from the selected topic of food. Please ask me something related to food.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline networking types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ]
+  },
+  "5cbb1478c2": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "6a6dac55f5": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "8e7476de06": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "52b6e68c99": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "6099baf16d": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "64df144589": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python uses several built-in data types to categorize data and determine what operations can be performed on it.</p>\n<h3><strong>Core Python Data Types</strong></h3>\n<ul>\n<li><strong>Numeric Types</strong>: Represent numbers.<ul>\n<li><code>int</code>: Integers (e.g., <code>10</code>, <code>-5</code>).</li>\n<li><code>float</code>: Floating-point numbers with decimals (e.g., <code>3.14</code>).</li>\n<li><code>complex</code>: Numbers with a real and imaginary part (e.g., <code>2 + 3j</code>).</li>\n</ul>\n</li>\n<li><strong>Sequence Types</strong>: Ordered collections of items.<ul>\n<li><code>str</code>: Strings of Unicode characters (e.g., <code>\"Hello\"</code>).</li>\n<li><code>list</code>: Mutable, ordered collections (e.g., <code>[1, 2, 3]</code>).</li>\n<li><code>tuple</code>: Immutable, ordered collections (e.g., <code>(1, 2, 3)</code>).</li>\n</ul>\n</li>\n<li><strong>Mapping Type</strong>:<ul>\n<li><code>dict</code>: A collection of key-value pairs (e.g., <code>{\"name\": \"Alice\", \"age\": 25}</code>).</li>\n</ul>\n</li>\n<li><strong>Set Types</strong>: Unordered collections of unique elements.<ul>\n<li><code>set</code>: Mutable collection (e.g., <code>{1, 2, 3}</code>).</li>\n<li><code>frozenset</code>: Immutable version of a set.</li>\n</ul>\n</li>\n<li><strong>Boolean Type</strong>:<ul>\n<li><code>bool</code>: Represents truth values <code>True</code> or <code>False</code>.</li>\n</ul>\n</li>\n</ul>\n<h3><strong>Code Example</strong></h3>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x example demonstrating data types\nname = &quot;Python&quot;           # str\ncount = 10                # int\nprice = 19.99             # float\nis_active = True          # bool\nitems = [1, 2, 3]         # list\ndata = {&quot;key&quot;: &quot;value&quot;}   # dict\n\n# Printing the type of each variable\nprint(type(name))         # &lt;class 'str'&gt;\nprint(type(count))        # &lt;class 'int'&gt;\n</code></pre>\n\n<h3><strong>Common Mistakes to Avoid</strong></h3>\n<ul>\n<li><strong>Mutability Confusion</strong>: Trying to change a value inside a <code>tuple</code> will raise a <code>TypeError</code> because tuples are immutable.</li>\n<li><strong>String Formatting</strong>: Attempting to concatenate an <code>int</code> directly to a <code>str</code> (e.g., <code>\"Age: \" + 25</code>) will cause an error. You must cast the integer to a string first: <code>\"Age: \" + str(25)</code>.</li>\n<li><strong>Dictionary Keys</strong>: Only immutable types (like strings, numbers, or tuples) can be used as keys in a dictionary; using a <code>list</code> as a key will raise a <code>TypeError</code>.</li>\n</ul>"
+      }
+    ]
+  },
+  "baad245b30": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "fbc3a6823f": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "2175249d2e": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "aed77e48ef": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "9ec72533ab": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "e04b1c83dd": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "2c981f979d": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "cd364c9daa": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "62b88f26a2": {
+    "title": "what is best food option avail",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a vast culinary landscape. The \"best\" option depends on your preference, but here are the most iconic categories:</p>\n<h3>Top Food Categories in Tokyo</h3>\n<ul>\n<li><strong>Sushi/Sashimi:</strong> Fresh, high-quality seafood. High-end options are found in Ginza, while casual \"conveyor belt\" (kaiten-zushi) options are available city-wide.</li>\n<li><strong>Ramen:</strong> Tokyo specializes in various styles, notably Shoyu (soy sauce) based broth. Famous areas include Tokyo Ramen Street in the station.</li>\n<li><strong>Izakaya Cuisine:</strong> Japanese-style pubs serving small plates like yakitori (grilled chicken skewers), karaage (fried chicken), and edamame.</li>\n<li><strong>Tempura:</strong> Lightly battered, deep-fried vegetables and seafood, best enjoyed at specialized tempura houses.</li>\n<li><strong>Wagyu Beef:</strong> Premium Japanese beef often served as Yakiniku (grilled at the table) or Shabu-shabu (thinly sliced and boiled).</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Sushi</th>\n<th style=\"text-align: left;\">Ramen</th>\n<th style=\"text-align: left;\">Izakaya</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Taste</strong></td>\n<td style=\"text-align: left;\">Fresh/Delicate</td>\n<td style=\"text-align: left;\">Savory/Rich</td>\n<td style=\"text-align: left;\">Varied/Salty</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Atmosphere</strong></td>\n<td style=\"text-align: left;\">Quiet/Formal</td>\n<td style=\"text-align: left;\">Fast/Casual</td>\n<td style=\"text-align: left;\">Social/Noisy</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Price Point</strong></td>\n<td style=\"text-align: left;\">High to Mid</td>\n<td style=\"text-align: left;\">Low to Mid</td>\n<td style=\"text-align: left;\">Mid</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best For</strong></td>\n<td style=\"text-align: left;\">Culinary Appreciation</td>\n<td style=\"text-align: left;\">Quick Meals</td>\n<td style=\"text-align: left;\">Groups/Nightlife</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose <strong>Sushi</strong> if you want a quintessential, high-quality Japanese dining experience.<br />\n*   Choose <strong>Ramen</strong> if you are looking for a satisfying, budget-friendly, and quick meal.<br />\n*   Choose <strong>Izakaya</strong> if you are dining with a group and want to sample a wide variety of dishes in a social environment.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a diverse culinary landscape ranging from affordable street food to world-class fine dining. The \"best\" option depends on your preference for atmosphere and budget.</p>\n<h3><strong>Top Food Categories</strong></h3>\n<ul>\n<li><strong>Sushi</strong>: Best experienced at high-end counters in Ginza or via conveyor belt (<strong>kaiten-zushi</strong>) for a casual experience.</li>\n<li><strong>Ramen</strong>: Ranging from rich <strong>Tonkotsu</strong> (pork bone broth) to light <strong>Shoyu</strong> (soy sauce), available in almost every neighborhood.</li>\n<li><strong>Izakaya</strong>: Japanese-style pubs serving small plates like <strong>yakitori</strong> (grilled chicken skewers), perfect for social dining.</li>\n<li><strong>Kaiseki</strong>: A traditional multi-course haute cuisine that focuses on seasonal ingredients and artistic presentation.</li>\n</ul>\n<h3><strong>Comparison of Popular Dining Experiences</strong></h3>\n<canvas id=\"tokyoFoodChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('tokyoFoodChart'), {\n  type: 'bar',\n  data: {\n    labels: ['Sushi', 'Ramen', 'Izakaya', 'Kaiseki'],\n    datasets: [{\n      label: 'Average Cost (USD)',\n      data: [80, 10, 30, 150],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#4ae27d', '#e24ab4']\n    }]\n  },\n  options: { responsive: false, plugins: { legend: { display: true } } }\n});\n</script>\n\n<h3><strong>Which is better?</strong></h3>\n<ul>\n<li><strong>For convenience and speed:</strong> Ramen is the best choice due to its accessibility and low cost.</li>\n<li><strong>For a memorable cultural experience:</strong> Kaiseki is recommended for those wanting a deep dive into Japanese culinary tradition.</li>\n<li><strong>For social gatherings:</strong> Izakaya is the superior option, offering a relaxed environment and a variety of shareable dishes.</li>\n</ul>"
+      }
+    ]
+  },
+  "5b4cddd2f0": {
+    "title": "what is best food option avail",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a vast culinary landscape. The \"best\" option depends on your preference, but here are the most iconic categories:</p>\n<h3>Top Food Categories in Tokyo</h3>\n<ul>\n<li><strong>Sushi/Sashimi:</strong> Fresh, high-quality seafood. High-end options are found in Ginza, while casual \"conveyor belt\" (kaiten-zushi) options are available city-wide.</li>\n<li><strong>Ramen:</strong> Tokyo specializes in various styles, notably Shoyu (soy sauce) based broth. Famous areas include Tokyo Ramen Street in the station.</li>\n<li><strong>Izakaya Cuisine:</strong> Japanese-style pubs serving small plates like yakitori (grilled chicken skewers), karaage (fried chicken), and edamame.</li>\n<li><strong>Tempura:</strong> Lightly battered, deep-fried vegetables and seafood, best enjoyed at specialized tempura houses.</li>\n<li><strong>Wagyu Beef:</strong> Premium Japanese beef often served as Yakiniku (grilled at the table) or Shabu-shabu (thinly sliced and boiled).</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Sushi</th>\n<th style=\"text-align: left;\">Ramen</th>\n<th style=\"text-align: left;\">Izakaya</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Taste</strong></td>\n<td style=\"text-align: left;\">Fresh/Delicate</td>\n<td style=\"text-align: left;\">Savory/Rich</td>\n<td style=\"text-align: left;\">Varied/Salty</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Atmosphere</strong></td>\n<td style=\"text-align: left;\">Quiet/Formal</td>\n<td style=\"text-align: left;\">Fast/Casual</td>\n<td style=\"text-align: left;\">Social/Noisy</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Price Point</strong></td>\n<td style=\"text-align: left;\">High to Mid</td>\n<td style=\"text-align: left;\">Low to Mid</td>\n<td style=\"text-align: left;\">Mid</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best For</strong></td>\n<td style=\"text-align: left;\">Culinary Appreciation</td>\n<td style=\"text-align: left;\">Quick Meals</td>\n<td style=\"text-align: left;\">Groups/Nightlife</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose <strong>Sushi</strong> if you want a quintessential, high-quality Japanese dining experience.<br />\n*   Choose <strong>Ramen</strong> if you are looking for a satisfying, budget-friendly, and quick meal.<br />\n*   Choose <strong>Izakaya</strong> if you are dining with a group and want to sample a wide variety of dishes in a social environment.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a diverse culinary landscape ranging from affordable street food to world-class fine dining. The \"best\" option depends on your preference for atmosphere and budget.</p>\n<h3><strong>Top Food Categories</strong></h3>\n<ul>\n<li><strong>Sushi</strong>: Best experienced at high-end counters in Ginza or via conveyor belt (<strong>kaiten-zushi</strong>) for a casual experience.</li>\n<li><strong>Ramen</strong>: Ranging from rich <strong>Tonkotsu</strong> (pork bone broth) to light <strong>Shoyu</strong> (soy sauce), available in almost every neighborhood.</li>\n<li><strong>Izakaya</strong>: Japanese-style pubs serving small plates like <strong>yakitori</strong> (grilled chicken skewers), perfect for social dining.</li>\n<li><strong>Kaiseki</strong>: A traditional multi-course haute cuisine that focuses on seasonal ingredients and artistic presentation.</li>\n</ul>\n<h3><strong>Comparison of Popular Dining Experiences</strong></h3>\n<canvas id=\"tokyoFoodChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('tokyoFoodChart'), {\n  type: 'bar',\n  data: {\n    labels: ['Sushi', 'Ramen', 'Izakaya', 'Kaiseki'],\n    datasets: [{\n      label: 'Average Cost (USD)',\n      data: [80, 10, 30, 150],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#4ae27d', '#e24ab4']\n    }]\n  },\n  options: { responsive: false, plugins: { legend: { display: true } } }\n});\n</script>\n\n<h3><strong>Which is better?</strong></h3>\n<ul>\n<li><strong>For convenience and speed:</strong> Ramen is the best choice due to its accessibility and low cost.</li>\n<li><strong>For a memorable cultural experience:</strong> Kaiseki is recommended for those wanting a deep dive into Japanese culinary tradition.</li>\n<li><strong>For social gatherings:</strong> Izakaya is the superior option, offering a relaxed environment and a variety of shareable dishes.</li>\n</ul>"
+      }
+    ]
+  },
+  "b2c6421cdd": {
+    "title": "what is best food option avail",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a vast culinary landscape. The \"best\" option depends on your preference, but here are the most iconic categories:</p>\n<h3>Top Food Categories in Tokyo</h3>\n<ul>\n<li><strong>Sushi/Sashimi:</strong> Fresh, high-quality seafood. High-end options are found in Ginza, while casual \"conveyor belt\" (kaiten-zushi) options are available city-wide.</li>\n<li><strong>Ramen:</strong> Tokyo specializes in various styles, notably Shoyu (soy sauce) based broth. Famous areas include Tokyo Ramen Street in the station.</li>\n<li><strong>Izakaya Cuisine:</strong> Japanese-style pubs serving small plates like yakitori (grilled chicken skewers), karaage (fried chicken), and edamame.</li>\n<li><strong>Tempura:</strong> Lightly battered, deep-fried vegetables and seafood, best enjoyed at specialized tempura houses.</li>\n<li><strong>Wagyu Beef:</strong> Premium Japanese beef often served as Yakiniku (grilled at the table) or Shabu-shabu (thinly sliced and boiled).</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Sushi</th>\n<th style=\"text-align: left;\">Ramen</th>\n<th style=\"text-align: left;\">Izakaya</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Taste</strong></td>\n<td style=\"text-align: left;\">Fresh/Delicate</td>\n<td style=\"text-align: left;\">Savory/Rich</td>\n<td style=\"text-align: left;\">Varied/Salty</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Atmosphere</strong></td>\n<td style=\"text-align: left;\">Quiet/Formal</td>\n<td style=\"text-align: left;\">Fast/Casual</td>\n<td style=\"text-align: left;\">Social/Noisy</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Price Point</strong></td>\n<td style=\"text-align: left;\">High to Mid</td>\n<td style=\"text-align: left;\">Low to Mid</td>\n<td style=\"text-align: left;\">Mid</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best For</strong></td>\n<td style=\"text-align: left;\">Culinary Appreciation</td>\n<td style=\"text-align: left;\">Quick Meals</td>\n<td style=\"text-align: left;\">Groups/Nightlife</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose <strong>Sushi</strong> if you want a quintessential, high-quality Japanese dining experience.<br />\n*   Choose <strong>Ramen</strong> if you are looking for a satisfying, budget-friendly, and quick meal.<br />\n*   Choose <strong>Izakaya</strong> if you are dining with a group and want to sample a wide variety of dishes in a social environment.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a diverse culinary landscape ranging from affordable street food to world-class fine dining. The \"best\" option depends on your preference for atmosphere and budget.</p>\n<h3><strong>Top Food Categories</strong></h3>\n<ul>\n<li><strong>Sushi</strong>: Best experienced at high-end counters in Ginza or via conveyor belt (<strong>kaiten-zushi</strong>) for a casual experience.</li>\n<li><strong>Ramen</strong>: Ranging from rich <strong>Tonkotsu</strong> (pork bone broth) to light <strong>Shoyu</strong> (soy sauce), available in almost every neighborhood.</li>\n<li><strong>Izakaya</strong>: Japanese-style pubs serving small plates like <strong>yakitori</strong> (grilled chicken skewers), perfect for social dining.</li>\n<li><strong>Kaiseki</strong>: A traditional multi-course haute cuisine that focuses on seasonal ingredients and artistic presentation.</li>\n</ul>\n<h3><strong>Comparison of Popular Dining Experiences</strong></h3>\n<canvas id=\"tokyoFoodChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('tokyoFoodChart'), {\n  type: 'bar',\n  data: {\n    labels: ['Sushi', 'Ramen', 'Izakaya', 'Kaiseki'],\n    datasets: [{\n      label: 'Average Cost (USD)',\n      data: [80, 10, 30, 150],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#4ae27d', '#e24ab4']\n    }]\n  },\n  options: { responsive: false, plugins: { legend: { display: true } } }\n});\n</script>\n\n<h3><strong>Which is better?</strong></h3>\n<ul>\n<li><strong>For convenience and speed:</strong> Ramen is the best choice due to its accessibility and low cost.</li>\n<li><strong>For a memorable cultural experience:</strong> Kaiseki is recommended for those wanting a deep dive into Japanese culinary tradition.</li>\n<li><strong>For social gatherings:</strong> Izakaya is the superior option, offering a relaxed environment and a variety of shareable dishes.</li>\n</ul>"
+      }
+    ]
+  },
+  "9905b128aa": {
+    "title": "network types",
+    "messages": [
+      {
+        "role": "user",
+        "text": "network types"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Network types are generally categorized by their geographical scale:</p>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> Connects devices within an individual's immediate workspace (e.g., Bluetooth pairing a phone to headphones).</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area like a home, office, or building (e.g., Wi-Fi in a house).</li>\n<li><strong>WLAN (Wireless Local Area Network):</strong> A LAN that uses wireless technology instead of cables.</li>\n<li><strong>CAN (Campus Area Network):</strong> Connects multiple LANs within a specific geographical area, such as a university campus or corporate headquarters.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger area, such as a city or a large campus, often connecting multiple LANs.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a large physical distance, such as a country, continent, or the entire globe (e.g., the Internet).</li>\n<li><strong>VPN (Virtual Private Network):</strong> A secure, encrypted tunnel created over a public network (like the Internet) to allow users to send and receive data as if they were directly connected to a private network.</li>\n</ul>"
+      }
+    ]
+  },
+  "46e1fdc655": {
+    "title": "network types",
+    "messages": [
+      {
+        "role": "user",
+        "text": "network types"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Network types are generally categorized by their geographical scale:</p>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> Connects devices within an individual's immediate workspace (e.g., Bluetooth pairing a phone to headphones).</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area like a home, office, or building (e.g., Wi-Fi in a house).</li>\n<li><strong>WLAN (Wireless Local Area Network):</strong> A LAN that uses wireless technology instead of cables.</li>\n<li><strong>CAN (Campus Area Network):</strong> Connects multiple LANs within a specific geographical area, such as a university campus or corporate headquarters.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger area, such as a city or a large campus, often connecting multiple LANs.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a large physical distance, such as a country, continent, or the entire globe (e.g., the Internet).</li>\n<li><strong>VPN (Virtual Private Network):</strong> A secure, encrypted tunnel created over a public network (like the Internet) to allow users to send and receive data as if they were directly connected to a private network.</li>\n</ul>"
+      }
+    ]
+  },
+  "a1a2826264": {
+    "title": "Understanding Application Programming In",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is api"
+      },
+      {
+        "role": "ai",
+        "text": "<p>An <strong>API</strong> (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other. It acts as an intermediary, enabling one system to request data or services from another without needing to understand the underlying implementation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Abstraction:</strong> It hides the complexity of how a system works.</li>\n<li><strong>Standardization:</strong> It provides a consistent way for different platforms (web, mobile, server) to interact.</li>\n<li><strong>Security:</strong> It serves as a gateway, controlling access to data and system resources.</li>\n</ul>\n<h3>Example</h3>\n<p>When you use a weather app on your phone, the app sends an <strong>API request</strong> to a server owned by a meteorological service. The server processes the request and sends back the current temperature data, which the app then displays to you.</p>\n<h3>Common Use Cases</h3>\n<ol>\n<li><strong>Payment Processing:</strong> Integrating services like Stripe or PayPal into an e-commerce site.</li>\n<li><strong>Authentication:</strong> Using \"Log in with Google/Facebook\" features on third-party websites.</li>\n<li><strong>Data Integration:</strong> Fetching stock market data, currency exchange rates, or social media feeds.</li>\n<li><strong>Device Connectivity:</strong> Allowing mobile apps to interact with hardware like cameras or GPS sensors.</li>\n</ol>\n<p>In short, APIs act as the \"connective tissue\" of the modern internet, allowing disparate systems to function as a cohesive ecosystem.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the python data types and variable",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "79677af2dc": {
+    "title": "Simple Vanilla Cake Recipe for Beginners",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to make cack",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>To bake a basic vanilla cake, follow these instructions.</p>\n<h3><strong>Ingredients</strong></h3>\n<ul>\n<li>1 \u00bd cups all-purpose flour</li>\n<li>1 cup granulated sugar</li>\n<li>\u00bd cup softened butter</li>\n<li>2 large eggs</li>\n<li>2 tsp baking powder</li>\n<li>\u00bd cup milk</li>\n<li>1 tsp vanilla extract</li>\n</ul>\n<h3><strong>Instructions</strong></h3>\n<ol>\n<li><strong>Preheat</strong> your oven to 350\u00b0F (175\u00b0C) and grease a 9-inch cake pan.</li>\n<li><strong>Cream</strong> the butter and sugar together in a bowl until light and fluffy.</li>\n<li><strong>Beat</strong> in the eggs one at a time, then stir in the vanilla.</li>\n<li><strong>Combine</strong> the flour and baking powder, then alternate adding the dry ingredients and milk to the butter mixture.</li>\n<li><strong>Pour</strong> the batter into the pan and bake for 30\u201335 minutes, or until a toothpick inserted into the center comes out clean.</li>\n<li><strong>Cool</strong> the cake in the pan for 10 minutes before transferring to a wire rack.</li>\n</ol>\n<h3><strong>Common Baking Mistakes</strong></h3>\n<ul>\n<li><strong>Over-mixing:</strong> Can lead to a dense, tough cake. Mix only until the ingredients are incorporated.</li>\n<li><strong>Expired Leavening Agents:</strong> Ensure your baking powder is fresh, or the cake will not rise.</li>\n<li><strong>Incorrect Oven Temperature:</strong> Use an oven thermometer to ensure accuracy; an oven that is too hot will burn the edges before the center sets.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0ab5\u0abe\u0aa8\u0abf\u0ab2\u0abe \u0a95\u0ac7\u0a95 \u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa8\u0ac0\u0a9a\u0ac7\u0aa8\u0ac0 \u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0 \u0a85\u0aa8\u0ac7 \u0ab0\u0ac0\u0aa4\u0aa8\u0acb \u0a89\u0aaa\u0aaf\u0acb\u0a97 \u0a95\u0ab0\u0acb.</p>\n<h3><strong>\u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0</strong></h3>\n<ul>\n<li><strong>\u0aae\u0ac7\u0a82\u0aa6\u0acb:</strong> \u0ae7 \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a96\u0abe\u0a82\u0aa1:</strong> \u0ae7 \u0a95\u0aaa</li>\n<li><strong>\u0aae\u0abe\u0a96\u0aa3 (Butter):</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a88\u0a82\u0aa1\u0abe:</strong> \u0ae8 \u0aa8\u0a82\u0a97</li>\n<li><strong>\u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0:</strong> \u0ae8 \u0a9a\u0aae\u0a9a\u0ac0</li>\n<li><strong>\u0aa6\u0ac2\u0aa7:</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8:</strong> \u0ae7 \u0a9a\u0aae\u0a9a\u0ac0</li>\n</ul>\n<h3><strong>\u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe\u0aa8\u0ac0 \u0ab0\u0ac0\u0aa4</strong></h3>\n<ol>\n<li>\u0a93\u0ab5\u0aa8\u0aa8\u0ac7 <strong>\u0ae9\u0aeb\u0ae6\u00b0F (\u0ae7\u0aed\u0aeb\u00b0C)</strong> \u0aaa\u0ab0 \u0aaa\u0acd\u0ab0\u0ac0-\u0ab9\u0ac0\u0a9f \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0a95\u0ac7\u0a95 \u0aaa\u0ac7\u0aa8\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0a8f\u0a95 \u0ab5\u0abe\u0ab8\u0aa3\u0aae\u0abe\u0a82 \u0aae\u0abe\u0a96\u0aa3 \u0a85\u0aa8\u0ac7 \u0a96\u0abe\u0a82\u0aa1\u0aa8\u0ac7 \u0ab9\u0ab3\u0ab5\u0abe \u0a85\u0aa8\u0ac7 \u0aab\u0ac2\u0ab2\u0ac7\u0ab2\u0abe \u0aa5\u0abe\u0aaf \u0aa4\u0acd\u0aaf\u0abe\u0a82 \u0ab8\u0ac1\u0aa7\u0ac0 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a8f\u0a95 \u0aaa\u0a9b\u0ac0 \u0a8f\u0a95 \u0a88\u0a82\u0aa1\u0abe \u0a89\u0aae\u0ac7\u0ab0\u0ac0\u0aa8\u0ac7 \u0aab\u0ac7\u0a82\u0a9f\u0aa4\u0abe \u0ab0\u0ab9\u0acb, \u0aa4\u0acd\u0aaf\u0abe\u0ab0\u0aac\u0abe\u0aa6 \u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8 \u0a89\u0aae\u0ac7\u0ab0\u0acb.</li>\n<li>\u0aae\u0ac7\u0a82\u0aa6\u0acb \u0a85\u0aa8\u0ac7 \u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0\u0aa8\u0ac7 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0ac0\u0aa8\u0ac7, \u0aa5\u0acb\u0aa1\u0ac1\u0a82-\u0aa5\u0acb\u0aa1\u0ac1\u0a82 \u0aa6\u0ac2\u0aa7 \u0ab8\u0abe\u0aa5\u0ac7 \u0aac\u0ac7\u0a9f\u0ab0\u0aae\u0abe\u0a82 \u0a89\u0aae\u0ac7\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0ab9\u0ab2\u0abe\u0ab5\u0acb.</li>\n<li>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 <strong>\u0ae9\u0ae6-\u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f</strong> \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb.</li>\n</ol>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0ac7\u0ab2\u0ac0 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 \u0ae9\u0ae6 \u0aa5\u0ac0 \u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb. \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7 \u0a95\u0ac7 \u0aa8\u0ab9\u0ac0\u0a82 \u0aa4\u0ac7 \u0a9c\u0abe\u0aa3\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a9f\u0ac2\u0aa5\u0aaa\u0abf\u0a95 \u0aa8\u0abe\u0a96\u0ac0\u0aa8\u0ac7 \u0aa4\u0aaa\u0abe\u0ab8\u0acb, \u0a9c\u0acb \u0aa4\u0ac7 \u0ab8\u0abe\u0aab \u0aac\u0ab9\u0abe\u0ab0 \u0a86\u0ab5\u0ac7 \u0aa4\u0acb \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7. \u0aa4\u0ac7\u0aa8\u0ac7 \u0aac\u0ab9\u0abe\u0ab0 \u0a95\u0abe\u0aa2\u0ac0\u0aa8\u0ac7 \u0aa0\u0a82\u0aa1\u0ac0 \u0aa5\u0ab5\u0abe \u0aa6\u0acb.</p>"
+      }
+    ]
+  },
+  "aa616c6f28": {
+    "title": "how to create tic tac toe usin",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to create tic tac toe using javascript"
+      },
+      {
+        "role": "ai",
+        "text": "<p>To create a Tic-Tac-Toe game, you need three components: <strong>HTML</strong> for the structure, <strong>CSS</strong> for the layout, and <strong>JavaScript</strong> for the logic.</p>\n<h3>1. HTML Structure</h3>\n<p>Create a container for the 3x3 grid using buttons.</p>\n<pre class=\"codehilite\"><code class=\"language-html\">&lt;div id=&quot;board&quot; class=&quot;board&quot;&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;0&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;1&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;2&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;3&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;4&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;5&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;6&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;7&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;8&quot;&gt;&lt;/button&gt;\n&lt;/div&gt;\n</code></pre>\n\n<h3>2. CSS Styling</h3>\n<p>Use <strong>CSS Grid</strong> to create the 3x3 layout.</p>\n<pre class=\"codehilite\"><code class=\"language-css\">.board {\n  display: grid;\n  grid-template-columns: repeat(3, 100px);\n  gap: 5px;\n}\n\n.cell {\n  width: 100px;\n  height: 100px;\n  font-size: 2rem;\n}\n</code></pre>\n\n<h3>3. JavaScript Logic</h3>\n<p>The JavaScript handles turn switching, win detection, and input tracking.</p>\n<pre class=\"codehilite\"><code class=\"language-javascript\">const cells = document.querySelectorAll('.cell');\nlet currentPlayer = 'X';\nlet gameState = [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;];\n\nconst winningConditions = [\n  [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows\n  [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns\n  [0, 4, 8], [2, 4, 6]             // Diagonals\n];\n\ncells.forEach(cell =&gt; cell.addEventListener('click', handleCellClick));\n\nfunction handleCellClick(e) {\n  const index = e.target.getAttribute('data-index');\n\n  if (gameState[index] !== &quot;&quot; || checkWinner()) return;\n\n  gameState[index] = currentPlayer;\n  e.target.innerText = currentPlayer;\n\n  if (checkWinner()) {\n    alert(`${currentPlayer} wins!`);\n  } else {\n    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';\n  }\n}\n\nfunction checkWinner() {\n  return winningConditions.some(condition =&gt; {\n    return condition.every(index =&gt; gameState[index] === currentPlayer);\n  });\n}\n</code></pre>\n\n<h3>Key Logic Steps</h3>\n<ol>\n<li><strong>State Tracking</strong>: Use an array (<code>gameState</code>) to keep track of X and O positions.</li>\n<li><strong>Event Handling</strong>: Listen for clicks on grid cells and update the UI and state.</li>\n<li><strong>Win Validation</strong>: After every move, iterate through the <code>winningConditions</code> array to check if the current player has three symbols in a row.</li>\n<li><strong>Turn Switching</strong>: Toggle the <code>currentPlayer</code> variable between 'X' and 'O' after each valid move.</li>\n</ol>"
+      }
+    ]
+  },
+  "f227005143": {
+    "title": "how to create tic tac toe usin",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to create tic tac toe using javascript"
+      },
+      {
+        "role": "ai",
+        "text": "<p>To create a Tic-Tac-Toe game, you need three components: <strong>HTML</strong> for the structure, <strong>CSS</strong> for the layout, and <strong>JavaScript</strong> for the logic.</p>\n<h3>1. HTML Structure</h3>\n<p>Create a container for the 3x3 grid using buttons.</p>\n<pre class=\"codehilite\"><code class=\"language-html\">&lt;div id=&quot;board&quot; class=&quot;board&quot;&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;0&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;1&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;2&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;3&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;4&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;5&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;6&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;7&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;8&quot;&gt;&lt;/button&gt;\n&lt;/div&gt;\n</code></pre>\n\n<h3>2. CSS Styling</h3>\n<p>Use <strong>CSS Grid</strong> to create the 3x3 layout.</p>\n<pre class=\"codehilite\"><code class=\"language-css\">.board {\n  display: grid;\n  grid-template-columns: repeat(3, 100px);\n  gap: 5px;\n}\n\n.cell {\n  width: 100px;\n  height: 100px;\n  font-size: 2rem;\n}\n</code></pre>\n\n<h3>3. JavaScript Logic</h3>\n<p>The JavaScript handles turn switching, win detection, and input tracking.</p>\n<pre class=\"codehilite\"><code class=\"language-javascript\">const cells = document.querySelectorAll('.cell');\nlet currentPlayer = 'X';\nlet gameState = [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;];\n\nconst winningConditions = [\n  [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows\n  [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns\n  [0, 4, 8], [2, 4, 6]             // Diagonals\n];\n\ncells.forEach(cell =&gt; cell.addEventListener('click', handleCellClick));\n\nfunction handleCellClick(e) {\n  const index = e.target.getAttribute('data-index');\n\n  if (gameState[index] !== &quot;&quot; || checkWinner()) return;\n\n  gameState[index] = currentPlayer;\n  e.target.innerText = currentPlayer;\n\n  if (checkWinner()) {\n    alert(`${currentPlayer} wins!`);\n  } else {\n    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';\n  }\n}\n\nfunction checkWinner() {\n  return winningConditions.some(condition =&gt; {\n    return condition.every(index =&gt; gameState[index] === currentPlayer);\n  });\n}\n</code></pre>\n\n<h3>Key Logic Steps</h3>\n<ol>\n<li><strong>State Tracking</strong>: Use an array (<code>gameState</code>) to keep track of X and O positions.</li>\n<li><strong>Event Handling</strong>: Listen for clicks on grid cells and update the UI and state.</li>\n<li><strong>Win Validation</strong>: After every move, iterate through the <code>winningConditions</code> array to check if the current player has three symbols in a row.</li>\n<li><strong>Turn Switching</strong>: Toggle the <code>currentPlayer</code> variable between 'X' and 'O' after each valid move.</li>\n</ol>"
+      }
+    ]
+  },
+  "6ada9485c3": {
+    "title": "explne the vmware use how it w",
+    "messages": [
+      {
+        "role": "user",
+        "text": "explne the vmware use how it work and what is use of this tool",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. VMware is a leading provider of <strong>virtualization software</strong> that allows you to run multiple operating systems and applications on a single physical server or computer.</p>\n<h3>How VMware Works</h3>\n<p>VMware utilizes a software layer called a <strong>hypervisor</strong> (specifically ESXi). This layer sits between the hardware and the operating system.</p>\n<ol>\n<li><strong>Abstraction:</strong> It abstracts the physical hardware (CPU, RAM, storage) into virtual resources.</li>\n<li><strong>Virtual Machines (VMs):</strong> These resources are partitioned into multiple isolated containers called Virtual Machines.</li>\n<li><strong>Independence:</strong> Each VM runs its own guest operating system, independent of the host hardware and other VMs.</li>\n</ol>\n<h3>Core Uses of VMware</h3>\n<ul>\n<li><strong>Server Consolidation:</strong> Running multiple server workloads on one physical machine to reduce hardware costs and energy consumption.</li>\n<li><strong>Testing and Development:</strong> Creating isolated environments to test software without risking the integrity of the host system.</li>\n<li><strong>Disaster Recovery:</strong> Easily migrating or backing up entire virtual environments to different physical locations.</li>\n<li><strong>Legacy Support:</strong> Running older, incompatible operating systems on modern hardware by virtualizing the necessary environment.</li>\n</ul>\n<h3>Technical Example</h3>\n<p>If you are using <strong>VMware Workstation Pro</strong>, you might create a VM to run an old version of Linux on a Windows machine.</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Conceptual command for managing a VM via VMware command line (vmrun)\n# This command powers on a specific virtual machine\nvmrun -T ws start &quot;C:\\VMs\\Ubuntu_Server\\Ubuntu.vmx&quot; nogui\n\n# Explanation:\n# -T ws: Specifies the target (Workstation)\n# start: Tells the hypervisor to boot the VM\n# &quot;C:\\...&quot;: The path to the VM configuration file\n</code></pre>\n\n<p><strong>Common mistake:</strong> A frequent error is over-provisioning resources. Assigning more virtual CPUs or RAM to a VM than the physical host actually possesses will lead to significant performance degradation. Always ensure you maintain a \"buffer\" of resources for the host OS.</p>"
+      }
+    ]
+  },
+  "207335f5e6": {
+    "title": "Title: Invalid Topic Selection Error",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the fastapi",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Overview of FastAPI</h3>\n<p><strong>FastAPI</strong> is a modern, high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints. It is designed to be easy to learn, fast to code, and production-ready.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>High Performance:</strong> It is one of the fastest Python frameworks available, rivaling NodeJS and Go, thanks to <strong>Starlette</strong> (for web routing) and <strong>Pydantic</strong> (for data validation).</li>\n<li><strong>Automatic Documentation:</strong> It automatically generates interactive API documentation (Swagger UI and ReDoc) at <code>/docs</code>.</li>\n<li><strong>Type Safety:</strong> Uses standard Python type hints to provide deep editor support, autocompletion, and robust error checking.</li>\n<li><strong>Asynchronous Support:</strong> Built natively to handle <code>async</code> and <code>await</code> syntax, making it ideal for I/O-bound operations.</li>\n</ul>\n<h3>Example Code</h3>\n<p>This example shows a basic <strong>FastAPI</strong> application (Python 3.9+).</p>\n<pre class=\"codehilite\"><code class=\"language-python\">from fastapi import FastAPI\n\n# Initialize the FastAPI app\napp = FastAPI()\n\n# Define a route with a path parameter\n@app.get(&quot;/items/{item_id}&quot;)\ndef read_item(item_id: int, q: str = None):\n    # This function automatically validates that item_id is an integer\n    return {&quot;item_id&quot;: item_id, &quot;query&quot;: q}\n</code></pre>\n\n<h3>Comparison: FastAPI vs. Flask</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">FastAPI</th>\n<th style=\"text-align: left;\">Flask</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Performance</strong></td>\n<td style=\"text-align: left;\">Very High (Asynchronous)</td>\n<td style=\"text-align: left;\">Moderate (Synchronous by default)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Validation</strong></td>\n<td style=\"text-align: left;\">Built-in via Pydantic</td>\n<td style=\"text-align: left;\">Requires external extensions</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Documentation</strong></td>\n<td style=\"text-align: left;\">Automatic Swagger/ReDoc</td>\n<td style=\"text-align: left;\">Requires manual configuration</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Typing</strong></td>\n<td style=\"text-align: left;\">Heavy reliance on Type Hints</td>\n<td style=\"text-align: left;\">Optional</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   <strong>Use FastAPI</strong> if you are building modern, high-performance APIs, require automatic data validation, or need extensive documentation.<br />\n*   <strong>Use Flask</strong> if you are building a small, simple application or prefer a minimalist framework where you can choose your own libraries for every task.</p>\n<h3>Common Mistakes to Avoid</h3>\n<ol>\n<li><strong>Blocking the Event Loop:</strong> Do not perform heavy CPU-bound tasks inside an <code>async def</code> function, as this will block the entire server. Use <code>def</code> for CPU-heavy tasks or run them in a separate thread.</li>\n<li><strong>Ignoring Type Hints:</strong> Failing to use Python type hints negates the primary benefit of FastAPI's request validation and auto-documentation.</li>\n</ol>"
+      }
+    ]
+  },
+  "8fe4ced444": {
+    "title": "Title: Invalid Topic Selection Error",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the fastapi",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Overview of FastAPI</h3>\n<p><strong>FastAPI</strong> is a modern, high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints. It is designed to be easy to learn, fast to code, and production-ready.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>High Performance:</strong> It is one of the fastest Python frameworks available, rivaling NodeJS and Go, thanks to <strong>Starlette</strong> (for web routing) and <strong>Pydantic</strong> (for data validation).</li>\n<li><strong>Automatic Documentation:</strong> It automatically generates interactive API documentation (Swagger UI and ReDoc) at <code>/docs</code>.</li>\n<li><strong>Type Safety:</strong> Uses standard Python type hints to provide deep editor support, autocompletion, and robust error checking.</li>\n<li><strong>Asynchronous Support:</strong> Built natively to handle <code>async</code> and <code>await</code> syntax, making it ideal for I/O-bound operations.</li>\n</ul>\n<h3>Example Code</h3>\n<p>This example shows a basic <strong>FastAPI</strong> application (Python 3.9+).</p>\n<pre class=\"codehilite\"><code class=\"language-python\">from fastapi import FastAPI\n\n# Initialize the FastAPI app\napp = FastAPI()\n\n# Define a route with a path parameter\n@app.get(&quot;/items/{item_id}&quot;)\ndef read_item(item_id: int, q: str = None):\n    # This function automatically validates that item_id is an integer\n    return {&quot;item_id&quot;: item_id, &quot;query&quot;: q}\n</code></pre>\n\n<h3>Comparison: FastAPI vs. Flask</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">FastAPI</th>\n<th style=\"text-align: left;\">Flask</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Performance</strong></td>\n<td style=\"text-align: left;\">Very High (Asynchronous)</td>\n<td style=\"text-align: left;\">Moderate (Synchronous by default)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Validation</strong></td>\n<td style=\"text-align: left;\">Built-in via Pydantic</td>\n<td style=\"text-align: left;\">Requires external extensions</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Documentation</strong></td>\n<td style=\"text-align: left;\">Automatic Swagger/ReDoc</td>\n<td style=\"text-align: left;\">Requires manual configuration</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Typing</strong></td>\n<td style=\"text-align: left;\">Heavy reliance on Type Hints</td>\n<td style=\"text-align: left;\">Optional</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   <strong>Use FastAPI</strong> if you are building modern, high-performance APIs, require automatic data validation, or need extensive documentation.<br />\n*   <strong>Use Flask</strong> if you are building a small, simple application or prefer a minimalist framework where you can choose your own libraries for every task.</p>\n<h3>Common Mistakes to Avoid</h3>\n<ol>\n<li><strong>Blocking the Event Loop:</strong> Do not perform heavy CPU-bound tasks inside an <code>async def</code> function, as this will block the entire server. Use <code>def</code> for CPU-heavy tasks or run them in a separate thread.</li>\n<li><strong>Ignoring Type Hints:</strong> Failing to use Python type hints negates the primary benefit of FastAPI's request validation and auto-documentation.</li>\n</ol>"
+      }
+    ]
+  },
+  "2fd1e351b1": {
+    "title": "Best Food Options and Dining Experiences",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a world-class culinary scene ranging from budget-friendly street food to Michelin-starred dining. The \"best\" option depends on your preference, but here are the most iconic categories:</p>\n<h3>Top Food Categories in Tokyo</h3>\n<ul>\n<li><strong>Sushi:</strong> Tokyo is world-renowned for its fresh seafood. You can find options ranging from <strong>kaiten-zushi</strong> (conveyor belt sushi) in areas like Shibuya, to high-end <strong>omakase</strong> (chef's choice) experiences in Ginza.</li>\n<li><strong>Ramen:</strong> Every neighborhood has unique regional styles. Popular types include <strong>Tonkotsu</strong> (pork bone broth), <strong>Shoyu</strong> (soy sauce base), and <strong>Tsukemen</strong> (dipping noodles).</li>\n<li><strong>Izakaya Cuisine:</strong> These Japanese pubs serve small, shareable plates such as <strong>yakitori</strong> (grilled chicken skewers), sashimi, and fried snacks. They are excellent for experiencing local social culture.</li>\n<li><strong>Tempura:</strong> Lightly battered and deep-fried seafood and vegetables. You can find specialty shops that fry ingredients to order, ensuring a crisp, non-greasy texture.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Ramen</th>\n<th style=\"text-align: left;\">Sushi</th>\n<th style=\"text-align: left;\">Izakaya</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Price Range</strong></td>\n<td style=\"text-align: left;\">Low ($7\u2013$15)</td>\n<td style=\"text-align: left;\">Medium to High ($20\u2013$200+)</td>\n<td style=\"text-align: left;\">Medium ($25\u2013$60)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Atmosphere</strong></td>\n<td style=\"text-align: left;\">Quick, casual, counter-seating</td>\n<td style=\"text-align: left;\">Refined, quiet, or traditional</td>\n<td style=\"text-align: left;\">Lively, social, noisy</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Service Speed</strong></td>\n<td style=\"text-align: left;\">Very fast</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Slow/Casual</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best For</strong></td>\n<td style=\"text-align: left;\">Solo diners, lunch</td>\n<td style=\"text-align: left;\">Special occasions, quality</td>\n<td style=\"text-align: left;\">Groups, nightlife</td>\n</tr>\n</tbody>\n</table>\n<h3>Recommendation</h3>\n<ul>\n<li><strong>For the quintessential Tokyo experience:</strong> If you only have one meal, go for <strong>high-end sushi</strong>. It showcases the quality of Japanese ingredients better than any other dish.</li>\n<li><strong>For budget travelers:</strong> <strong>Ramen</strong> is the most reliable, delicious, and affordable option, with countless specialized shops available in almost every train station.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is best vegitarian food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo has a diverse vegetarian scene, ranging from traditional Buddhist cuisine to modern international fare. Here are the top categories of vegetarian-friendly food options in the city:</p>\n<h3>Popular Vegetarian Options</h3>\n<ul>\n<li><strong>Shojin Ryori (Buddhist Temple Cuisine):</strong> A traditional, vegan style of cooking based on seasonal vegetables, tofu, and mountain plants. It is highly refined and often served in serene temple settings.</li>\n<li><strong>Vegetarian Ramen:</strong> Many shops now offer ramen made with vegetable-based broths (using kombu, mushrooms, or soy milk) instead of traditional pork or fish stock.</li>\n<li><strong>Izakaya Veggie Dishes:</strong> Many Japanese pubs offer <em>edamame</em>, <em>agedashi tofu</em> (deep-fried tofu in broth), <em>nasu dengaku</em> (miso-glazed eggplant), and various <em>oshinko</em> (pickled vegetables).</li>\n<li><strong>Macrobiotic/Organic Cafes:</strong> These establishments specialize in balanced, plant-based meals that emphasize brown rice, legumes, and locally sourced seasonal produce.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Shojin Ryori</th>\n<th style=\"text-align: left;\">Ramen (Veggie)</th>\n<th style=\"text-align: left;\">Izakaya/Pub Food</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Experience</strong></td>\n<td style=\"text-align: left;\">Formal/Quiet</td>\n<td style=\"text-align: left;\">Casual/Fast</td>\n<td style=\"text-align: left;\">Lively/Social</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Flavor Profile</strong></td>\n<td style=\"text-align: left;\">Subtle/Natural</td>\n<td style=\"text-align: left;\">Rich/Savory</td>\n<td style=\"text-align: left;\">Salty/Umami</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Cost</strong></td>\n<td style=\"text-align: left;\">High ($$$)</td>\n<td style=\"text-align: left;\">Low ($)</td>\n<td style=\"text-align: left;\">Medium ($$)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Availability</strong></td>\n<td style=\"text-align: left;\">Lower (Specialty)</td>\n<td style=\"text-align: left;\">Medium</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<h3>Which is better?</h3>\n<ul>\n<li>Choose <strong>Shojin Ryori</strong> if you want an authentic cultural experience and a formal, multi-course meal.</li>\n<li>Choose <strong>Vegetarian Ramen</strong> if you want a quick, filling, and satisfying comfort meal.</li>\n<li>Choose <strong>Izakaya</strong> if you are dining with a group and want to sample a variety of small, shareable vegetable-based dishes.</li>\n</ul>\n<p><strong>Tip:</strong> Download the <strong>HappyCow</strong> app, which is the most reliable resource for finding vegetarian and vegan restaurants throughout Tokyo. Always check if a broth contains <em>dashi</em> (fish stock), as it is a common hidden ingredient in many Japanese dishes.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is best vegitarian food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a wide variety of vegetarian and vegan options. Because traditional Japanese cuisine often uses dashi (fish stock), it is important to confirm ingredients when dining out.</p>\n<h3>Top Vegetarian-Friendly Food Options</h3>\n<ul>\n<li><strong>Shojin Ryori (Buddhist Temple Cuisine):</strong> The gold standard for vegetarian dining in Japan. It is entirely plant-based, seasonal, and served in traditional settings.</li>\n<li><strong>Vegetable-Focused Ramen:</strong> Many modern ramen shops now offer <strong>vegan broth</strong> options made from soy milk, miso, or mushroom bases instead of pork or fish.</li>\n<li><strong>Curry Rice:</strong> Japanese-style curry is widely available. Look for \"Vegetable Curry,\" but verify that the roux does not contain beef fat or meat extracts.</li>\n<li><strong>Convenience Store (Konbini) Snacks:</strong> Stores like 7-Eleven, Lawson, and FamilyMart offer <strong>onigiri</strong> (rice balls) with pickled plum (umeboshi) or kelp (konbu), as well as edamame.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Shojin Ryori</th>\n<th style=\"text-align: left;\">Vegan Ramen</th>\n<th style=\"text-align: left;\">Convenience Store</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Price</strong></td>\n<td style=\"text-align: left;\">Expensive</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Inexpensive</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Traditional/Artisanal</td>\n<td style=\"text-align: left;\">Modern/Fast</td>\n<td style=\"text-align: left;\">Pre-packaged</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Availability</strong></td>\n<td style=\"text-align: left;\">Low (Specialized shops)</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">High (Everywhere)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Nutritional Value</strong></td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Variable</td>\n<td style=\"text-align: left;\">Low/Processed</td>\n</tr>\n</tbody>\n</table>\n<h3>Recommendation</h3>\n<ul>\n<li><strong>For the experience:</strong> Choose <strong>Shojin Ryori</strong> if you want an authentic cultural experience.</li>\n<li><strong>For daily convenience:</strong> Choose <strong>Vegan Ramen</strong> or specialized vegetarian cafes found in areas like Shibuya or Harajuku for a quick, filling meal.</li>\n</ul>\n<p><em>Note: Always use phrases like \"Niku, sakana, dashi wa dame desu\" (No meat, fish, or fish stock) when asking staff to ensure your meal is truly vegetarian.</em></p>"
+      }
+    ]
+  },
+  "04e3f06899": {
+    "title": "Simple Vanilla Cake Recipe for Beginners",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to make cack",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>To bake a basic vanilla cake, follow these instructions.</p>\n<h3><strong>Ingredients</strong></h3>\n<ul>\n<li>1 \u00bd cups all-purpose flour</li>\n<li>1 cup granulated sugar</li>\n<li>\u00bd cup softened butter</li>\n<li>2 large eggs</li>\n<li>2 tsp baking powder</li>\n<li>\u00bd cup milk</li>\n<li>1 tsp vanilla extract</li>\n</ul>\n<h3><strong>Instructions</strong></h3>\n<ol>\n<li><strong>Preheat</strong> your oven to 350\u00b0F (175\u00b0C) and grease a 9-inch cake pan.</li>\n<li><strong>Cream</strong> the butter and sugar together in a bowl until light and fluffy.</li>\n<li><strong>Beat</strong> in the eggs one at a time, then stir in the vanilla.</li>\n<li><strong>Combine</strong> the flour and baking powder, then alternate adding the dry ingredients and milk to the butter mixture.</li>\n<li><strong>Pour</strong> the batter into the pan and bake for 30\u201335 minutes, or until a toothpick inserted into the center comes out clean.</li>\n<li><strong>Cool</strong> the cake in the pan for 10 minutes before transferring to a wire rack.</li>\n</ol>\n<h3><strong>Common Baking Mistakes</strong></h3>\n<ul>\n<li><strong>Over-mixing:</strong> Can lead to a dense, tough cake. Mix only until the ingredients are incorporated.</li>\n<li><strong>Expired Leavening Agents:</strong> Ensure your baking powder is fresh, or the cake will not rise.</li>\n<li><strong>Incorrect Oven Temperature:</strong> Use an oven thermometer to ensure accuracy; an oven that is too hot will burn the edges before the center sets.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0ab5\u0abe\u0aa8\u0abf\u0ab2\u0abe \u0a95\u0ac7\u0a95 \u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa8\u0ac0\u0a9a\u0ac7\u0aa8\u0ac0 \u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0 \u0a85\u0aa8\u0ac7 \u0ab0\u0ac0\u0aa4\u0aa8\u0acb \u0a89\u0aaa\u0aaf\u0acb\u0a97 \u0a95\u0ab0\u0acb.</p>\n<h3><strong>\u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0</strong></h3>\n<ul>\n<li><strong>\u0aae\u0ac7\u0a82\u0aa6\u0acb:</strong> \u0ae7 \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a96\u0abe\u0a82\u0aa1:</strong> \u0ae7 \u0a95\u0aaa</li>\n<li><strong>\u0aae\u0abe\u0a96\u0aa3 (Butter):</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a88\u0a82\u0aa1\u0abe:</strong> \u0ae8 \u0aa8\u0a82\u0a97</li>\n<li><strong>\u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0:</strong> \u0ae8 \u0a9a\u0aae\u0a9a\u0ac0</li>\n<li><strong>\u0aa6\u0ac2\u0aa7:</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8:</strong> \u0ae7 \u0a9a\u0aae\u0a9a\u0ac0</li>\n</ul>\n<h3><strong>\u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe\u0aa8\u0ac0 \u0ab0\u0ac0\u0aa4</strong></h3>\n<ol>\n<li>\u0a93\u0ab5\u0aa8\u0aa8\u0ac7 <strong>\u0ae9\u0aeb\u0ae6\u00b0F (\u0ae7\u0aed\u0aeb\u00b0C)</strong> \u0aaa\u0ab0 \u0aaa\u0acd\u0ab0\u0ac0-\u0ab9\u0ac0\u0a9f \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0a95\u0ac7\u0a95 \u0aaa\u0ac7\u0aa8\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0a8f\u0a95 \u0ab5\u0abe\u0ab8\u0aa3\u0aae\u0abe\u0a82 \u0aae\u0abe\u0a96\u0aa3 \u0a85\u0aa8\u0ac7 \u0a96\u0abe\u0a82\u0aa1\u0aa8\u0ac7 \u0ab9\u0ab3\u0ab5\u0abe \u0a85\u0aa8\u0ac7 \u0aab\u0ac2\u0ab2\u0ac7\u0ab2\u0abe \u0aa5\u0abe\u0aaf \u0aa4\u0acd\u0aaf\u0abe\u0a82 \u0ab8\u0ac1\u0aa7\u0ac0 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a8f\u0a95 \u0aaa\u0a9b\u0ac0 \u0a8f\u0a95 \u0a88\u0a82\u0aa1\u0abe \u0a89\u0aae\u0ac7\u0ab0\u0ac0\u0aa8\u0ac7 \u0aab\u0ac7\u0a82\u0a9f\u0aa4\u0abe \u0ab0\u0ab9\u0acb, \u0aa4\u0acd\u0aaf\u0abe\u0ab0\u0aac\u0abe\u0aa6 \u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8 \u0a89\u0aae\u0ac7\u0ab0\u0acb.</li>\n<li>\u0aae\u0ac7\u0a82\u0aa6\u0acb \u0a85\u0aa8\u0ac7 \u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0\u0aa8\u0ac7 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0ac0\u0aa8\u0ac7, \u0aa5\u0acb\u0aa1\u0ac1\u0a82-\u0aa5\u0acb\u0aa1\u0ac1\u0a82 \u0aa6\u0ac2\u0aa7 \u0ab8\u0abe\u0aa5\u0ac7 \u0aac\u0ac7\u0a9f\u0ab0\u0aae\u0abe\u0a82 \u0a89\u0aae\u0ac7\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0ab9\u0ab2\u0abe\u0ab5\u0acb.</li>\n<li>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 <strong>\u0ae9\u0ae6-\u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f</strong> \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb.</li>\n</ol>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0ac7\u0ab2\u0ac0 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 \u0ae9\u0ae6 \u0aa5\u0ac0 \u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb. \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7 \u0a95\u0ac7 \u0aa8\u0ab9\u0ac0\u0a82 \u0aa4\u0ac7 \u0a9c\u0abe\u0aa3\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a9f\u0ac2\u0aa5\u0aaa\u0abf\u0a95 \u0aa8\u0abe\u0a96\u0ac0\u0aa8\u0ac7 \u0aa4\u0aaa\u0abe\u0ab8\u0acb, \u0a9c\u0acb \u0aa4\u0ac7 \u0ab8\u0abe\u0aab \u0aac\u0ab9\u0abe\u0ab0 \u0a86\u0ab5\u0ac7 \u0aa4\u0acb \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7. \u0aa4\u0ac7\u0aa8\u0ac7 \u0aac\u0ab9\u0abe\u0ab0 \u0a95\u0abe\u0aa2\u0ac0\u0aa8\u0ac7 \u0aa0\u0a82\u0aa1\u0ac0 \u0aa5\u0ab5\u0abe \u0aa6\u0acb.</p>"
+      }
+    ]
+  },
+  "3d29493aa2": {
+    "title": "Simple Vanilla Cake Recipe for Beginners",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to make cack",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>To bake a basic vanilla cake, follow these instructions.</p>\n<h3><strong>Ingredients</strong></h3>\n<ul>\n<li>1 \u00bd cups all-purpose flour</li>\n<li>1 cup granulated sugar</li>\n<li>\u00bd cup softened butter</li>\n<li>2 large eggs</li>\n<li>2 tsp baking powder</li>\n<li>\u00bd cup milk</li>\n<li>1 tsp vanilla extract</li>\n</ul>\n<h3><strong>Instructions</strong></h3>\n<ol>\n<li><strong>Preheat</strong> your oven to 350\u00b0F (175\u00b0C) and grease a 9-inch cake pan.</li>\n<li><strong>Cream</strong> the butter and sugar together in a bowl until light and fluffy.</li>\n<li><strong>Beat</strong> in the eggs one at a time, then stir in the vanilla.</li>\n<li><strong>Combine</strong> the flour and baking powder, then alternate adding the dry ingredients and milk to the butter mixture.</li>\n<li><strong>Pour</strong> the batter into the pan and bake for 30\u201335 minutes, or until a toothpick inserted into the center comes out clean.</li>\n<li><strong>Cool</strong> the cake in the pan for 10 minutes before transferring to a wire rack.</li>\n</ol>\n<h3><strong>Common Baking Mistakes</strong></h3>\n<ul>\n<li><strong>Over-mixing:</strong> Can lead to a dense, tough cake. Mix only until the ingredients are incorporated.</li>\n<li><strong>Expired Leavening Agents:</strong> Ensure your baking powder is fresh, or the cake will not rise.</li>\n<li><strong>Incorrect Oven Temperature:</strong> Use an oven thermometer to ensure accuracy; an oven that is too hot will burn the edges before the center sets.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0ab5\u0abe\u0aa8\u0abf\u0ab2\u0abe \u0a95\u0ac7\u0a95 \u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa8\u0ac0\u0a9a\u0ac7\u0aa8\u0ac0 \u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0 \u0a85\u0aa8\u0ac7 \u0ab0\u0ac0\u0aa4\u0aa8\u0acb \u0a89\u0aaa\u0aaf\u0acb\u0a97 \u0a95\u0ab0\u0acb.</p>\n<h3><strong>\u0ab8\u0abe\u0aae\u0a97\u0acd\u0ab0\u0ac0</strong></h3>\n<ul>\n<li><strong>\u0aae\u0ac7\u0a82\u0aa6\u0acb:</strong> \u0ae7 \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a96\u0abe\u0a82\u0aa1:</strong> \u0ae7 \u0a95\u0aaa</li>\n<li><strong>\u0aae\u0abe\u0a96\u0aa3 (Butter):</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0a88\u0a82\u0aa1\u0abe:</strong> \u0ae8 \u0aa8\u0a82\u0a97</li>\n<li><strong>\u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0:</strong> \u0ae8 \u0a9a\u0aae\u0a9a\u0ac0</li>\n<li><strong>\u0aa6\u0ac2\u0aa7:</strong> \u00bd \u0a95\u0aaa</li>\n<li><strong>\u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8:</strong> \u0ae7 \u0a9a\u0aae\u0a9a\u0ac0</li>\n</ul>\n<h3><strong>\u0aac\u0aa8\u0abe\u0ab5\u0ab5\u0abe\u0aa8\u0ac0 \u0ab0\u0ac0\u0aa4</strong></h3>\n<ol>\n<li>\u0a93\u0ab5\u0aa8\u0aa8\u0ac7 <strong>\u0ae9\u0aeb\u0ae6\u00b0F (\u0ae7\u0aed\u0aeb\u00b0C)</strong> \u0aaa\u0ab0 \u0aaa\u0acd\u0ab0\u0ac0-\u0ab9\u0ac0\u0a9f \u0a95\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0a95\u0ac7\u0a95 \u0aaa\u0ac7\u0aa8\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0a8f\u0a95 \u0ab5\u0abe\u0ab8\u0aa3\u0aae\u0abe\u0a82 \u0aae\u0abe\u0a96\u0aa3 \u0a85\u0aa8\u0ac7 \u0a96\u0abe\u0a82\u0aa1\u0aa8\u0ac7 \u0ab9\u0ab3\u0ab5\u0abe \u0a85\u0aa8\u0ac7 \u0aab\u0ac2\u0ab2\u0ac7\u0ab2\u0abe \u0aa5\u0abe\u0aaf \u0aa4\u0acd\u0aaf\u0abe\u0a82 \u0ab8\u0ac1\u0aa7\u0ac0 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0acb.</li>\n<li>\u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a8f\u0a95 \u0aaa\u0a9b\u0ac0 \u0a8f\u0a95 \u0a88\u0a82\u0aa1\u0abe \u0a89\u0aae\u0ac7\u0ab0\u0ac0\u0aa8\u0ac7 \u0aab\u0ac7\u0a82\u0a9f\u0aa4\u0abe \u0ab0\u0ab9\u0acb, \u0aa4\u0acd\u0aaf\u0abe\u0ab0\u0aac\u0abe\u0aa6 \u0ab5\u0ac7\u0aa8\u0ac0\u0ab2\u0abe \u0a8f\u0ab8\u0ac7\u0aa8\u0acd\u0ab8 \u0a89\u0aae\u0ac7\u0ab0\u0acb.</li>\n<li>\u0aae\u0ac7\u0a82\u0aa6\u0acb \u0a85\u0aa8\u0ac7 \u0aac\u0ac7\u0a95\u0abf\u0a82\u0a97 \u0aaa\u0abe\u0ab5\u0aa1\u0ab0\u0aa8\u0ac7 \u0aae\u0abf\u0a95\u0acd\u0ab8 \u0a95\u0ab0\u0ac0\u0aa8\u0ac7, \u0aa5\u0acb\u0aa1\u0ac1\u0a82-\u0aa5\u0acb\u0aa1\u0ac1\u0a82 \u0aa6\u0ac2\u0aa7 \u0ab8\u0abe\u0aa5\u0ac7 \u0aac\u0ac7\u0a9f\u0ab0\u0aae\u0abe\u0a82 \u0a89\u0aae\u0ac7\u0ab0\u0acb \u0a85\u0aa8\u0ac7 \u0ab9\u0ab2\u0abe\u0ab5\u0acb.</li>\n<li>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 <strong>\u0ae9\u0ae6-\u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f</strong> \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb.</li>\n</ol>"
+      },
+      {
+        "role": "user",
+        "text": "in gujrati",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>\u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0aae\u0abf\u0ab6\u0acd\u0ab0\u0aa3\u0aa8\u0ac7 \u0a97\u0acd\u0ab0\u0ac0\u0ab8 \u0a95\u0ab0\u0ac7\u0ab2\u0ac0 \u0aaa\u0ac7\u0aa8\u0aae\u0abe\u0a82 \u0ab0\u0ac7\u0aa1\u0acb \u0a85\u0aa8\u0ac7 \u0ae9\u0ae6 \u0aa5\u0ac0 \u0ae9\u0aeb \u0aae\u0abf\u0aa8\u0abf\u0a9f \u0ab8\u0ac1\u0aa7\u0ac0 \u0aac\u0ac7\u0a95 \u0a95\u0ab0\u0acb. \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7 \u0a95\u0ac7 \u0aa8\u0ab9\u0ac0\u0a82 \u0aa4\u0ac7 \u0a9c\u0abe\u0aa3\u0ab5\u0abe \u0aae\u0abe\u0a9f\u0ac7 \u0aa4\u0ac7\u0aae\u0abe\u0a82 \u0a9f\u0ac2\u0aa5\u0aaa\u0abf\u0a95 \u0aa8\u0abe\u0a96\u0ac0\u0aa8\u0ac7 \u0aa4\u0aaa\u0abe\u0ab8\u0acb, \u0a9c\u0acb \u0aa4\u0ac7 \u0ab8\u0abe\u0aab \u0aac\u0ab9\u0abe\u0ab0 \u0a86\u0ab5\u0ac7 \u0aa4\u0acb \u0a95\u0ac7\u0a95 \u0aa4\u0ac8\u0aaf\u0abe\u0ab0 \u0a9b\u0ac7. \u0aa4\u0ac7\u0aa8\u0ac7 \u0aac\u0ab9\u0abe\u0ab0 \u0a95\u0abe\u0aa2\u0ac0\u0aa8\u0ac7 \u0aa0\u0a82\u0aa1\u0ac0 \u0aa5\u0ab5\u0abe \u0aa6\u0acb.</p>"
+      }
+    ]
+  },
+  "5d30c24909": {
+    "title": "Comparing Red Hat Enterprise Linux and K",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is deference beetween redhat and kali ",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Red Hat Enterprise Linux (RHEL) and Kali Linux serve distinct purposes within the IT landscape.</p>\n<h3><strong>Red Hat Enterprise Linux (RHEL)</strong></h3>\n<p>RHEL is a commercial, enterprise-grade Linux distribution focused on stability, security, and scalability for corporate data centers, servers, and cloud environments. It provides long-term support and is widely used for hosting production applications.</p>\n<h3><strong>Kali Linux</strong></h3>\n<p>Kali Linux is a Debian-based distribution designed specifically for digital forensics and penetration testing. It comes pre-installed with a vast collection of security tools used by cybersecurity professionals for vulnerability assessment and ethical hacking.</p>\n<h3><strong>Comparison Data</strong></h3>\n<canvas id=\"linuxComparison\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('linuxComparison'), {\n  type: 'bar',\n  data: {\n    labels: ['Stability', 'Security Focus', 'Ease of Use', 'Primary Goal'],\n    datasets: [{\n      label: 'RHEL (Scale 1-10)',\n      data: [10, 9, 7, 10],\n      backgroundColor: '#4a90e2'\n    }, {\n      label: 'Kali Linux (Scale 1-10)',\n      data: [6, 10, 5, 4],\n      backgroundColor: '#e25c4a'\n    }]\n  },\n  options: { responsive: false }\n});\n</script>\n\n<h3><strong>Which is better?</strong></h3>\n<ul>\n<li><strong>Choose RHEL</strong> if you need a reliable operating system for business applications, server management, or learning enterprise Linux administration.</li>\n<li><strong>Choose Kali Linux</strong> if you are performing penetration testing, security auditing, or learning about cybersecurity vulnerabilities. </li>\n</ul>\n<p>They are not interchangeable; RHEL is meant for building and maintaining services, while Kali is meant for testing their security.</p>"
+      }
+    ]
+  },
+  "a602856227": {
+    "title": "Title: Invalid Topic Selection Error",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the fastapi",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Overview of FastAPI</h3>\n<p><strong>FastAPI</strong> is a modern, high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints. It is designed to be easy to learn, fast to code, and production-ready.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>High Performance:</strong> It is one of the fastest Python frameworks available, rivaling NodeJS and Go, thanks to <strong>Starlette</strong> (for web routing) and <strong>Pydantic</strong> (for data validation).</li>\n<li><strong>Automatic Documentation:</strong> It automatically generates interactive API documentation (Swagger UI and ReDoc) at <code>/docs</code>.</li>\n<li><strong>Type Safety:</strong> Uses standard Python type hints to provide deep editor support, autocompletion, and robust error checking.</li>\n<li><strong>Asynchronous Support:</strong> Built natively to handle <code>async</code> and <code>await</code> syntax, making it ideal for I/O-bound operations.</li>\n</ul>\n<h3>Example Code</h3>\n<p>This example shows a basic <strong>FastAPI</strong> application (Python 3.9+).</p>\n<pre class=\"codehilite\"><code class=\"language-python\">from fastapi import FastAPI\n\n# Initialize the FastAPI app\napp = FastAPI()\n\n# Define a route with a path parameter\n@app.get(&quot;/items/{item_id}&quot;)\ndef read_item(item_id: int, q: str = None):\n    # This function automatically validates that item_id is an integer\n    return {&quot;item_id&quot;: item_id, &quot;query&quot;: q}\n</code></pre>\n\n<h3>Comparison: FastAPI vs. Flask</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">FastAPI</th>\n<th style=\"text-align: left;\">Flask</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Performance</strong></td>\n<td style=\"text-align: left;\">Very High (Asynchronous)</td>\n<td style=\"text-align: left;\">Moderate (Synchronous by default)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Validation</strong></td>\n<td style=\"text-align: left;\">Built-in via Pydantic</td>\n<td style=\"text-align: left;\">Requires external extensions</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Documentation</strong></td>\n<td style=\"text-align: left;\">Automatic Swagger/ReDoc</td>\n<td style=\"text-align: left;\">Requires manual configuration</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Typing</strong></td>\n<td style=\"text-align: left;\">Heavy reliance on Type Hints</td>\n<td style=\"text-align: left;\">Optional</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   <strong>Use FastAPI</strong> if you are building modern, high-performance APIs, require automatic data validation, or need extensive documentation.<br />\n*   <strong>Use Flask</strong> if you are building a small, simple application or prefer a minimalist framework where you can choose your own libraries for every task.</p>\n<h3>Common Mistakes to Avoid</h3>\n<ol>\n<li><strong>Blocking the Event Loop:</strong> Do not perform heavy CPU-bound tasks inside an <code>async def</code> function, as this will block the entire server. Use <code>def</code> for CPU-heavy tasks or run them in a separate thread.</li>\n<li><strong>Ignoring Type Hints:</strong> Failing to use Python type hints negates the primary benefit of FastAPI's request validation and auto-documentation.</li>\n</ol>"
+      }
+    ]
+  },
+  "848093bc63": {
+    "title": "Title: Invalid Topic Selection Error",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the fastapi",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Overview of FastAPI</h3>\n<p><strong>FastAPI</strong> is a modern, high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints. It is designed to be easy to learn, fast to code, and production-ready.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>High Performance:</strong> It is one of the fastest Python frameworks available, rivaling NodeJS and Go, thanks to <strong>Starlette</strong> (for web routing) and <strong>Pydantic</strong> (for data validation).</li>\n<li><strong>Automatic Documentation:</strong> It automatically generates interactive API documentation (Swagger UI and ReDoc) at <code>/docs</code>.</li>\n<li><strong>Type Safety:</strong> Uses standard Python type hints to provide deep editor support, autocompletion, and robust error checking.</li>\n<li><strong>Asynchronous Support:</strong> Built natively to handle <code>async</code> and <code>await</code> syntax, making it ideal for I/O-bound operations.</li>\n</ul>\n<h3>Example Code</h3>\n<p>This example shows a basic <strong>FastAPI</strong> application (Python 3.9+).</p>\n<pre class=\"codehilite\"><code class=\"language-python\">from fastapi import FastAPI\n\n# Initialize the FastAPI app\napp = FastAPI()\n\n# Define a route with a path parameter\n@app.get(&quot;/items/{item_id}&quot;)\ndef read_item(item_id: int, q: str = None):\n    # This function automatically validates that item_id is an integer\n    return {&quot;item_id&quot;: item_id, &quot;query&quot;: q}\n</code></pre>\n\n<h3>Comparison: FastAPI vs. Flask</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">FastAPI</th>\n<th style=\"text-align: left;\">Flask</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Performance</strong></td>\n<td style=\"text-align: left;\">Very High (Asynchronous)</td>\n<td style=\"text-align: left;\">Moderate (Synchronous by default)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Validation</strong></td>\n<td style=\"text-align: left;\">Built-in via Pydantic</td>\n<td style=\"text-align: left;\">Requires external extensions</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Documentation</strong></td>\n<td style=\"text-align: left;\">Automatic Swagger/ReDoc</td>\n<td style=\"text-align: left;\">Requires manual configuration</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Typing</strong></td>\n<td style=\"text-align: left;\">Heavy reliance on Type Hints</td>\n<td style=\"text-align: left;\">Optional</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   <strong>Use FastAPI</strong> if you are building modern, high-performance APIs, require automatic data validation, or need extensive documentation.<br />\n*   <strong>Use Flask</strong> if you are building a small, simple application or prefer a minimalist framework where you can choose your own libraries for every task.</p>\n<h3>Common Mistakes to Avoid</h3>\n<ol>\n<li><strong>Blocking the Event Loop:</strong> Do not perform heavy CPU-bound tasks inside an <code>async def</code> function, as this will block the entire server. Use <code>def</code> for CPU-heavy tasks or run them in a separate thread.</li>\n<li><strong>Ignoring Type Hints:</strong> Failing to use Python type hints negates the primary benefit of FastAPI's request validation and auto-documentation.</li>\n</ol>"
+      }
+    ]
+  },
+  "dd6055a243": {
+    "title": "Cybersecurity Project Content Evaluation",
+    "messages": [
+      {
+        "role": "user",
+        "text": "rate this pdf content , and all",
+        "pdf": "Presentation 12 (1).pdf"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Here is an evaluation of the project documentation provided.</p>\n<h3><strong>Project Content Evaluation</strong></h3>\n<p>The content is well-structured and provides a clear technical scope for a cybersecurity research project. </p>\n<ul>\n<li><strong>Strengths:</strong><ul>\n<li><strong>Defined Scope:</strong> Clearly identifies the attack types, target platforms, and the tools being used.</li>\n<li><strong>Practical Implementation:</strong> The inclusion of a custom Python Flask dashboard indicates a focus on automation and user experience.</li>\n<li><strong>Educational Value:</strong> Focusing on SSH/FTP as entry points is highly relevant for academic research.</li>\n</ul>\n</li>\n<li><strong>Areas for Improvement:</strong><ul>\n<li><strong>Hybrid Attack definition:</strong> The provided text cuts off mid-sentence; ensure the definition and the specific methodology for hybrid password mutation are fully explained.</li>\n<li><strong>Mitigation Strategy:</strong> While the project focuses on the attack, adding a section on <strong>Defensive Measures</strong> (e.g., account lockout policies, Fail2Ban, or MFA) would add significant value.</li>\n</ul>\n</li>\n</ul>\n<hr />\n<h3><strong>Technical Comparison: Dictionary vs. Hybrid Attack</strong></h3>\n<p>To visualize the operational differences between these two methods, refer to the data below:</p>\n<canvas id=\"chart1\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'bar',\n  data: {\n    labels: ['Speed', 'Success Rate', 'Complexity'],\n    datasets: [{\n      label: 'Dictionary Attack',\n      data: [90, 40, 20],\n      backgroundColor: '#4a90e2'\n    },\n    {\n      label: 'Hybrid Attack',\n      data: [60, 75, 80],\n      backgroundColor: '#e25c4a'\n    }]\n  },\n  options: { responsive: false, scales: { y: { beginAtZero: true } } }\n});\n</script>\n\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Criteria</th>\n<th style=\"text-align: left;\">Dictionary Attack</th>\n<th style=\"text-align: left;\">Hybrid Attack</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Method</strong></td>\n<td style=\"text-align: left;\">Fixed list matching</td>\n<td style=\"text-align: left;\">List matching + mutation rules</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Speed</strong></td>\n<td style=\"text-align: left;\">Very Fast</td>\n<td style=\"text-align: left;\">Slower (due to generation)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Success Rate</strong></td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThe <strong>Hybrid Attack</strong> is objectively better for real-world scenarios. While the Dictionary attack is faster, the Hybrid approach captures users who use \"leaked\" passwords with minor modifications (e.g., adding a year or special character), making it significantly more effective against modern security practices.</p>\n<hr />\n<h3><strong>Coding Note</strong></h3>\n<p>You mentioned using Hydra. When implementing this in a project, ensure you use the <code>-t</code> flag correctly to manage threads.</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Example Hydra command for a Hybrid Attack\n# -t 4: sets 4 parallel connections\n# -x 4:10:a: attempts passwords 4-10 chars long with 'a' (lowercase) masks\nhydra -l admin -x 4:10:a ssh://192.168.1.5 -t 4\n</code></pre>\n\n<p><strong>Common Mistake:</strong> Avoid running too many concurrent threads (the <code>-t</code> parameter) on a target, as this can crash the service or trigger security alerts/Firewall IPS (Intrusion Prevention Systems) instantly.</p>"
+      }
+    ]
+  },
+  "92b3e08b03": {
+    "title": "Cybersecurity Project Content Evaluation",
+    "messages": [
+      {
+        "role": "user",
+        "text": "rate this pdf content , and all",
+        "pdf": "Presentation 12 (1).pdf"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Here is an evaluation of the project documentation provided.</p>\n<h3><strong>Project Content Evaluation</strong></h3>\n<p>The content is well-structured and provides a clear technical scope for a cybersecurity research project. </p>\n<ul>\n<li><strong>Strengths:</strong><ul>\n<li><strong>Defined Scope:</strong> Clearly identifies the attack types, target platforms, and the tools being used.</li>\n<li><strong>Practical Implementation:</strong> The inclusion of a custom Python Flask dashboard indicates a focus on automation and user experience.</li>\n<li><strong>Educational Value:</strong> Focusing on SSH/FTP as entry points is highly relevant for academic research.</li>\n</ul>\n</li>\n<li><strong>Areas for Improvement:</strong><ul>\n<li><strong>Hybrid Attack definition:</strong> The provided text cuts off mid-sentence; ensure the definition and the specific methodology for hybrid password mutation are fully explained.</li>\n<li><strong>Mitigation Strategy:</strong> While the project focuses on the attack, adding a section on <strong>Defensive Measures</strong> (e.g., account lockout policies, Fail2Ban, or MFA) would add significant value.</li>\n</ul>\n</li>\n</ul>\n<hr />\n<h3><strong>Technical Comparison: Dictionary vs. Hybrid Attack</strong></h3>\n<p>To visualize the operational differences between these two methods, refer to the data below:</p>\n<canvas id=\"chart1\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'bar',\n  data: {\n    labels: ['Speed', 'Success Rate', 'Complexity'],\n    datasets: [{\n      label: 'Dictionary Attack',\n      data: [90, 40, 20],\n      backgroundColor: '#4a90e2'\n    },\n    {\n      label: 'Hybrid Attack',\n      data: [60, 75, 80],\n      backgroundColor: '#e25c4a'\n    }]\n  },\n  options: { responsive: false, scales: { y: { beginAtZero: true } } }\n});\n</script>\n\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Criteria</th>\n<th style=\"text-align: left;\">Dictionary Attack</th>\n<th style=\"text-align: left;\">Hybrid Attack</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Method</strong></td>\n<td style=\"text-align: left;\">Fixed list matching</td>\n<td style=\"text-align: left;\">List matching + mutation rules</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Speed</strong></td>\n<td style=\"text-align: left;\">Very Fast</td>\n<td style=\"text-align: left;\">Slower (due to generation)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Success Rate</strong></td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThe <strong>Hybrid Attack</strong> is objectively better for real-world scenarios. While the Dictionary attack is faster, the Hybrid approach captures users who use \"leaked\" passwords with minor modifications (e.g., adding a year or special character), making it significantly more effective against modern security practices.</p>\n<hr />\n<h3><strong>Coding Note</strong></h3>\n<p>You mentioned using Hydra. When implementing this in a project, ensure you use the <code>-t</code> flag correctly to manage threads.</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Example Hydra command for a Hybrid Attack\n# -t 4: sets 4 parallel connections\n# -x 4:10:a: attempts passwords 4-10 chars long with 'a' (lowercase) masks\nhydra -l admin -x 4:10:a ssh://192.168.1.5 -t 4\n</code></pre>\n\n<p><strong>Common Mistake:</strong> Avoid running too many concurrent threads (the <code>-t</code> parameter) on a target, as this can crash the service or trigger security alerts/Firewall IPS (Intrusion Prevention Systems) instantly.</p>"
+      }
+    ]
+  },
+  "b40fb48ead": {
+    "title": "Cybersecurity Project Content Evaluation",
+    "messages": [
+      {
+        "role": "user",
+        "text": "rate this pdf content , and all",
+        "pdf": "Presentation 12 (1).pdf"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Here is an evaluation of the project documentation provided.</p>\n<h3><strong>Project Content Evaluation</strong></h3>\n<p>The content is well-structured and provides a clear technical scope for a cybersecurity research project. </p>\n<ul>\n<li><strong>Strengths:</strong><ul>\n<li><strong>Defined Scope:</strong> Clearly identifies the attack types, target platforms, and the tools being used.</li>\n<li><strong>Practical Implementation:</strong> The inclusion of a custom Python Flask dashboard indicates a focus on automation and user experience.</li>\n<li><strong>Educational Value:</strong> Focusing on SSH/FTP as entry points is highly relevant for academic research.</li>\n</ul>\n</li>\n<li><strong>Areas for Improvement:</strong><ul>\n<li><strong>Hybrid Attack definition:</strong> The provided text cuts off mid-sentence; ensure the definition and the specific methodology for hybrid password mutation are fully explained.</li>\n<li><strong>Mitigation Strategy:</strong> While the project focuses on the attack, adding a section on <strong>Defensive Measures</strong> (e.g., account lockout policies, Fail2Ban, or MFA) would add significant value.</li>\n</ul>\n</li>\n</ul>\n<hr />\n<h3><strong>Technical Comparison: Dictionary vs. Hybrid Attack</strong></h3>\n<p>To visualize the operational differences between these two methods, refer to the data below:</p>\n<canvas id=\"chart1\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'bar',\n  data: {\n    labels: ['Speed', 'Success Rate', 'Complexity'],\n    datasets: [{\n      label: 'Dictionary Attack',\n      data: [90, 40, 20],\n      backgroundColor: '#4a90e2'\n    },\n    {\n      label: 'Hybrid Attack',\n      data: [60, 75, 80],\n      backgroundColor: '#e25c4a'\n    }]\n  },\n  options: { responsive: false, scales: { y: { beginAtZero: true } } }\n});\n</script>\n\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Criteria</th>\n<th style=\"text-align: left;\">Dictionary Attack</th>\n<th style=\"text-align: left;\">Hybrid Attack</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Method</strong></td>\n<td style=\"text-align: left;\">Fixed list matching</td>\n<td style=\"text-align: left;\">List matching + mutation rules</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Speed</strong></td>\n<td style=\"text-align: left;\">Very Fast</td>\n<td style=\"text-align: left;\">Slower (due to generation)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Success Rate</strong></td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nThe <strong>Hybrid Attack</strong> is objectively better for real-world scenarios. While the Dictionary attack is faster, the Hybrid approach captures users who use \"leaked\" passwords with minor modifications (e.g., adding a year or special character), making it significantly more effective against modern security practices.</p>\n<hr />\n<h3><strong>Coding Note</strong></h3>\n<p>You mentioned using Hydra. When implementing this in a project, ensure you use the <code>-t</code> flag correctly to manage threads.</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Example Hydra command for a Hybrid Attack\n# -t 4: sets 4 parallel connections\n# -x 4:10:a: attempts passwords 4-10 chars long with 'a' (lowercase) masks\nhydra -l admin -x 4:10:a ssh://192.168.1.5 -t 4\n</code></pre>\n\n<p><strong>Common Mistake:</strong> Avoid running too many concurrent threads (the <code>-t</code> parameter) on a target, as this can crash the service or trigger security alerts/Firewall IPS (Intrusion Prevention Systems) instantly.</p>"
+      }
+    ]
+  },
+  "a48b7766dd": {
+    "title": "what is the rate of gold today in india",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is the rate of gold today in india",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      },
+      {
+        "role": "user",
+        "text": "what is the rate of gold today in india",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ]
+  },
+  "3b4493c8e0": {
+    "title": "A Guide to Common Network Types and Thei",
+    "messages": [
+      {
+        "role": "user",
+        "text": " explain the network types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Networks are categorized primarily by their geographical scale and the scope of devices they connect. Here are the most common network types:</p>\n<h3>Common Network Types</h3>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> The smallest network type, typically used for connecting personal devices (e.g., smartphones, laptops, Bluetooth headphones) within a single person's workspace.</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area such as a home, school, or office building. It is characterized by high data transfer speeds.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Spans a larger geographical area, such as a city or a large university campus. It often acts as a high-speed backbone for multiple LANs.</li>\n<li><strong>WAN (Wide Area Network):</strong> Covers a large physical distance, such as a country or the entire world. The internet is the largest and most well-known example of a WAN.</li>\n</ul>\n<h3>Comparison Table</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">PAN</th>\n<th style=\"text-align: left;\">LAN</th>\n<th style=\"text-align: left;\">MAN</th>\n<th style=\"text-align: left;\">WAN</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Coverage</strong></td>\n<td style=\"text-align: left;\">Personal space</td>\n<td style=\"text-align: left;\">Room/Building</td>\n<td style=\"text-align: left;\">City</td>\n<td style=\"text-align: left;\">Country/Global</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Speed</strong></td>\n<td style=\"text-align: left;\">Very High</td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Low to Moderate</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Maintenance</strong></td>\n<td style=\"text-align: left;\">Individual</td>\n<td style=\"text-align: left;\">Local Admin</td>\n<td style=\"text-align: left;\">ISP/Gov</td>\n<td style=\"text-align: left;\">Multiple ISPs</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Cost</strong></td>\n<td style=\"text-align: left;\">Negligible</td>\n<td style=\"text-align: left;\">Low</td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Very High</td>\n</tr>\n</tbody>\n</table>\n<h3>Which is better?</h3>\n<p>There is no \"better\" network type; the choice depends entirely on the required scale. Use a <strong>LAN</strong> for efficient local resource sharing (like printing or file access), while a <strong>WAN</strong> is necessary for connecting geographically dispersed offices or accessing global services like the internet.</p>"
+      }
+    ]
+  },
+  "e2770bd869": {
+    "title": "Introduction to Cybersecurity Fundamenta",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is cybersicurity expline",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>What is Cybersecurity?</h3>\n<p><strong>Cybersecurity</strong> is the practice of protecting internet-connected systems, including hardware, software, and data, from digital attacks. These measures aim to ensure the confidentiality, integrity, and availability of information.</p>\n<h4>Core Pillars of Cybersecurity</h4>\n<ul>\n<li><strong>Confidentiality:</strong> Ensuring that sensitive information is accessible only by authorized individuals.</li>\n<li><strong>Integrity:</strong> Guarding against the unauthorized modification or destruction of data.</li>\n<li><strong>Availability:</strong> Ensuring that systems and data are accessible to authorized users when needed.</li>\n</ul>\n<h4>Common Threats</h4>\n<ul>\n<li><strong>Malware:</strong> Malicious software (e.g., viruses, ransomware) designed to damage or gain unauthorized access to a computer system.</li>\n<li><strong>Phishing:</strong> Deceptive communication used to trick individuals into revealing sensitive information like passwords or credit card numbers.</li>\n<li><strong>Denial-of-Service (DoS):</strong> Attacks that overwhelm a system, making it unavailable to intended users.</li>\n</ul>\n<h4>Example of Basic Defense</h4>\n<p>A common technical implementation is the use of <strong>Multi-Factor Authentication (MFA)</strong>. Here is a Python representation of a simple logic check for MFA:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python 3.x: Simple MFA Logic Example\ndef verify_user(password, mfa_code):\n    correct_password = &quot;secure_password123&quot;\n    correct_mfa = &quot;998877&quot;\n\n    # Check if both credentials match\n    if password == correct_password and mfa_code == correct_mfa:\n        return &quot;Access Granted&quot;\n    else:\n        # Common mistake: Failing to implement account lockout after multiple failed attempts\n        return &quot;Access Denied&quot;\n\nprint(verify_user(&quot;secure_password123&quot;, &quot;998877&quot;))\n</code></pre>\n\n<p><em>Note: A common error in cybersecurity implementation is relying on \"Security through Obscurity,\" which assumes hiding a system is enough to keep it safe; always prioritize robust encryption and access controls instead.</em></p>"
+      },
+      {
+        "role": "user",
+        "text": "deference beetween lan and wan",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Difference Between LAN and WAN</h3>\n<p>A <strong>Local Area Network (LAN)</strong> connects devices within a limited physical area, while a <strong>Wide Area Network (WAN)</strong> spans a large geographical distance, often connecting multiple smaller networks.</p>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">LAN (Local Area Network)</th>\n<th style=\"text-align: left;\">WAN (Wide Area Network)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Coverage Area</strong></td>\n<td style=\"text-align: left;\">Small (Home, Office, Building)</td>\n<td style=\"text-align: left;\">Large (City, Country, Global)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Speed</strong></td>\n<td style=\"text-align: left;\">High data transfer rates</td>\n<td style=\"text-align: left;\">Lower than LAN</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Ownership</strong></td>\n<td style=\"text-align: left;\">Private (Single person/org)</td>\n<td style=\"text-align: left;\">Public/Leased (ISP/Telecoms)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Congestion</strong></td>\n<td style=\"text-align: left;\">Low</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<h3>Which is better?</h3>\n<p>Neither is \"better\" as they serve different purposes. <strong>LAN</strong> is superior for internal high-speed communication within a specific site, while <strong>WAN</strong> is essential for connecting remote locations to the internet or corporate headquarters over long distances.</p>"
+      }
+    ]
+  },
+  "b1b1e5f540": {
+    "title": "what is python and deference b",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is python and deference between java and python",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>What is Python?</h3>\n<p><strong>Python</strong> is a high-level, interpreted programming language known for its clear syntax and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. It is widely used in data science, artificial intelligence, web development, and automation.</p>\n<h3>Comparison: Python vs. Java</h3>\n<p>While both are popular, they differ significantly in their execution and structure:</p>\n<ul>\n<li><strong>Syntax:</strong> Python uses indentation to define code blocks, whereas Java uses curly braces.</li>\n<li><strong>Typing:</strong> Python is dynamically typed (type checking occurs at runtime), while Java is statically typed (type checking occurs at compile-time).</li>\n<li><strong>Performance:</strong> Java generally executes faster as it is a compiled language; Python is interpreted, which typically makes it slower.</li>\n<li><strong>Verbosity:</strong> Java is more verbose, requiring more lines of code to perform the same task compared to Python.</li>\n</ul>\n<canvas id=\"chart1\" width=\"400\" height=\"260\" style=\"width:400px;height:260px;max-width:100%\"></canvas>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'pie',\n  data: {\n    labels: ['Python Verbosity', 'Java Verbosity', 'Python Execution Time', 'Java Execution Time'],\n    datasets: [{\n      label: 'Comparison',\n      data: [1, 3, 3, 1],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#2ecc71', '#f39c12'],\n    }]\n  },\n  options: { responsive: false, plugins: { legend: { display: true } } }\n});\n</script>\n\n<h3>Which is better?</h3>\n<ul>\n<li><strong>Choose Python if</strong> you are working on data science, rapid prototyping, or are a beginner looking for an easier learning curve.</li>\n<li><strong>Choose Java if</strong> you are building large-scale enterprise applications, Android apps, or require high performance and strict type safety.</li>\n</ul>"
+      }
+    ]
+  },
+  "1e9a4ca303": {
+    "title": "expline all libraries from python import",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline all libraries from python importante",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      },
+      {
+        "role": "user",
+        "text": "expline all libraries from python importante",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>It is impossible to explain \"all\" Python libraries, as the <strong>Python Package Index (PyPI)</strong> hosts over 500,000 packages. However, I can categorize the most essential libraries that are standard in professional software development and data science.</p>\n<h3>Essential Python Libraries</h3>\n<ul>\n<li><strong>Data Manipulation and Analysis</strong><ul>\n<li><strong>Pandas:</strong> The industry standard for data manipulation, providing structures like DataFrames.</li>\n<li><strong>NumPy:</strong> The foundation for numerical computing, offering support for large multi-dimensional arrays and matrices.</li>\n</ul>\n</li>\n<li><strong>Data Visualization</strong><ul>\n<li><strong>Matplotlib:</strong> A low-level library for creating static, animated, and interactive visualizations.</li>\n<li><strong>Seaborn:</strong> Built on Matplotlib, it provides a high-level interface for drawing attractive statistical graphics.</li>\n</ul>\n</li>\n<li><strong>Web Development</strong><ul>\n<li><strong>Flask:</strong> A lightweight WSGI web application framework designed to get started quickly.</li>\n<li><strong>Django:</strong> A high-level web framework that encourages rapid development and clean, pragmatic design.</li>\n</ul>\n</li>\n<li><strong>Machine Learning</strong><ul>\n<li><strong>Scikit-learn:</strong> Provides simple and efficient tools for predictive data analysis.</li>\n<li><strong>TensorFlow / PyTorch:</strong> Advanced frameworks for deep learning and neural networks.</li>\n</ul>\n</li>\n<li><strong>Requesting Data</strong><ul>\n<li><strong>Requests:</strong> Simplifies making HTTP requests to interact with web services and APIs.</li>\n</ul>\n</li>\n</ul>\n<h3>Example: Using the Requests Library</h3>\n<p>This example demonstrates how to fetch data from an API using the <code>requests</code> library (Python 3.x).</p>\n<pre class=\"codehilite\"><code class=\"language-python\">import requests\n\n# Define the target URL\nurl = &quot;https://api.github.com&quot;\n\n# Perform a GET request to the API\nresponse = requests.get(url)\n\n# Check if the request was successful\nif response.status_code == 200:\n    # Print the JSON content of the response\n    print(response.json())\nelse:\n    print(f&quot;Failed to retrieve data: {response.status_code}&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Namespace Collisions:</strong> Avoid naming your own files the same as a library (e.g., naming a file <code>pandas.py</code> will prevent you from importing the actual library).</li>\n<li><strong>Dependency Bloat:</strong> Only install libraries you strictly need. Use a <strong>virtual environment</strong> (<code>venv</code> or <code>conda</code>) to manage project-specific dependencies.</li>\n<li><strong>Versioning Issues:</strong> Always specify version requirements in a <code>requirements.txt</code> file to ensure consistency across different development environments.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is server",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>python</strong>. Please ask something related to selected topic <strong>python</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is server",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ]
+  },
+  "6a3941a287": {
+    "title": "Advantages of  iPhone",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is the best quality of iphone than other phones"
+      },
+      {
+        "role": "ai",
+        "text": "<p>iPhones are often distinguished from other smartphones by their integration and performance. Here are the primary factors that set them apart:</p>\n<ul>\n<li><strong>Ecosystem Integration:</strong> Apple devices (iPhone, Mac, iPad, Apple Watch) work together seamlessly via features like AirDrop, Handoff, and iCloud synchronization.</li>\n<li><strong>iOS Optimization:</strong> Because Apple develops both the hardware and the software, the operating system is highly optimized, leading to smooth performance and longevity.</li>\n<li><strong>Long-term Software Support:</strong> Apple consistently provides major iOS updates for older devices for 5\u20137 years, ensuring current security and features.</li>\n<li><strong>Privacy and Security:</strong> Apple implements strict privacy controls, such as App Tracking Transparency, and offers a highly secure App Store ecosystem.</li>\n<li><strong>Hardware Resale Value:</strong> iPhones generally retain their monetary value significantly better than Android devices over time.</li>\n</ul>\n<h3>Comparison: iPhone vs. Android</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">iPhone (iOS)</th>\n<th style=\"text-align: left;\">Android</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>System Control</strong></td>\n<td style=\"text-align: left;\">Closed (Strict)</td>\n<td style=\"text-align: left;\">Open (Flexible)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Software Updates</strong></td>\n<td style=\"text-align: left;\">Uniform and long-term</td>\n<td style=\"text-align: left;\">Fragmented by manufacturer</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>App Ecosystem</strong></td>\n<td style=\"text-align: left;\">Apple App Store (Curated)</td>\n<td style=\"text-align: left;\">Google Play/Sideloading (Varied)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Hardware Variety</strong></td>\n<td style=\"text-align: left;\">Limited (Specific models)</td>\n<td style=\"text-align: left;\">Extensive (Wide range of prices)</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose an <strong>iPhone</strong> if you value a seamless user experience, long-term software support, and integration within the Apple ecosystem. <br />\n*   Choose an <strong>Android</strong> if you prefer hardware variety, deep customization options, and the flexibility to install software from outside the official store.</p>"
+      }
+    ]
+  }
+}

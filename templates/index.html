@@ -1,434 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gemini Chatbot</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      height: 100vh;
-    }
-
-    .sidebar {
-      width: 240px;
-      background: #fff;
-      border-right: 1px solid #e0e0e0;
-      display: flex;
-      flex-direction: column;
-      padding: 20px 14px;
-      gap: 12px;
-      flex-shrink: 0;
-    }
-
-    .sidebar-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #333;
-      padding: 0 4px;
-    }
-
-    .new-chat-btn {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      background: #4a90e2;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .new-chat-btn:hover { background: #357abd; }
-
-    .sidebar-divider {
-      border: none;
-      border-top: 1px solid #ebebeb;
-    }
-
-    .sidebar-section-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: #aaa;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0 4px;
-    }
-
-    .history-list {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      overflow-y: auto;
-      scrollbar-width: none;
-      padding-bottom: 120px;
-    }
-
-    .history-list::-webkit-scrollbar { display: none; }
-
-    .history-row {
-      position: relative;
-      display: flex;
-      align-items: center;
-      border-radius: 8px;
-      background: #f0f4ff;
-      transition: background 0.15s;
-    }
-
-    .history-row:hover { background: #e8eeff; }
-    .history-row.active { background: #e8f0fe; }
-
-    .row-normal {
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
-
-    .history-item {
-      flex: 1;
-      padding: 8px 10px;
-      font-size: 0.82rem;
-      color: #444;
-      text-decoration: none;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .history-row.active .history-item { color: #4a90e2; font-weight: 600; }
-
-    .menu-btn {
-      all: unset;
-      cursor: pointer;
-      padding: 4px 8px;
-      font-size: 1rem;
-      color: #aaa;
-      border-radius: 6px;
-      opacity: 0;
-      transition: opacity 0.15s;
-      flex-shrink: 0;
-    }
-
-    .history-row:hover .menu-btn { opacity: 1; }
-    .menu-btn:hover { background: #dde6ff; color: #555; }
-
-    .dropdown {
-      position: absolute;
-      right: 0;
-      top: 100%;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      z-index: 100;
-      min-width: 130px;
-      display: none;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .dropdown.open { display: flex; }
-
-    .dropdown-item {
-      all: unset;
-      padding: 9px 14px;
-      font-size: 0.82rem;
-      cursor: pointer;
-      color: #333;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: background 0.15s;
-      width: 100%;
-    }
-
-    .dropdown-item:hover { background: #f5f5f5; }
-    .dropdown-item.delete { color: #e74c3c; }
-    .dropdown-item.delete:hover { background: #ffeaea; color: #e74c3c; }
-       
-    /* rename */
-    .rename-form {
-      display: none;
-      gap: 4px;
-      padding: 4px 6px;
-      width: 100%;
-    }
-
-    .rename-form.open { display: flex; }
-
-    .rename-form input {
-      flex: 1;
-      padding: 5px 8px;
-      font-size: 0.8rem;
-      border-radius: 6px;
-      border: 1px solid #ddd;
-      min-width: 0;
-      outline: none;
-    }
-
-    .rename-form input:focus { border-color: #4a90e2; }
-
-    .save-btn {
-      all: unset;
-      padding: 5px 10px;
-      font-size: 0.78rem;
-      border-radius: 6px;
-      background: #4a90e2;
-      color: #fff;
-      cursor: pointer;
-    }
-
-    .save-btn:hover { background: #357abd; }
-
-    .cancel-btn {
-      all: unset;
-      cursor: pointer;
-      font-size: 0.75rem;
-      color: #aaa;
-      padding: 4px 6px;
-      border-radius: 4px;
-    }
-
-    .cancel-btn:hover { background: #eee; color: #555; }
-
-    .sidebar-empty {
-      font-size: 0.8rem;
-      color: #bbb;
-      padding: 4px;
-    }
-
-    .main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    .messages {
-      flex: 1;
-      overflow-y: auto;
-      padding: 30px 24px 10px;
-      max-width: 700px;
-      width: 100%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      scrollbar-width: none;
-    }
-
-    .messages::-webkit-scrollbar { display: none; }
-
-    .msg-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: #999;
-      margin-bottom: 3px;
-    }
-
-    .msg-row { display: flex; flex-direction: column; gap: 2px; }
-    .msg-row.user { align-items: flex-end; }
-    .msg-row.gemini { align-items: flex-start; }
-
-    .msg-row.user .bubble {
-      max-width: 68%;
-      padding: 10px 14px;
-      border-radius: 12px;
-      font-size: 0.93rem;
-      line-height: 1.6;
-      background: #e8e8e8;
-      color: #222;
-    }
-
-    .msg-row.gemini .bubble {
-      max-width: 80%;
-      padding: 4px 2px;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      color: #222;
-      background: transparent;
-    }
-
-    .msg-row.gemini .msg-label { color: #4a90e2; font-size: 0.75rem; }
-
-    .msg-row.gemini .bubble ul,
-    .msg-row.gemini .bubble ol { padding-left: 20px; margin: 6px 0; }
-    .msg-row.gemini .bubble li { margin-bottom: 4px; line-height: 1.6; }
-    .msg-row.gemini .bubble p { margin-bottom: 8px; }
-    .msg-row.gemini .bubble strong { font-weight: 700; color: #111; }
-    .msg-row.gemini .bubble h1,
-    .msg-row.gemini .bubble h2,
-    .msg-row.gemini .bubble h3 { margin: 8px 0 4px; font-size: 1rem; color: #222; }
-
-    .input-bar {
-      background: #f5f5f5;
-      padding: 12px 24px 24px;
-    }
-
-    .input-bar form {
-      display: flex;
-      gap: 8px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    input {
-      flex: 1;
-      padding: 13px 16px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    input:focus { border-color: #4a90e2; }
-
-    button {
-      padding: 13px 26px;
-      background: #4a90e2;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      min-width: 90px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    button:hover { background: #357abd; }
-
-    .dots {
-      display: none;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-    }
-
-    .dots span {
-      width: 7px;
-      height: 7px;
-      background: #fff;
-      border-radius: 50%;
-      animation: fade 1.2s infinite;
-    }
-
-    .dots span:nth-child(2) { animation-delay: 0.4s; }
-    .dots span:nth-child(3) { animation-delay: 0.8s; }
-
-    @keyframes fade {
-      0%, 100% { opacity: 0.2; transform: scale(0.8); }
-      50%       { opacity: 1;   transform: scale(1.2); }
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/css/style.css" />
 </head>
+
 <body>
 
-  <div class="sidebar">
-    <div class="sidebar-title">Gemini Chat</div>
-    <a href="/" class="new-chat-btn">+ New Chat</a>
-    <hr class="sidebar-divider"/>
-    <div class="sidebar-section-label">History</div>
-    <div class="history-list">
-      {% if history %}
-        {% for id, chat in history.items() %}
-          <div class="history-row {% if id == chat_id %}active{% endif %}" id="row-{{ id }}">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="navbar-logo">Gemini Chat</span>
+    </div>
 
-            <!-- normal view -->
-            <div class="row-normal" id="normal-{{ id }}">
-              <a href="/chat/{{ id }}" class="history-item">{{ chat.title }}</a>
-              <button class="menu-btn" onclick="toggleMenu('{{ id }}', event)">⋯</button>
-              <div class="dropdown" id="menu-{{ id }}">
-                <button class="dropdown-item" onclick="openRename('{{ id }}', '{{ chat.title }}')">Rename</button>
-                <form method="POST" action="/chat/{{ id }}/delete">
-                  <button type="submit" class="dropdown-item delete">Delete</button>
-                </form>
-              </div>
-            </div>
+    <!-- Topic mode -->
+    <div class="topic-wrapper">
+      <button class="topic-btn" id="topic-btn" onclick="openTopicModal()" title="Set Topic">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <span id="topic-btn-label">Topic</span>
+      </button>
+    </div>
 
-            <!-- rename view -->
-            <form method="POST" action="/chat/{{ id }}/rename"
-                  id="rename-{{ id }}" class="rename-form">
-              <input type="text" name="new_title" id="rename-input-{{ id }}"/>
-              <button type="submit" class="save-btn">Save</button>
-              <button type="button" class="cancel-btn" onclick="closeRename('{{ id }}')">x</button>
-            </form>
+    <!-- Topic Modal -->
+    <div class="topic-modal-overlay" id="topic-modal-overlay" onclick="closeTopicModal(event)">
+      <div class="topic-modal" onclick="event.stopPropagation()">
+        <div class="topic-modal-title">Set Topic Mode</div>
+        <div class="topic-modal-desc">Chat is limited to this topic, only relevant questions will be answered.</div>
+        <input type="text" class="topic-input" id="topic-input" placeholder="Enter topic..." />
+        <div class="topic-modal-actions">
+          <button class="topic-clear-btn" onclick="clearTopic()">Clear Topic</button>
+          <button class="topic-save-btn" onclick="saveTopic()">Set Topic</button>
+        </div>
+      </div>
+    </div>
 
+    <!-- Search -->
+    <div class="navbar-search">
+      <span class="search-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      </span>
+      <input type="text" id="search-input" placeholder="Search chats..." autocomplete="off"
+        oninput="searchChats(this.value)" onfocus="searchChats(this.value)" />
+      <div class="search-results" id="search-results"></div>
+    </div>
+
+
+    <div class="navbar-right">
+
+      <!-- Share Chat -->
+      <button class="share-btn" id="share-btn" onclick="handleShareClick()" title="Share Chat">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+        </svg>
+        Share
+      </button>
+
+      <!-- Share Modal -->
+      <div class="share-modal-overlay" id="share-modal-overlay" onclick="closeShareModal(event)">
+        <div class="share-modal" onclick="event.stopPropagation()">
+          <div class="share-modal-title">
+            Share Chat
+            <button class="share-modal-close" onclick="closeShareModal()">✕</button>
           </div>
+          <div class="share-chat-preview" id="share-preview"></div>
+          <div class="share-modal-actions">
+            <button class="share-copy-btn" id="share-copy-btn" onclick="copyShareText()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+              </svg>
+              Copy Chat
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn" onclick="toggleFavPanel()" id="fav-nav-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        Favorites
+      </button>
+
+      <button class="theme-btn" onclick="toggleTheme()" id="theme-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+
+      <!-- charts/table -->
+      <div class="chart-mode-wrapper" id="chart-mode-wrapper">
+        <!--Switch between Table and Chart mode-->
+        <button class="nav-btn" onclick="toggleResponseMode()" id="mode-btn"
+          title="Switch between Table and Chart mode">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+          <span id="mode-label">Table</span>
+          <svg id="chart-arrow" onclick="toggleDropdown(event)" width="12" height="12" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="display:none; margin-left:2px; cursor:pointer;">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <!-- Chart type dropdown -->
+        <div class="chart-dropdown" id="chart-dropdown">
+          <button class="chart-option" onclick="selectChart('bar')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+            Bar Chart
+          </button>
+          <button class="chart-option" onclick="selectChart('pie')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+              <path d="M22 12A10 10 0 0 0 12 2v10z" />
+            </svg>
+            Pie Chart
+          </button>
+          <button class="chart-option" onclick="selectChart('line')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+            Line Chart
+          </button>
+          <button class="chart-option" onclick="selectChart('doughnut')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>
+            Doughnut
+          </button>
+          <button class="chart-option" onclick="selectChart('radar')">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" />
+            </svg>
+            Radar Chart
+          </button>
+        </div>
+      </div>
+
+      <a href="/logout" class="logout-btn">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+          <polyline points="16 17 21 12 16 7" />
+          <line x1="21" y1="12" x2="9" y2="12" />
+        </svg>
+        Logout
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- PDF Viewer Panel -->
+  <div class="pdf-viewer-panel" id="pdf-viewer-panel">
+    <div class="pdf-viewer-header">
+      <span class="pdf-viewer-title" id="pdf-viewer-title">PDF</span>
+      <button class="pdf-viewer-close" onclick="closePdfViewer()">✕</button>
+    </div>
+    <div class="pdf-viewer-body">
+      <iframe id="pdf-iframe" src=""></iframe>
+    </div>
+  </div>
+
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="/" class="new-chat-btn">+ New Chat</a>
+      <hr class="sidebar-divider" />
+
+      <!-- ONE scrollable container -->
+      <div class="history-list">
+
+        <!-- Shared Chats Section -->
+        {% set shared_chats = [] %}
+        {% for id, chat in history.items() %}
+        {% if chat.get('shared') %}{% set _ = shared_chats.append((id, chat)) %}{% endif %}
         {% endfor %}
-      {% else %}
+
+        {% if shared_chats %}
+        <div class="sidebar-section-label" style="color:#4a90e2;">Shared Chats</div>
+        {% for id, chat in shared_chats %}
+        <div class="history-row" id="shared-row-{{ id }}">
+          <div class="row-normal" id="shared-normal-{{ id }}">
+            <a href="/chat/{{ id }}" class="history-item" style="color:#4a90e2;">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                style="margin-right:3px;vertical-align:middle;flex-shrink:0">
+                <circle cx="18" cy="5" r="3" />
+                <circle cx="6" cy="12" r="3" />
+                <circle cx="18" cy="19" r="3" />
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+              </svg>
+              {{ chat.title }}
+            </a>
+
+            <button class="menu-btn" onclick="toggleMenu('shared-{{ id }}', event)">⋯</button>
+
+
+            <div class="dropdown" id="menu-shared-{{ id }}">
+              <button class="dropdown-item" onclick="openRename('{{ id }}', '{{ chat.title }}')">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                </svg>
+                Rename
+              </button>
+
+              <form method="POST" action="/chat/{{ id }}/delete">
+                <button type="submit" class="dropdown-item delete">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6" />
+                    <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+                    <path d="M10 11v6" />
+                    <path d="M14 11v6" />
+                    <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+                  </svg>
+                  Delete
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <form method="POST" action="/chat/{{ id }}/rename" id="rename-{{ id }}" class="rename-form">
+            <input type="text" name="new_title" id="rename-input-{{ id }}" />
+            <button type="submit" class="save-btn">Save</button>
+            <button type="button" class="cancel-btn" onclick="closeRename('{{ id }}')">x</button>
+          </form>
+        </div>
+        {% endfor %}
+
+        <!-- History label AFTER shared -->
+        <div class="sidebar-section-label">History</div>
+        {% else %}
+        <div class="sidebar-section-label">History</div>
+        {% endif %}
+
+        <!-- History items -->
+        {% if history %}
+        {% for id, chat in history.items() %}
+        <div class="history-row {% if id == chat_id %}active{% endif %}" id="row-{{ id }}">
+          <div class="row-normal" id="normal-{{ id }}">
+            {% if chat.get('pinned') %}
+            <span class="pinned-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </span>
+            {% endif %}
+
+            <a href="/chat/{{ id }}" class="history-item">{{ chat.title }}</a>
+
+            <button class="menu-btn" onclick="toggleMenu('{{ id }}', event)">⋯</button>
+
+            <div class="dropdown" id="menu-{{ id }}">
+              <button class="dropdown-item pin" onclick="togglePin('{{ id }}', event)">
+                {% if chat.get('pinned') %}
+                Remove Favorite
+                {% else %}
+                Add to Favorites
+                {% endif %}
+              </button>
+
+              <button class="dropdown-item" onclick="openRename('{{ id }}', '{{ chat.title }}')">
+                Rename
+              </button>
+
+              <form method="POST" action="/chat/{{ id }}/delete">
+                <button type="submit" class="dropdown-item delete">Delete</button>
+              </form>
+            </div>
+          </div>
+
+          <form method="POST" action="/chat/{{ id }}/rename" id="rename-{{ id }}" class="rename-form">
+            <input type="text" name="new_title" id="rename-input-{{ id }}" />
+            <button type="submit" class="save-btn">Save</button>
+            <button type="button" class="cancel-btn" onclick="closeRename('{{ id }}')">x</button>
+          </form>
+        </div>
+        {% endfor %}
+        {% else %}
         <div class="sidebar-empty">No history yet</div>
+        {% endif %}
+
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="messages">
+        {% for msg in messages %}
+        <div class="msg-row {{ 'user' if msg.role == 'user' else 'gemini' }}" id="msgrow-{{ loop.index }}">
+          <div class="msg-label">{{ 'You' if msg.role == 'user' else 'Gemini' }}</div>
+          {% if msg.get('pdf') %}
+          <div class="pdf-bubble-tag" style="cursor:pointer" onclick="openPdfViewer('{{ msg.pdf }}')">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+            {{ msg.pdf }}
+          </div>
+          {% endif %}
+          <div class="bubble" id="bubble-{{ loop.index }}">{{ msg.text | safe }}</div>
+          {% if msg.role == 'user' %}
+          <button class="edit-msg-btn" data-idx="{{ loop.index }}">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+            </svg>
+            Edit
+          </button>
+          <div class="edit-inline-box" id="editbox-{{ loop.index }}">
+            <textarea class="edit-inline-textarea" id="edit-ta-{{ loop.index }}"></textarea>
+            <div class="edit-actions">
+              <button class="edit-cancel-btn" data-idx="{{ loop.index }}">Cancel</button>
+              <button class="edit-send-btn" data-idx="{{ loop.index }}">Send</button>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <!-- Scroll to bottom -->
+      <button class="scroll-bottom-btn" id="scroll-bottom-btn" onclick="scrollToBottom()" title="Scroll to bottom">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9" />
+        </svg>
+      </button>
+
+      <div class="topic-badge" id="topic-badge">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        Topic: <span id="topic-badge-text"></span>
+      </div>
+
+
+      <!-- Suggested prompts -->
+      <div class="suggestions-box" id="suggestions-box" style="display:none">
+        <div class="suggestion-item" onclick="useSuggestion(this)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          Explain this topic in simple terms
+        </div>
+        <div class="suggestion-item" onclick="useSuggestion(this)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          Compare these two things in a table
+        </div>
+        <div class="suggestion-item" onclick="useSuggestion(this)">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          Give me a step-by-step guide
+        </div>
+      </div>
+
+      <div class="input-bar">
+
+        <div class="pdf-tag" id="pdf-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+          </svg>
+          <span id="pdf-name-text"></span>
+          <span class="pdf-remove" onclick="removePdf()">✕</span>
+        </div>
+        <form method="POST" action="/chat/ui" onsubmit="showLoading()" enctype="multipart/form-data">
+          <input type="hidden" name="chat_id" value="{{ chat_id or '' }}" />
+          <input type="hidden" name="response_mode" id="response-mode-input" value="table" />
+          <input type="hidden" name="topic" id="topic-hidden" value="{{ current_topic or '' }}" />
+          <input type="file" name="pdf_file" id="pdf-input" accept=".pdf" style="display:none"
+            onchange="showPdfTag(this)" />
+
+
+          <button type="button" class="attach-btn" onclick="el('pdf-input').click()" title="Attach PDF">
+
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+          </button>
+
+          <div class="input-wrapper">
+            <textarea name="message" class="msg-input" placeholder="Enter here" required autofocus rows="1"
+              onkeydown="handleEnter(event)" oninput="autoResize(this)"></textarea>
+
+            <div class="voice-wave" id="voice-wave">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+
+          <button type="button" class="mic-btn" id="mic-btn" onclick="toggleSpeech()" title="Speak">
+            <svg id="mic-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" y1="19" x2="12" y2="23" />
+              <line x1="8" y1="23" x2="16" y2="23" />
+            </svg>
+          </button>
+
+          <button type="submit" id="send-btn">
+            <span id="btn-text">Send</span>
+            <div class="dots" id="dots">
+              <span></span><span></span><span></span>
+            </div>
+          </button>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Favorites Panel -->
+  <div class="fav-panel" id="fav-panel">
+    <div class="fav-panel-title">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <path
+          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+      </svg>
+      Favorites
+    </div>
+    <hr class="sidebar-divider" />
+    <div class="fav-list">
+      {% set has_pinned = [] %}
+      {% for id, chat in history.items() %}
+      {% if chat.get('pinned') %}
+      {% set _ = has_pinned.append(1) %}
+      <a href="/chat/{{ id }}" class="fav-item" onclick="toggleFavPanel()">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="flex-shrink:0">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+        {{ chat.title }}
+      </a>
+      {% endif %}
+      {% endfor %}
+      {% if not has_pinned %}
+      <div class="fav-empty">No favorites added yet.</div>
       {% endif %}
     </div>
   </div>
 
-  <div class="main">
-    <div class="messages">
-      {% for msg in messages %}
-        <div class="msg-row {{ 'user' if msg.role == 'user' else 'gemini' }}">
-          <div class="msg-label">{{ 'You' if msg.role == 'user' else 'Gemini' }}</div>
-          <div class="bubble">{{ msg.text | safe }}</div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="input-bar">
-      <form method="POST" action="/chat/ui" onsubmit="showLoading()">
-        <input type="hidden" name="chat_id" value="{{ chat_id or '' }}"/>
-        <input type="text" name="message" placeholder="Enter here" required autofocus/>
-        <button type="submit" id="send-btn">
-          <span id="btn-text">Send</span>
-          <div class="dots" id="dots">
-            <span></span><span></span><span></span>
-          </div>
-        </button>
-      </form>
-    </div>
-  </div>
-
- <script>
-  const el = id => document.getElementById(id);
-
-  function showLoading() {
-    document.getElementById('btn-text').style.display = 'none';
-    document.getElementById('dots').style.display = 'flex';
-    document.getElementById('send-btn').disabled = true;
-  }
-
-  function toggleMenu(id, e) {
-    e.stopPropagation();
-    document.querySelectorAll('.dropdown').forEach(d => d.id !== 'menu-'+id && d.classList.remove('open'));
-    el('menu-'+id).classList.toggle('open');
-  }
-
-  function openRename(id, title) {
-    el('menu-'+id).classList.remove('open');
-    el('normal-'+id).style.display = 'none';
-    el('rename-'+id).classList.add('open');
-    el('rename-input-'+id).value = title;
-    el('rename-input-'+id).focus();
-  }
-
-  function closeRename(id) {
-    el('normal-'+id).style.display = 'flex';
-    el('rename-'+id).classList.remove('open');
-  }
-
-  document.addEventListener('click', () =>
-    document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'))
-  );
+  <!-- History data for search -->
+  <script id="history-data" type="application/json">
+  {{ history | tojson }}
 </script>
 
+  <script>
+    const isShared = {{ history.get(chat_id, {}).get('shared', false) | tojson }};
+    const currentChatId = "{{ chat_id }}";
+  </script>
+
+  <script src="/static/js/main.js"></script>
+
 </body>
+
 </html>

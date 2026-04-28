@@ -1,133 +1,4 @@
 {
-  "b2bd8200": {
-    "title": "fastapi overview",
-    "messages": [
-      {
-        "role": "user",
-        "text": "what is fastapi"
-      },
-      {
-        "role": "ai",
-        "text": "**FastAPI** is a modern, high-performance web framework for building APIs with Python 3.8+ based on standard Python type hints.\n\nKey features include:\n\n*   **Speed:** It is one of the fastest Python frameworks available, on par with NodeJS and Go, thanks to Starlette and Pydantic.\n*   **Automatic Documentation:** It automatically generates interactive API documentation (using Swagger UI and ReDoc) based on your code.\n*   **Type Safety:** By using Python type hints, it provides excellent editor support, autocompletion, and automatic data validation.\n*   **Asynchronous Support:** It is built from the ground up to support `async` and `await` natively.\n*   **Ease of Use:** It is designed to be intuitive and easy to learn, requiring minimal boilerplate code."
-      },
-      {
-        "role": "user",
-        "text": "and api"
-      },
-      {
-        "role": "ai",
-        "text": "An **API** (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other.\n\nThink of it as a **messenger** that takes a request from you, tells a system what you want to do, and then returns the response back to you.\n\n**Key points:**\n*   **Abstraction:** You don\u2019t need to know how the other system works internally; you only need to know how to \"ask\" for data or services.\n*   **Examples:**\n    *   **Weather apps:** Your phone's weather app gets data from a central weather service via an API.\n    *   **Payments:** When you pay with PayPal on a website, the site uses an API to talk to PayPal's servers to verify the transaction.\n    *   **Logins:** Using \"Sign in with Google\" on a third-party app uses an API to verify your identity.\n\n**Common types:**\n*   **REST:** The most common standard, which uses standard HTTP methods (GET, POST, PUT, DELETE).\n*   **GraphQL:** A flexible query language that allows you to request exactly the data you need.\n*   **SOAP:** A more rigid, security-focused protocol often used in enterprise or banking systems.\n\nDo you have a specific question about how to use an API or how they work?"
-      },
-      {
-        "role": "user",
-        "text": "and api"
-      },
-      {
-        "role": "ai",
-        "text": "An **API** (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other.\n\nIt acts as an intermediary, enabling one program to request information or functionality from another without needing to know how the other system is built internally.\n\n**Common examples include:**\n*   **Weather apps:** Fetching live data from a weather service provider.\n*   **Login with Google/Facebook:** Allowing a website to verify your identity using your existing social media account.\n*   **Payment gateways:** Processing credit card transactions on an e-commerce site via services like Stripe or PayPal.\n\nIn short, if software \"A\" wants to use a feature from software \"B,\" it sends a request through an API."
-      },
-      {
-        "role": "user",
-        "text": "and api"
-      },
-      {
-        "role": "ai",
-        "text": "An **API** (Application Programming Interface) is a set of rules and protocols that allows different software applications to communicate with each other.\n\nThink of it as a **messenger** that takes a request from you, tells a system what you want to do, and brings the response back to you.\n\n**Key concepts:**\n*   **Request/Response:** You send a request to a server, and the API brings back the data you asked for.\n*   **Abstraction:** You don't need to know how the system works internally; you only need to know how to \"talk\" to the API.\n*   **Common Use Case:** When you check the weather on your phone, your app uses an API to \"ask\" a weather service for the current temperature and displays the result to you.\n\nDo you have a specific type of API or use case you are interested in?"
-      },
-      {
-        "role": "user",
-        "text": "hey"
-      },
-      {
-        "role": "ai",
-        "text": "Hello! How can I help you today?"
-      }
-    ]
-  },
-  "fd6b6bde": {
-    "title": "what is SSL",
-    "messages": [
-      {
-        "role": "user",
-        "text": "what is SSL"
-      },
-      {
-        "role": "ai",
-        "text": "**SSL** (Secure Sockets Layer) is a standard security technology used to establish an encrypted link between a web server and a browser. \n\nIts primary purpose is to ensure that all data passed between the web server and the browser remains private and integral. Today, it has been largely superseded by its successor, **TLS** (Transport Layer Security), though the term \"SSL\" is still commonly used to refer to this technology. \n\nWhen a website uses SSL/TLS, it is indicated by \"HTTPS\" in the URL and a padlock icon in the browser's address bar."
-      },
-      {
-        "role": "user",
-        "text": "use of that"
-      },
-      {
-        "role": "ai",
-        "text": "\"That\" is a versatile word used primarily as a pronoun, conjunction, or determiner. Here are its main uses:\n\n**1. As a Demonstrative Pronoun or Determiner**\nUsed to identify a specific person, object, or idea that is further away in space or time.\n*   **Pronoun:** \"What is **that**?\"\n*   **Determiner:** \"**That** car belongs to me.\"\n\n**2. As a Relative Pronoun**\nUsed to introduce a clause that provides more information about a noun (often used instead of \"who\" or \"which\").\n*   \"The book **that** I read was excellent.\"\n\n**3. As a Conjunction**\nUsed to introduce a subordinate clause, often reporting speech or thoughts.\n*   \"He said **that** he would be late.\"\n\n**4. As an Adverb**\nUsed to indicate the extent or degree of something (informal).\n*   \"It wasn't **that** cold outside.\"\n\n**Key Distinction:**\n*   Use **\"that\"** for restrictive clauses (essential information). \n    *   *Example:* \"The cake **that** has strawberries is mine.\" (Specifies which cake).\n*   Use **\"which\"** for non-restrictive clauses (extra information).\n    *   *Example:* \"The cake, **which** has strawberries, is delicious.\" (Adds information about the cake)."
-      },
-      {
-        "role": "user",
-        "text": "example"
-      },
-      {
-        "role": "ai",
-        "text": "This is an example. How can I help you today?"
-      }
-    ]
-  },
-  "69688e55": {
-    "title": "ip address class",
-    "messages": [
-      {
-        "role": "user",
-        "text": "ip address class"
-      },
-      {
-        "role": "ai",
-        "text": "IP addresses are categorized into five classes based on the first octet of the address (in IPv4):\n\n*   **Class A:** Range 1\u2013126. Used for very large networks (many hosts, few networks).\n*   **Class B:** Range 128\u2013191. Used for medium-to-large networks.\n*   **Class C:** Range 192\u2013223. Used for small local area networks (many networks, few hosts).\n*   **Class D:** Range 224\u2013239. Reserved for **multicasting**.\n*   **Class E:** Range 240\u2013255. Reserved for **experimental/research** purposes.\n\n*Note: The number 127 is reserved for loopback testing.*"
-      }
-    ]
-  },
-  "59c67f72": {
-    "title": "hello",
-    "messages": [
-      {
-        "role": "user",
-        "text": "hello"
-      },
-      {
-        "role": "ai",
-        "text": "Hello! How can I help you today?"
-      },
-      {
-        "role": "user",
-        "text": "in whuch areas you cn help me?"
-      },
-      {
-        "role": "ai",
-        "text": "I can assist you with a wide range of tasks, including:\n\n*   **Writing and Editing:** Drafting emails, essays, reports, creative stories, or proofreading your existing work.\n*   **Learning and Education:** Explaining complex concepts, summarizing articles, or helping you study new subjects.\n*   **Programming and Tech:** Writing, debugging, and explaining code in various languages, as well as troubleshooting technical issues.\n*   **Data and Analysis:** Organizing information, brainstorming ideas, or helping with logical problem-solving.\n*   **Language:** Translating text or helping you practice a new language.\n*   **General Productivity:** Planning schedules, drafting lists, creating templates, or providing recommendations.\n\nIs there something specific you would like help with right now?"
-      },
-      {
-        "role": "user",
-        "text": "in whuch areas you cn help me?"
-      },
-      {
-        "role": "ai",
-        "text": "I can assist you with a wide range of tasks, including:\n\n*   **Writing and Editing:** Drafting emails, essays, reports, creative stories, or proofreading your existing text.\n*   **Information and Learning:** Explaining complex topics, summarizing articles, and answering general knowledge questions.\n*   **Programming and Tech:** Writing code, debugging, explaining technical concepts, and troubleshooting software issues.\n*   **Organization and Planning:** Creating schedules, brainstorming ideas, planning travel itineraries, or drafting to-do lists.\n*   **Data Analysis:** Summarizing data, performing basic calculations, and helping with formatting or structuring information.\n*   **Language:** Translating text between languages or helping you practice a new language.\n\nIs there something specific you would like help with today?"
-      }
-    ]
-  },
-  "66f124db": {
-    "title": "network types",
-    "messages": [
-      {
-        "role": "user",
-        "text": "network types"
-      },
-      {
-        "role": "ai",
-        "text": "Error: name 'markdown' is not defined"
-      }
-    ]
-  },
   "3b271f7f": {
     "title": "network types",
     "messages": [
@@ -138,54 +9,297 @@
       {
         "role": "ai",
         "text": "<p>Network types are generally categorized by their geographical scale:</p>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> Connects devices within an individual's immediate workspace (e.g., Bluetooth pairing a phone to headphones).</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area like a home, office, or building (e.g., Wi-Fi in a house).</li>\n<li><strong>WLAN (Wireless Local Area Network):</strong> A LAN that uses wireless technology instead of cables.</li>\n<li><strong>CAN (Campus Area Network):</strong> Connects multiple LANs within a specific geographical area, such as a university campus or corporate headquarters.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger area, such as a city or a large campus, often connecting multiple LANs.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a large physical distance, such as a country, continent, or the entire globe (e.g., the Internet).</li>\n<li><strong>VPN (Virtual Private Network):</strong> A secure, encrypted tunnel created over a public network (like the Internet) to allow users to send and receive data as if they were directly connected to a private network.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is main concepts of ntworking",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      },
+      {
+        "role": "user",
+        "text": "what is main concepts of ntworking",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Networking is the practice of connecting computing devices to exchange data and share resources. The following are the core concepts that form the foundation of modern computer networks:</p>\n<h3>Core Networking Concepts</h3>\n<ul>\n<li><strong>Network Topology:</strong> The physical or logical layout of a network. This defines how devices (nodes) are connected, such as Star, Bus, Mesh, or Ring topologies.</li>\n<li><strong>Protocols:</strong> Standardized sets of rules that allow devices to communicate. The <strong>TCP/IP</strong> suite is the most common, governing how data is packetized, addressed, and transmitted.</li>\n<li><strong>IP Addressing:</strong> Every device on a network requires a unique identifier. <strong>IPv4</strong> (e.g., 192.168.1.1) and <strong>IPv6</strong> (using hexadecimal notation) are the standards for addressing.</li>\n<li><strong>The OSI Model:</strong> A conceptual framework that standardizes communication functions into seven distinct layers, ranging from physical cabling (Layer 1) to user applications (Layer 7).</li>\n<li><strong>Switching and Routing:</strong> <strong>Switches</strong> connect devices within a single network (using MAC addresses), while <strong>Routers</strong> direct traffic between different networks (using IP addresses).</li>\n</ul>\n<h3>Example: IP Addressing (IPv4)</h3>\n<p>In IPv4, an address is a 32-bit number represented as four decimal octets.</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Python snippet to demonstrate checking an IP format\nimport ipaddress\n\nip = &quot;192.168.1.1&quot;\n\ntry:\n    # Verify if the string is a valid IPv4 address\n    addr = ipaddress.ip_address(ip)\n    print(f&quot;{ip} is a valid IP address.&quot;)\nexcept ValueError:\n    print(f&quot;{ip} is not a valid IP address.&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Overlooking Subnetting:</strong> Failing to segment networks can lead to excessive broadcast traffic and security vulnerabilities.</li>\n<li><strong>Incorrect Gateway Configuration:</strong> If a device has the wrong default gateway address, it will be unable to communicate with devices outside its local network.</li>\n<li><strong>Ignoring DNS:</strong> Assuming network connectivity issues are always physical when the problem is often a failure to resolve domain names to IP addresses.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "expline this pdf",
+        "pdf": "Presentation 12 (1).pdf"
+      },
+      {
+        "role": "ai",
+        "text": "<p>This document outlines a university project focused on cybersecurity, specifically demonstrating how <strong>Dictionary</strong> and <strong>Hybrid attacks</strong> can be used to compromise login services in a controlled environment.</p>\n<h3>Project Overview</h3>\n<ul>\n<li><strong>Topic:</strong> Dictionary and Hybrid attacks on VMware login services.</li>\n<li><strong>Goal:</strong> To analyze the speed, success, and impact of automated password-guessing attacks.</li>\n<li><strong>Environment:</strong> A lab setup using <strong>Kali Linux</strong> (the attacking machine) and <strong>Red Hat Linux</strong> (the target).</li>\n<li><strong>Tooling:</strong> A Python Flask web interface is used to control the attacks, monitor logs, and generate reports.</li>\n</ul>\n<h3>Key Attack Techniques</h3>\n<p>The project focuses on two specific methods of unauthorized access:</p>\n<ol>\n<li>\n<p><strong>Dictionary Attack:</strong> </p>\n<ul>\n<li><strong>Mechanism:</strong> Uses a pre-compiled list of common passwords (like <code>rockyou.txt</code>) to test combinations systematically.</li>\n<li><strong>Tool:</strong> The project utilizes <strong>Hydra</strong> to automate the process against services like SSH and FTP.</li>\n<li><strong>Example Command:</strong> <br />\n<code>bash\n    # This command runs Hydra against an SSH service\n    # -l: Specifies the username\n    # -P: Specifies the wordlist file path\n    # -V: Verbose mode to show output\n    # -f: Stop after the first success\n    # -t 4: Run 4 tasks in parallel\n    hydra -l testuser -P wordlists/custom.txt ssh://192.168.126.140 -V -f -t 4</code></li>\n</ul>\n</li>\n<li>\n<p><strong>Hybrid Attack:</strong></p>\n<ul>\n<li><strong>Mechanism:</strong> An evolution of the dictionary attack. Instead of using only words from a list, it programmatically alters the words (e.g., adding numbers or symbols) to guess passwords that might be slight variations of common words.</li>\n</ul>\n</li>\n</ol>\n<h3>Project Significance</h3>\n<p>The project highlights why security measures like strong password policies and multi-factor authentication are critical. By exploiting common human behaviors\u2014such as using predictable passwords\u2014these attacks demonstrate how easily services like SSH or FTP can be breached if they are not adequately protected.</p>\n<hr />\n<p><em>Note: The provided PDF content appears to cut off during the definition of the Hybrid Attack. If you have the remainder of the document or specific questions about the technical implementation, feel free to share.</em></p>"
       }
-    ]
+    ],
+    "pinned": true,
+    "topic": ""
   },
-  "d832faa0": {
-    "title": "self",
+  "5716dc3d": {
+    "title": "how to create tic tac toe usin",
     "messages": [
       {
         "role": "user",
-        "text": "who are you"
+        "text": "how to create tic tac toe using javascript"
       },
       {
         "role": "ai",
-        "text": "<p>I am an AI assistant designed to provide clear and concise information.</p>"
-      },
-      {
-        "role": "user",
-        "text": "list of ai models"
-      },
-      {
-        "role": "ai",
-        "text": "<p>AI models are generally categorized by their primary function. Here is a list of prominent models by category:</p>\n<h3>1. Large Language Models (LLMs)</h3>\n<ul>\n<li><strong>GPT-4o / GPT-4 (OpenAI):</strong> Powering ChatGPT; known for versatility and reasoning.</li>\n<li><strong>Claude 3.5 Sonnet / Claude 3 Opus (Anthropic):</strong> Known for natural tone and strong coding/reasoning.</li>\n<li><strong>Gemini 1.5 Pro (Google):</strong> Integrated into the Google ecosystem with a massive \"context window.\"</li>\n<li><strong>Llama 3.1 (Meta):</strong> The leading open-weights model series.</li>\n<li><strong>Mistral / Mixtral (Mistral AI):</strong> Highly efficient open-weights models.</li>\n</ul>\n<h3>2. Image Generation Models</h3>\n<ul>\n<li><strong>DALL-E 3 (OpenAI):</strong> Excellent at following complex prompts.</li>\n<li><strong>Midjourney:</strong> Known for artistic quality and high aesthetic appeal.</li>\n<li><strong>Stable Diffusion (Stability AI):</strong> Highly customizable and open-source.</li>\n<li><strong>Flux.1 (Black Forest Labs):</strong> State-of-the-art open-weights image generation.</li>\n</ul>\n<h3>3. Coding-Specific Models</h3>\n<ul>\n<li><strong>GitHub Copilot (powered by OpenAI models):</strong> Integrated directly into IDEs.</li>\n<li><strong>Claude 3.5 Sonnet:</strong> Currently considered a top-tier model for complex programming tasks.</li>\n<li><strong>DeepSeek Coder:</strong> High-performance model specializing in code generation.</li>\n</ul>\n<h3>4. Audio &amp; Speech Models</h3>\n<ul>\n<li><strong>Whisper (OpenAI):</strong> The industry standard for speech-to-text transcription.</li>\n<li><strong>ElevenLabs:</strong> Leader in AI voice synthesis and text-to-speech.</li>\n<li><strong>Suno / Udio:</strong> Models specialized in generating high-fidelity AI music.</li>\n</ul>\n<h3>5. Video Generation Models</h3>\n<ul>\n<li><strong>Sora (OpenAI):</strong> High-fidelity video generation (currently limited access).</li>\n<li><strong>Runway Gen-3 Alpha:</strong> Professional-grade video generation tools.</li>\n<li><strong>Kling AI:</strong> High-quality video generation with realistic motion.</li>\n<li><strong>Luma Dream Machine:</strong> Popular tool for generating cinematic video clips.</li>\n</ul>\n<hr />\n<p><strong>Note:</strong> The AI landscape evolves rapidly. \"Open-weights\" models (like Llama) allow developers to run them locally, while \"closed\" models (like GPT-4) are accessed via APIs or web interfaces.</p>"
+        "text": "<p>To create a Tic-Tac-Toe game, you need three components: <strong>HTML</strong> for the structure, <strong>CSS</strong> for the layout, and <strong>JavaScript</strong> for the logic.</p>\n<h3>1. HTML Structure</h3>\n<p>Create a container for the 3x3 grid using buttons.</p>\n<pre class=\"codehilite\"><code class=\"language-html\">&lt;div id=&quot;board&quot; class=&quot;board&quot;&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;0&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;1&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;2&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;3&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;4&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;5&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;6&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;7&quot;&gt;&lt;/button&gt;\n  &lt;button class=&quot;cell&quot; data-index=&quot;8&quot;&gt;&lt;/button&gt;\n&lt;/div&gt;\n</code></pre>\n\n<h3>2. CSS Styling</h3>\n<p>Use <strong>CSS Grid</strong> to create the 3x3 layout.</p>\n<pre class=\"codehilite\"><code class=\"language-css\">.board {\n  display: grid;\n  grid-template-columns: repeat(3, 100px);\n  gap: 5px;\n}\n\n.cell {\n  width: 100px;\n  height: 100px;\n  font-size: 2rem;\n}\n</code></pre>\n\n<h3>3. JavaScript Logic</h3>\n<p>The JavaScript handles turn switching, win detection, and input tracking.</p>\n<pre class=\"codehilite\"><code class=\"language-javascript\">const cells = document.querySelectorAll('.cell');\nlet currentPlayer = 'X';\nlet gameState = [&quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;, &quot;&quot;];\n\nconst winningConditions = [\n  [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows\n  [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns\n  [0, 4, 8], [2, 4, 6]             // Diagonals\n];\n\ncells.forEach(cell =&gt; cell.addEventListener('click', handleCellClick));\n\nfunction handleCellClick(e) {\n  const index = e.target.getAttribute('data-index');\n\n  if (gameState[index] !== &quot;&quot; || checkWinner()) return;\n\n  gameState[index] = currentPlayer;\n  e.target.innerText = currentPlayer;\n\n  if (checkWinner()) {\n    alert(`${currentPlayer} wins!`);\n  } else {\n    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';\n  }\n}\n\nfunction checkWinner() {\n  return winningConditions.some(condition =&gt; {\n    return condition.every(index =&gt; gameState[index] === currentPlayer);\n  });\n}\n</code></pre>\n\n<h3>Key Logic Steps</h3>\n<ol>\n<li><strong>State Tracking</strong>: Use an array (<code>gameState</code>) to keep track of X and O positions.</li>\n<li><strong>Event Handling</strong>: Listen for clicks on grid cells and update the UI and state.</li>\n<li><strong>Win Validation</strong>: After every move, iterate through the <code>winningConditions</code> array to check if the current player has three symbols in a row.</li>\n<li><strong>Turn Switching</strong>: Toggle the <code>currentPlayer</code> variable between 'X' and 'O' after each valid move.</li>\n</ol>"
       }
-    ]
+    ],
+    "pinned": false,
+    "shared": false
   },
-  "ef884826": {
-    "title": "network types",
+  "a58abbdd": {
+    "title": "Advantages of  iPhone",
     "messages": [
       {
         "role": "user",
-        "text": "network types"
+        "text": "what is the best quality of iphone than other phones"
       },
       {
         "role": "ai",
-        "text": "<p>Computer networks are typically categorized by their geographical scale:</p>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> Connects devices within an individual\u2019s workspace (e.g., Bluetooth pairing a phone to headphones).</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area like a home, office, or building (e.g., Wi-Fi in a house).</li>\n<li><strong>WLAN (Wireless Local Area Network):</strong> A LAN that uses wireless technology instead of cables.</li>\n<li><strong>CAN (Campus Area Network):</strong> Interconnects multiple LANs within a specific geographical area, such as a university or corporate campus.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger area, such as an entire city or a large campus.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a large physical distance, such as a country or continent (e.g., the Internet is the largest WAN).</li>\n<li><strong>SAN (Storage Area Network):</strong> A specialized, high-speed network that provides block-level network access to storage.</li>\n<li><strong>VPN (Virtual Private Network):</strong> A secure, encrypted tunnel created over a public network (like the Internet) to connect users to a private network.</li>\n</ul>"
+        "text": "<p>iPhones are often distinguished from other smartphones by their integration and performance. Here are the primary factors that set them apart:</p>\n<ul>\n<li><strong>Ecosystem Integration:</strong> Apple devices (iPhone, Mac, iPad, Apple Watch) work together seamlessly via features like AirDrop, Handoff, and iCloud synchronization.</li>\n<li><strong>iOS Optimization:</strong> Because Apple develops both the hardware and the software, the operating system is highly optimized, leading to smooth performance and longevity.</li>\n<li><strong>Long-term Software Support:</strong> Apple consistently provides major iOS updates for older devices for 5\u20137 years, ensuring current security and features.</li>\n<li><strong>Privacy and Security:</strong> Apple implements strict privacy controls, such as App Tracking Transparency, and offers a highly secure App Store ecosystem.</li>\n<li><strong>Hardware Resale Value:</strong> iPhones generally retain their monetary value significantly better than Android devices over time.</li>\n</ul>\n<h3>Comparison: iPhone vs. Android</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">iPhone (iOS)</th>\n<th style=\"text-align: left;\">Android</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>System Control</strong></td>\n<td style=\"text-align: left;\">Closed (Strict)</td>\n<td style=\"text-align: left;\">Open (Flexible)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Software Updates</strong></td>\n<td style=\"text-align: left;\">Uniform and long-term</td>\n<td style=\"text-align: left;\">Fragmented by manufacturer</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>App Ecosystem</strong></td>\n<td style=\"text-align: left;\">Apple App Store (Curated)</td>\n<td style=\"text-align: left;\">Google Play/Sideloading (Varied)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Hardware Variety</strong></td>\n<td style=\"text-align: left;\">Limited (Specific models)</td>\n<td style=\"text-align: left;\">Extensive (Wide range of prices)</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose an <strong>iPhone</strong> if you value a seamless user experience, long-term software support, and integration within the Apple ecosystem. <br />\n*   Choose an <strong>Android</strong> if you prefer hardware variety, deep customization options, and the flexibility to install software from outside the official store.</p>"
       }
-    ]
+    ],
+    "pinned": false,
+    "shared": true,
+    "share_id": "6a3941a287"
   },
-  "d6f70837": {
-    "title": "what is network",
+  "1b863b31": {
+    "title": "Top Travel Destinations in India",
     "messages": [
       {
         "role": "user",
-        "text": "what is network"
+        "text": "whitch is the best place in india to travel"
       },
       {
         "role": "ai",
-        "text": "<p>A network is a collection of two or more computers or devices connected together to share resources, exchange files, or allow electronic communications. These devices are linked using physical cables (like Ethernet) or wireless technologies (like Wi-Fi) to transmit data.</p>"
+        "text": "<p>Choosing the \"best\" place to travel in India depends on your personal interests, as the country offers diverse landscapes and cultural experiences. Here are three top-rated destinations:</p>\n<ul>\n<li><strong>Rajasthan (Jaipur, Udaipur, Jodhpur):</strong> Ideal for those interested in royal history, grand palaces, vibrant markets, and desert architecture.</li>\n<li><strong>Kerala:</strong> Known as \"God's Own Country,\" it is perfect for nature lovers, offering tranquil backwaters, tea plantations, and Ayurvedic wellness retreats.</li>\n<li><strong>Ladakh:</strong> Best for adventure seekers and mountain enthusiasts, featuring high-altitude landscapes, Buddhist monasteries, and trekking opportunities.</li>\n</ul>\n<h3>Comparison of Popular Regions</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Rajasthan</th>\n<th style=\"text-align: left;\">Kerala</th>\n<th style=\"text-align: left;\">Ladakh</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Attraction</strong></td>\n<td style=\"text-align: left;\">Palaces &amp; Forts</td>\n<td style=\"text-align: left;\">Backwaters &amp; Nature</td>\n<td style=\"text-align: left;\">Mountains &amp; Adventure</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best Time to Visit</strong></td>\n<td style=\"text-align: left;\">Oct to March</td>\n<td style=\"text-align: left;\">Sept to March</td>\n<td style=\"text-align: left;\">June to Sept</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Typical Climate</strong></td>\n<td style=\"text-align: left;\">Hot &amp; Dry</td>\n<td style=\"text-align: left;\">Tropical &amp; Humid</td>\n<td style=\"text-align: left;\">Cold &amp; High Altitude</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Key Activity</strong></td>\n<td style=\"text-align: left;\">Heritage Tours</td>\n<td style=\"text-align: left;\">Houseboat Cruises</td>\n<td style=\"text-align: left;\">Trekking &amp; Biking</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose <strong>Rajasthan</strong> if you want to experience India\u2019s rich cultural and architectural history.<br />\n*   Choose <strong>Kerala</strong> if you prefer a relaxing environment surrounded by lush greenery and water bodies.<br />\n*   Choose <strong>Ladakh</strong> if you are looking for an adventurous escape into the high Himalayas.</p>"
+      }
+    ],
+    "pinned": true
+  },
+  "4055c587": {
+    "title": "Underrated Mystery Novels With Compellin",
+    "messages": [
+      {
+        "role": "user",
+        "text": "best book to read like interesting, mystry, and cool but underrated but good witch has great storyline so give me the list of book title with little description overview of related that book"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Here are four underrated mystery novels that feature compelling, unique storylines:</p>\n<h3>1. The 7 \u00bd Deaths of Evelyn Hardcastle by Stuart Turton</h3>\n<p>This is a high-concept mystery set in a decaying mansion. The protagonist must relive the same day in the bodies of different hosts to solve a murder. It combines elements of a classic \"whodunnit\" with a mind-bending time-loop premise.</p>\n<h3>2. The Devotion of Suspect X by Keigo Higashino</h3>\n<p>A brilliant mathematics teacher helps his neighbor cover up a crime. It is not a traditional mystery because you know \"who\" did it early on; the intrigue lies in the battle of wits between the culprit and a genius physicist trying to uncover the truth.</p>\n<h3>3. Night Film by Marisha Pessl</h3>\n<p>A disgraced investigative journalist becomes obsessed with the death of a horror director\u2019s daughter. The book is immersive, featuring \"found media\" like fake news clippings and websites integrated into the narrative to build a haunting atmosphere.</p>\n<h3>4. The Last House on Needless Street by Catriona Ward</h3>\n<p>A psychological thriller involving a boarded-up house, a missing girl, and a man who may not be who he seems. It is deeply atmospheric and relies on unreliable narration to keep the reader guessing about the nature of reality within the story.</p>\n<hr />\n<h3>Comparison Table</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">The 7 \u00bd Deaths</th>\n<th style=\"text-align: left;\">The Devotion of Suspect X</th>\n<th style=\"text-align: left;\">Night Film</th>\n<th style=\"text-align: left;\">The Last House</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Genre</strong></td>\n<td style=\"text-align: left;\">Sci-Fi Mystery</td>\n<td style=\"text-align: left;\">Logical Thriller</td>\n<td style=\"text-align: left;\">Dark Noir</td>\n<td style=\"text-align: left;\">Psychological Horror</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Pacing</strong></td>\n<td style=\"text-align: left;\">Fast/Complex</td>\n<td style=\"text-align: left;\">Methodical</td>\n<td style=\"text-align: left;\">Immersive</td>\n<td style=\"text-align: left;\">Slow-burn</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Theme</strong></td>\n<td style=\"text-align: left;\">Time Loops</td>\n<td style=\"text-align: left;\">Sacrifice</td>\n<td style=\"text-align: left;\">Obsession</td>\n<td style=\"text-align: left;\">Trauma</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Complexity</strong></td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Medium</td>\n<td style=\"text-align: left;\">Medium</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   Choose <strong>The 7 \u00bd Deaths of Evelyn Hardcastle</strong> if you want a complex puzzle that challenges your brain.<br />\n*   Choose <strong>The Devotion of Suspect X</strong> if you prefer sharp, logical reasoning over atmosphere.<br />\n*   Choose <strong>Night Film</strong> if you want a dark, investigative journey.<br />\n*   Choose <strong>The Last House on Needless Street</strong> if you enjoy unsettling, character-driven mysteries.</p>"
+      }
+    ],
+    "pinned": false,
+    "shared": false
+  },
+  "a00321b7": {
+    "title": "Best Food Options and Dining Experiences",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is best food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a world-class culinary scene ranging from budget-friendly street food to Michelin-starred dining. The \"best\" option depends on your preference, but here are the most iconic categories:</p>\n<h3>Top Food Categories in Tokyo</h3>\n<ul>\n<li><strong>Sushi:</strong> Tokyo is world-renowned for its fresh seafood. You can find options ranging from <strong>kaiten-zushi</strong> (conveyor belt sushi) in areas like Shibuya, to high-end <strong>omakase</strong> (chef's choice) experiences in Ginza.</li>\n<li><strong>Ramen:</strong> Every neighborhood has unique regional styles. Popular types include <strong>Tonkotsu</strong> (pork bone broth), <strong>Shoyu</strong> (soy sauce base), and <strong>Tsukemen</strong> (dipping noodles).</li>\n<li><strong>Izakaya Cuisine:</strong> These Japanese pubs serve small, shareable plates such as <strong>yakitori</strong> (grilled chicken skewers), sashimi, and fried snacks. They are excellent for experiencing local social culture.</li>\n<li><strong>Tempura:</strong> Lightly battered and deep-fried seafood and vegetables. You can find specialty shops that fry ingredients to order, ensuring a crisp, non-greasy texture.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Ramen</th>\n<th style=\"text-align: left;\">Sushi</th>\n<th style=\"text-align: left;\">Izakaya</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Price Range</strong></td>\n<td style=\"text-align: left;\">Low ($7\u2013$15)</td>\n<td style=\"text-align: left;\">Medium to High ($20\u2013$200+)</td>\n<td style=\"text-align: left;\">Medium ($25\u2013$60)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Atmosphere</strong></td>\n<td style=\"text-align: left;\">Quick, casual, counter-seating</td>\n<td style=\"text-align: left;\">Refined, quiet, or traditional</td>\n<td style=\"text-align: left;\">Lively, social, noisy</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Service Speed</strong></td>\n<td style=\"text-align: left;\">Very fast</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Slow/Casual</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Best For</strong></td>\n<td style=\"text-align: left;\">Solo diners, lunch</td>\n<td style=\"text-align: left;\">Special occasions, quality</td>\n<td style=\"text-align: left;\">Groups, nightlife</td>\n</tr>\n</tbody>\n</table>\n<h3>Recommendation</h3>\n<ul>\n<li><strong>For the quintessential Tokyo experience:</strong> If you only have one meal, go for <strong>high-end sushi</strong>. It showcases the quality of Japanese ingredients better than any other dish.</li>\n<li><strong>For budget travelers:</strong> <strong>Ramen</strong> is the most reliable, delicious, and affordable option, with countless specialized shops available in almost every train station.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is best vegitarian food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo has a diverse vegetarian scene, ranging from traditional Buddhist cuisine to modern international fare. Here are the top categories of vegetarian-friendly food options in the city:</p>\n<h3>Popular Vegetarian Options</h3>\n<ul>\n<li><strong>Shojin Ryori (Buddhist Temple Cuisine):</strong> A traditional, vegan style of cooking based on seasonal vegetables, tofu, and mountain plants. It is highly refined and often served in serene temple settings.</li>\n<li><strong>Vegetarian Ramen:</strong> Many shops now offer ramen made with vegetable-based broths (using kombu, mushrooms, or soy milk) instead of traditional pork or fish stock.</li>\n<li><strong>Izakaya Veggie Dishes:</strong> Many Japanese pubs offer <em>edamame</em>, <em>agedashi tofu</em> (deep-fried tofu in broth), <em>nasu dengaku</em> (miso-glazed eggplant), and various <em>oshinko</em> (pickled vegetables).</li>\n<li><strong>Macrobiotic/Organic Cafes:</strong> These establishments specialize in balanced, plant-based meals that emphasize brown rice, legumes, and locally sourced seasonal produce.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Shojin Ryori</th>\n<th style=\"text-align: left;\">Ramen (Veggie)</th>\n<th style=\"text-align: left;\">Izakaya/Pub Food</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Experience</strong></td>\n<td style=\"text-align: left;\">Formal/Quiet</td>\n<td style=\"text-align: left;\">Casual/Fast</td>\n<td style=\"text-align: left;\">Lively/Social</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Flavor Profile</strong></td>\n<td style=\"text-align: left;\">Subtle/Natural</td>\n<td style=\"text-align: left;\">Rich/Savory</td>\n<td style=\"text-align: left;\">Salty/Umami</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Cost</strong></td>\n<td style=\"text-align: left;\">High ($$$)</td>\n<td style=\"text-align: left;\">Low ($)</td>\n<td style=\"text-align: left;\">Medium ($$)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Availability</strong></td>\n<td style=\"text-align: left;\">Lower (Specialty)</td>\n<td style=\"text-align: left;\">Medium</td>\n<td style=\"text-align: left;\">High</td>\n</tr>\n</tbody>\n</table>\n<h3>Which is better?</h3>\n<ul>\n<li>Choose <strong>Shojin Ryori</strong> if you want an authentic cultural experience and a formal, multi-course meal.</li>\n<li>Choose <strong>Vegetarian Ramen</strong> if you want a quick, filling, and satisfying comfort meal.</li>\n<li>Choose <strong>Izakaya</strong> if you are dining with a group and want to sample a variety of small, shareable vegetable-based dishes.</li>\n</ul>\n<p><strong>Tip:</strong> Download the <strong>HappyCow</strong> app, which is the most reliable resource for finding vegetarian and vegan restaurants throughout Tokyo. Always check if a broth contains <em>dashi</em> (fish stock), as it is a common hidden ingredient in many Japanese dishes.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is best vegitarian food option available in tokyo"
+      },
+      {
+        "role": "ai",
+        "text": "<p>Tokyo offers a wide variety of vegetarian and vegan options. Because traditional Japanese cuisine often uses dashi (fish stock), it is important to confirm ingredients when dining out.</p>\n<h3>Top Vegetarian-Friendly Food Options</h3>\n<ul>\n<li><strong>Shojin Ryori (Buddhist Temple Cuisine):</strong> The gold standard for vegetarian dining in Japan. It is entirely plant-based, seasonal, and served in traditional settings.</li>\n<li><strong>Vegetable-Focused Ramen:</strong> Many modern ramen shops now offer <strong>vegan broth</strong> options made from soy milk, miso, or mushroom bases instead of pork or fish.</li>\n<li><strong>Curry Rice:</strong> Japanese-style curry is widely available. Look for \"Vegetable Curry,\" but verify that the roux does not contain beef fat or meat extracts.</li>\n<li><strong>Convenience Store (Konbini) Snacks:</strong> Stores like 7-Eleven, Lawson, and FamilyMart offer <strong>onigiri</strong> (rice balls) with pickled plum (umeboshi) or kelp (konbu), as well as edamame.</li>\n</ul>\n<h3>Comparison of Popular Dining Styles</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Shojin Ryori</th>\n<th style=\"text-align: left;\">Vegan Ramen</th>\n<th style=\"text-align: left;\">Convenience Store</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Price</strong></td>\n<td style=\"text-align: left;\">Expensive</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Inexpensive</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Preparation</strong></td>\n<td style=\"text-align: left;\">Traditional/Artisanal</td>\n<td style=\"text-align: left;\">Modern/Fast</td>\n<td style=\"text-align: left;\">Pre-packaged</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Availability</strong></td>\n<td style=\"text-align: left;\">Low (Specialized shops)</td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">High (Everywhere)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Nutritional Value</strong></td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Variable</td>\n<td style=\"text-align: left;\">Low/Processed</td>\n</tr>\n</tbody>\n</table>\n<h3>Recommendation</h3>\n<ul>\n<li><strong>For the experience:</strong> Choose <strong>Shojin Ryori</strong> if you want an authentic cultural experience.</li>\n<li><strong>For daily convenience:</strong> Choose <strong>Vegan Ramen</strong> or specialized vegetarian cafes found in areas like Shibuya or Harajuku for a quick, filling meal.</li>\n</ul>\n<p><em>Note: Always use phrases like \"Niku, sakana, dashi wa dame desu\" (No meat, fish, or fish stock) when asking staff to ensure your meal is truly vegetarian.</em></p>"
+      }
+    ],
+    "pinned": true,
+    "shared": false
+  },
+  "c44b4a47": {
+    "title": "A History of British Colonization in Ind",
+    "messages": [
+      {
+        "role": "user",
+        "text": "story of british colonize india"
+      },
+      {
+        "role": "ai",
+        "text": "<h3>The British Colonization of India</h3>\n<p>British involvement in India began not as a state-led conquest, but as a commercial venture. Over time, this evolved into formal imperial rule that lasted nearly two centuries.</p>\n<h4>1. The East India Company (1600\u20131858)</h4>\n<ul>\n<li><strong>Establishment:</strong> The <strong>East India Company (EIC)</strong> was granted a royal charter by Queen Elizabeth I in 1600 to pursue trade in the East Indies.</li>\n<li><strong>Expansion:</strong> Exploiting the decline of the Mughal Empire, the EIC transitioned from a trading entity to a territorial power, notably after the <strong>Battle of Plassey (1757)</strong>.</li>\n<li><strong>Governance:</strong> The company used a mix of military force, diplomacy, and \"subsidiary alliances\" to bring various Indian princely states under its control.</li>\n</ul>\n<h4>2. The Indian Rebellion and the British Raj (1858\u20131947)</h4>\n<ul>\n<li><strong>The 1857 Mutiny:</strong> A widespread uprising against EIC rule led to the <strong>Government of India Act 1858</strong>, which transferred power from the EIC to the British Crown.</li>\n<li><strong>The British Raj:</strong> This marked the beginning of direct imperial rule, overseen by a Viceroy. The period saw the expansion of railways, telegraphs, and a standardized legal system, often to facilitate resource extraction and administrative control.</li>\n<li><strong>Economic Impact:</strong> India became a primary source of raw materials (like cotton and tea) for British industry, while the local handicraft industries were undermined by imported British manufactured goods.</li>\n</ul>\n<h4>3. The Path to Independence (Early 20th Century\u20131947)</h4>\n<ul>\n<li><strong>Nationalist Movements:</strong> The formation of the <strong>Indian National Congress (1885)</strong> and the <strong>Muslim League (1906)</strong> catalyzed political opposition.</li>\n<li><strong>Resistance:</strong> Led by figures like Mahatma Gandhi, the movement shifted toward non-violent civil disobedience (Satyagraha) and mass mobilization.</li>\n<li><strong>Partition and Independence:</strong> Following World War II, the weakened British Empire could no longer maintain control. India gained independence in 1947, resulting in the <strong>Partition of India</strong> into two separate nations: India and Pakistan.</li>\n</ul>\n<hr />\n<h3>Comparison: EIC Rule vs. The British Raj</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Comparison Point</th>\n<th style=\"text-align: left;\">East India Company (1757\u20131858)</th>\n<th style=\"text-align: left;\">The British Raj (1858\u20131947)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Authority</strong></td>\n<td style=\"text-align: left;\">Private commercial corporation</td>\n<td style=\"text-align: left;\">The British Crown (Parliament)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Main Objective</strong></td>\n<td style=\"text-align: left;\">Profit maximization and trade</td>\n<td style=\"text-align: left;\">Imperial governance and stability</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Accountability</strong></td>\n<td style=\"text-align: left;\">Accountable to shareholders</td>\n<td style=\"text-align: left;\">Accountable to the British Government</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Control Mechanism</strong></td>\n<td style=\"text-align: left;\">Private armies and alliances</td>\n<td style=\"text-align: left;\">Civil service and military bureaucracy</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\nNeither system was \"better\" for the Indian population; both served British interests at the expense of local economic and political autonomy. The <strong>British Raj</strong> provided a more stable and centralized administrative structure, but it also solidified imperial exploitation through formal state institutions.</p>"
+      }
+    ],
+    "pinned": true
+  },
+  "63bb917b": {
+    "title": "Understanding SaaS in Cybersecurity",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline the Saas in cybersicurity",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. <strong>SaaS in Cybersecurity</strong> (Security Software as a Service) refers to cloud-based security solutions delivered over the internet, allowing organizations to manage security without maintaining on-premises hardware or software.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Centralized Management:</strong> Security policies and updates are managed from a single cloud dashboard.</li>\n<li><strong>Scalability:</strong> Resources can be adjusted quickly based on the organization's current needs.</li>\n<li><strong>Lower Upfront Costs:</strong> Utilizes a subscription-based model rather than expensive capital investments in servers.</li>\n<li><strong>Automated Updates:</strong> The vendor handles patches and threat intelligence updates automatically.</li>\n</ul>\n<h3>Comparison: Traditional Security vs. SaaS Security</h3>\n<canvas id=\"chart1\" width=\"500\" height=\"300\"></canvas>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'bar',\n  data: {\n    labels: ['Upfront Cost', 'Maintenance', 'Deployment Speed', 'Scalability'],\n    datasets: [{\n      label: 'Traditional (On-Prem)',\n      data: [90, 85, 20, 30],\n      backgroundColor: '#e25c4a'\n    }, {\n      label: 'SaaS Security',\n      data: [20, 15, 90, 95],\n      backgroundColor: '#4a90e2'\n    }]\n  },\n  options: { responsive: false }\n});\n</script>\n\n<h3>Which is better?</h3>\n<p><strong>SaaS security</strong> is generally better for most modern organizations, especially those with distributed workforces or limited IT staff. It offers faster deployment and reduced operational overhead. <strong>Traditional on-premises security</strong> remains relevant only for highly regulated industries that require absolute data residency and total control over the underlying infrastructure.</p>\n<h3>Example</h3>\n<p>A common example is <strong>Cloud Email Security</strong>. Instead of installing an appliance on your network to scan incoming emails for phishing or malware, you redirect your email traffic through a SaaS provider\u2019s cloud gateway. This service filters threats in real-time before they reach your internal mail server.</p>"
+      },
+      {
+        "role": "user",
+        "text": "deference beetween os systems",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Operating systems manage computer hardware, software resources, and provide common services for computer programs. While they share core responsibilities, they differ significantly in architecture, ecosystem, and usage.</p>\n<h3>Key Differences Between Operating Systems</h3>\n<p>The following chart compares Windows, macOS, and Linux across four performance and usage categories:</p>\n<canvas id=\"osChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('osChart'), {\n  type: 'line',\n  data: {\n    labels: ['Cost', 'Customization', 'Gaming Support', 'Security'],\n    datasets: [\n      {\n        label: 'Windows',\n        data: [2, 1, 5, 3],\n        borderColor: '#0078d4',\n        fill: false\n      },\n      {\n        label: 'macOS',\n        data: [1, 2, 2, 5],\n        borderColor: '#000000',\n        fill: false\n      },\n      {\n        label: 'Linux',\n        data: [5, 5, 3, 5],\n        borderColor: '#f9a825',\n        fill: false\n      }\n    ]\n  },\n  options: { responsive: false }\n});\n</script>\n\n<h3>Comparison Factors</h3>\n<ul>\n<li><strong>Cost</strong>: Linux is typically free/open-source; macOS is bundled with hardware costs; Windows requires a paid license.</li>\n<li><strong>Customization</strong>: Linux allows full modification of the kernel and desktop environment; Windows and macOS are restrictive.</li>\n<li><strong>Gaming Support</strong>: Windows is the industry standard for PC gaming; Linux has improved via Proton/Steam; macOS has limited native gaming titles.</li>\n<li><strong>Security</strong>: macOS and Linux are Unix-based and generally considered more secure; Windows is a frequent target for malware due to market share.</li>\n</ul>\n<h3>Which is better?</h3>\n<ul>\n<li><strong>Choose Windows</strong> if you require broad software compatibility, business productivity tools, or are a dedicated PC gamer.</li>\n<li><strong>Choose macOS</strong> if you prioritize a polished, integrated ecosystem and are involved in creative industries like design or video production.</li>\n<li><strong>Choose Linux</strong> if you are a developer, prioritize privacy, or prefer complete control over your computing environment.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is cisco packet tracer",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p><strong>Cisco Packet Tracer</strong> is a cross-platform visual simulation tool designed by Cisco Systems. It allows users to create network topologies, configure devices, and troubleshoot network behavior in a virtual environment.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>Device Simulation:</strong> Supports a wide variety of Cisco routers, switches, wireless devices, and end-user devices (PCs, servers, IoT).</li>\n<li><strong>Protocol Modeling:</strong> Simulates common networking protocols such as HTTP, SMTP, POP3, DHCP, DNS, and various routing protocols (OSPF, EIGRP, BGP).</li>\n<li><strong>Virtual Environments:</strong> Provides both \"Real-time\" mode (immediate feedback) and \"Simulation\" mode (step-by-step packet inspection).</li>\n<li><strong>Learning Tool:</strong> Primarily used by students studying for the CCNA certification to practice configuration without needing physical hardware.</li>\n</ul>\n<h3>Example Usage</h3>\n<p>To verify connectivity between two PCs connected via a switch, you would use the Command Line Interface (CLI) within the simulated PC:</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Language: Cisco IOS CLI\n# Objective: Test connectivity between two network devices\nping 192.168.1.5  # Send ICMP echo requests to the destination IP address\n</code></pre>\n\n<p><strong>Common Mistakes to Avoid:</strong><br />\n*   <strong>Forgetting to enable ports:</strong> A common error is failing to run the <code>no shutdown</code> command on router interfaces, leaving them administratively down.<br />\n*   <strong>Incorrect Cabling:</strong> Using a straight-through cable where a crossover cable is required (though modern devices often auto-sense this).<br />\n*   <strong>Ignoring IP Subnetting:</strong> Placing devices on different subnets without a router to act as a gateway will prevent communication.</p>"
       }
     ]
+  },
+  "ab94de9d": {
+    "title": "Key Differences Between iPhone and Samsu",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is man deference between iphone and samsung phone",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Hello. Choosing between an iPhone and a Samsung phone primarily comes down to your preference for operating systems and ecosystem integration.</p>\n<h3><strong>Key Differences</strong></h3>\n<ul>\n<li><strong>Operating System:</strong> iPhones run <strong>iOS</strong>, known for its simplicity, long-term software support, and integration with Apple services. Samsung phones run <strong>Android</strong> (with the <strong>One UI</strong> skin), offering greater customization, multitasking features, and file management flexibility.</li>\n<li><strong>Hardware Ecosystem:</strong> Apple devices work seamlessly together (AirDrop, Handoff, iCloud). Samsung devices integrate well with Windows PCs and other Android accessories, but lack the proprietary \"walled garden\" connectivity of Apple.</li>\n<li><strong>Customization:</strong> Samsung allows for deep interface changes, such as custom launchers, icon packs, and side-loading apps. iOS is more rigid, prioritizing security and a uniform user experience.</li>\n<li><strong>Hardware Variety:</strong> Samsung offers diverse form factors, including foldables (Galaxy Z Fold/Flip) and budget-friendly A-series devices. Apple maintains a more consistent, premium hardware lineup.</li>\n</ul>\n<h3><strong>Comparison Data</strong></h3>\n<canvas id=\"phoneChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('phoneChart'), {\n  type: 'bar',\n  data: {\n    labels: ['OS Customization', 'Ecosystem Ease', 'Hardware Variety', 'Update Longevity'],\n    datasets: [{\n      label: 'iPhone (iOS)',\n      data: [3, 10, 5, 9],\n      backgroundColor: '#4a90e2'\n    }, {\n      label: 'Samsung (Android)',\n      data: [9, 6, 9, 8],\n      backgroundColor: '#e25c4a'\n    }]\n  },\n  options: { \n    responsive: false, \n    scales: { y: { beginAtZero: true, max: 10 } }\n  }\n});\n</script>\n\n<h3><strong>Which is better?</strong></h3>\n<ul>\n<li><strong>Choose an iPhone</strong> if you prioritize a seamless, secure, and user-friendly experience and already own other Apple products.</li>\n<li><strong>Choose a Samsung phone</strong> if you want hardware innovation (like foldables), deep customization options, and better file system control.</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "expline the ai trend over time",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>AI development has evolved through distinct stages, transitioning from rule-based systems to advanced generative models.</p>\n<h3><strong>Key Historical Phases</strong></h3>\n<ul>\n<li><strong>Symbolic AI (1950s\u20131980s):</strong> Focused on \"Good Old Fashioned AI\" (GOFAI) where experts manually programmed rules for computers to follow.</li>\n<li><strong>Machine Learning (1990s\u20132010s):</strong> Shifted toward statistical models where systems learned patterns from data rather than being explicitly programmed.</li>\n<li><strong>Deep Learning &amp; Generative AI (2012\u2013Present):</strong> Leveraged neural networks and massive datasets to enable complex tasks like image generation and human-like text production.</li>\n</ul>\n<h3><strong>Growth Factors</strong></h3>\n<ol>\n<li><strong>Computational Power:</strong> The rise of GPUs and specialized hardware (like TPUs) allowed for faster processing of complex neural networks.</li>\n<li><strong>Big Data:</strong> The ubiquity of the internet provided the massive datasets required to train modern models.</li>\n<li><strong>Algorithmic Innovation:</strong> Architectures like the <strong>Transformer</strong> (introduced by Google in 2017) revolutionized natural language processing by enabling better context management.</li>\n</ol>\n<h3><strong>Comparison of AI Paradigms</strong></h3>\n<canvas id=\"aiChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('aiChart'), {\n  type: 'pie',\n  data: {\n    labels: ['Symbolic AI', 'Machine Learning', 'Generative AI'],\n    datasets: [{\n      label: 'Focus Area',\n      data: [10, 30, 60],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#2ecc71']\n    }]\n  },\n  options: { responsive: false }\n});\n</script>\n\n<p><strong>Which is better?</strong><br />\nGenerative AI is currently considered superior for creative and complex problem-solving, whereas Symbolic AI remains better for strict, rule-based environments (like accounting software) where predictability and auditability are required.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline the ai trend over time",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>Evolution of AI Trends</h3>\n<p>The history of AI has transitioned from rule-based systems to data-driven probabilistic models. The trend follows three distinct eras:</p>\n<ul>\n<li><strong>Symbolic AI (1950s\u20131980s):</strong> Focused on \"Good Old Fashioned AI\" (GOFAI), relying on hard-coded logic and human-defined rules to solve problems like chess or basic algebra.</li>\n<li><strong>Machine Learning (1990s\u20132010s):</strong> Shifted toward statistical learning where algorithms identify patterns in large datasets, enabling applications like spam filtering and recommendations.</li>\n<li><strong>Generative AI (2020s\u2013Present):</strong> Defined by Large Language Models (LLMs) and transformer architectures, allowing systems to create new content (text, images, code) rather than just classifying input.</li>\n</ul>\n<h3>Key Factors Driving Change</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Trend Feature</th>\n<th style=\"text-align: left;\">Symbolic AI</th>\n<th style=\"text-align: left;\">Machine Learning</th>\n<th style=\"text-align: left;\">Generative AI</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Logic Type</strong></td>\n<td style=\"text-align: left;\">Human-coded rules</td>\n<td style=\"text-align: left;\">Statistical inference</td>\n<td style=\"text-align: left;\">Probabilistic prediction</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Data Reliance</strong></td>\n<td style=\"text-align: left;\">Low</td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Massive (Unstructured)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Primary Goal</strong></td>\n<td style=\"text-align: left;\">Logic &amp; Reasoning</td>\n<td style=\"text-align: left;\">Classification &amp; Prediction</td>\n<td style=\"text-align: left;\">Content Generation</td>\n</tr>\n</tbody>\n</table>\n<canvas id=\"aiTrendChart\" width=\"500\" height=\"300\"></canvas>\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<script>\nnew Chart(document.getElementById('aiTrendChart'), {\n  type: 'pie',\n  data: {\n    labels: ['Symbolic AI (1950-80)', 'Machine Learning (90-10)', 'Generative AI (20-Present)'],\n    datasets: [{\n      label: 'AI Era Impact',\n      data: [20, 30, 50],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#2ecc71']\n    }]\n  },\n  options: { responsive: false }\n});\n</script>\n\n<h3>Which is better?</h3>\n<p>There is no single \"better\" era, as each serves different purposes. <strong>Symbolic AI</strong> remains superior for tasks requiring strict safety and absolute logical consistency (e.g., flight control software). <strong>Generative AI</strong> is superior for creative, open-ended tasks where human-like interaction is the primary objective. Most modern systems use a hybrid approach to balance reliability with flexibility.</p>"
+      }
+    ],
+    "chart_type": "pie",
+    "pinned": false
+  },
+  "bdded4ac": {
+    "title": "Understanding Common Network ",
+    "messages": [
+      {
+        "role": "user",
+        "text": " explain the network types",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Network types are categorized primarily by their geographic scale and the scope of the infrastructure involved. Here are the most common types:</p>\n<h3>Common Network Classifications</h3>\n<ul>\n<li><strong>PAN (Personal Area Network):</strong> The smallest type of network, typically used for connecting personal devices (e.g., smartphones, tablets, laptops) within an individual's workspace, usually via Bluetooth.</li>\n<li><strong>LAN (Local Area Network):</strong> Connects devices within a limited area, such as a single home, office, or building. Ethernet and Wi-Fi are the standard technologies used here.</li>\n<li><strong>MAN (Metropolitan Area Network):</strong> Covers a larger geographic area, such as an entire city or a large campus. It acts as an interconnection between multiple LANs.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a vast geographic distance, such as a country, continent, or the entire globe. The internet is the most well-known example of a WAN.</li>\n</ul>\n<h3>Network Comparison Table</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">PAN</th>\n<th style=\"text-align: left;\">LAN</th>\n<th style=\"text-align: left;\">MAN</th>\n<th style=\"text-align: left;\">WAN</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Coverage Area</strong></td>\n<td style=\"text-align: left;\">Few meters</td>\n<td style=\"text-align: left;\">One building/home</td>\n<td style=\"text-align: left;\">City-wide</td>\n<td style=\"text-align: left;\">Global/Country</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Data Speed</strong></td>\n<td style=\"text-align: left;\">Low to Medium</td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Medium to High</td>\n<td style=\"text-align: left;\">Varies (often lower)</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Owner</strong></td>\n<td style=\"text-align: left;\">Individual</td>\n<td style=\"text-align: left;\">Individual/Org</td>\n<td style=\"text-align: left;\">ISP/Gov</td>\n<td style=\"text-align: left;\">Multiple ISPs</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Complexity</strong></td>\n<td style=\"text-align: left;\">Low</td>\n<td style=\"text-align: left;\">Low/Moderate</td>\n<td style=\"text-align: left;\">High</td>\n<td style=\"text-align: left;\">Very High</td>\n</tr>\n</tbody>\n</table>\n<h3>Which is better?</h3>\n<p>There is no \"better\" network type; the choice depends entirely on your <strong>geographic requirements</strong>. A <strong>LAN</strong> is best for a home or office to ensure high speed and security, while a <strong>WAN</strong> is necessary for connecting branch offices across different cities.</p>"
+      },
+      {
+        "role": "user",
+        "text": "expline what is vlan",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>A <strong>VLAN (Virtual Local Area Network)</strong> is a logical segmentation of a physical network that allows you to group devices together, even if they are connected to different physical switches. It is implemented at the Data Link Layer (Layer 2) of the OSI model.</p>\n<h3>Key Benefits of VLANs</h3>\n<ul>\n<li><strong>Improved Security:</strong> Sensitive devices (like HR or Finance computers) can be isolated from the rest of the network.</li>\n<li><strong>Reduced Broadcast Traffic:</strong> VLANs break up large broadcast domains into smaller ones, preventing broadcast frames from reaching all devices.</li>\n<li><strong>Better Performance:</strong> Minimizing unnecessary broadcast traffic improves overall network speed and efficiency.</li>\n<li><strong>Simplified Management:</strong> Network administrators can group users by department or function rather than physical location.</li>\n</ul>\n<h3>How VLANs Work</h3>\n<p>A network administrator assigns specific switch ports to a \"VLAN ID.\" When a frame enters a port, the switch tags it with that ID, ensuring the traffic only travels to other ports assigned to the same VLAN.</p>\n<h3>Example Configuration (Cisco IOS)</h3>\n<p>This example demonstrates how to create a VLAN and assign an interface to it:</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Enter global configuration mode\nconfigure terminal\n\n# Create VLAN 10 and name it 'Marketing'\nvlan 10\n name Marketing\nexit\n\n# Assign a specific interface to VLAN 10\ninterface GigabitEthernet0/1\n switchport mode access      # Sets port to access mode\n switchport access vlan 10   # Assigns the port to VLAN 10\nexit\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>VLAN Mismatch:</strong> Ensure both sides of a trunk link are configured with the same native VLAN, or traffic may be dropped.</li>\n<li><strong>Default VLAN:</strong> Avoid using VLAN 1 for production traffic; it is often the default for all ports and a common target for security exploits.</li>\n<li><strong>Forgetting to Tag:</strong> If traffic needs to cross multiple switches, ensure the link between them is a <strong>Trunk Port</strong> configured to carry multiple VLANs (tagged traffic).</li>\n</ul>"
+      },
+      {
+        "role": "user",
+        "text": "what is sql",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>network</strong>. Please ask something related to selected topic <strong>network</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is sql",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is sql",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>I am not able to help with that. Please ask me something else.</p>"
+      }
+    ],
+    "topic": ""
+  },
+  "ac0a29a5": {
+    "title": "Understanding Python and Comparing It to",
+    "messages": [
+      {
+        "role": "user",
+        "text": "what is python and deference between java and python",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<h3>What is Python?</h3>\n<p><strong>Python</strong> is a high-level, interpreted, general-purpose programming language known for its clear syntax and readability. It emphasizes developer productivity, making it an excellent choice for web development, data science, automation, and artificial intelligence.</p>\n<h3>Comparison: Python vs. Java</h3>\n<p>To compare these languages, we evaluate them across four key technical areas: syntax style, execution method, typing system, and typical use cases.</p>\n<canvas id=\"chart1\" width=\"400\" height=\"260\" style=\"width:400px;height:260px;max-width:100%\"></canvas>\n<script>\nnew Chart(document.getElementById('chart1'), {\n  type: 'pie',\n  data: {\n    labels: ['Syntax Verbosity', 'Execution Speed', 'Type Flexibility', 'Setup Complexity'],\n    datasets: [{\n      label: 'Comparison Values',\n      data: [20, 30, 30, 20],\n      backgroundColor: ['#4a90e2', '#e25c4a', '#2ecc71', '#f39c12'],\n    }]\n  },\n  options: { responsive: false, plugins: { legend: { display: true } } }\n});\n</script>\n\n<ul>\n<li><strong>Syntax:</strong> Python is concise and relies on indentation; Java is verbose and requires curly braces and semicolons.</li>\n<li><strong>Execution:</strong> Python is interpreted (line-by-line), whereas Java is compiled to bytecode and runs on the Java Virtual Machine (JVM).</li>\n<li><strong>Typing:</strong> Python uses dynamic typing; Java uses strict static typing.</li>\n<li><strong>Usage:</strong> Python is preferred for scripting and data science; Java is standard for large-scale enterprise applications and Android development.</li>\n</ul>\n<h3>Which is better?</h3>\n<ul>\n<li><strong>Choose Python</strong> if you prioritize rapid development, data analysis, or are a beginner.</li>\n<li><strong>Choose Java</strong> if you are building large, performance-critical enterprise systems that require strict type safety.</li>\n</ul>\n<h3>Example Code</h3>\n<p>Here is a simple example of printing a message in both languages.</p>\n<p><strong>Python</strong></p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Simple print statement\nname = &quot;World&quot;\nprint(f&quot;Hello, {name}&quot;) \n</code></pre>\n\n<p><strong>Java</strong></p>\n<pre class=\"codehilite\"><code class=\"language-java\">// Java requires a class structure\npublic class Main {\n    public static void main(String[] args) {\n        String name = &quot;World&quot;;\n        System.out.println(&quot;Hello, &quot; + name);\n    }\n}\n</code></pre>\n\n<p><strong>Common Mistakes:</strong><br />\n*   <strong>Python:</strong> Forgetting to maintain consistent indentation, which will cause an <code>IndentationError</code>.<br />\n*   <strong>Java:</strong> Forgetting semicolons at the end of statements or mismatched curly braces, which will cause compilation errors.</p>"
+      }
+    ],
+    "topic": ""
+  },
+  "e5f22c2d": {
+    "title": "Title: Network topic restriction notific",
+    "messages": [
+      {
+        "role": "user",
+        "text": "expline about  java",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>This question is not from selected topic <strong>network</strong>. Please ask something related to selected topic <strong>network</strong>.</p>"
+      },
+      {
+        "role": "user",
+        "text": "what is python",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Python is a high-level, interpreted programming language known for its clear syntax and readability. It is widely used in web development, data science, artificial intelligence, and automation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Interpreted:</strong> Code is executed line-by-line, which simplifies debugging.</li>\n<li><strong>Dynamically Typed:</strong> Variable types are determined at runtime rather than during compilation.</li>\n<li><strong>Extensive Libraries:</strong> A vast ecosystem of modules supports tasks ranging from web scraping to machine learning.</li>\n<li><strong>Cross-platform:</strong> Python scripts run on Windows, macOS, and Linux without modification.</li>\n</ul>\n<h3>Code Example</h3>\n<p>This example demonstrates a basic function in <strong>Python 3.x</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Function to calculate the square of a number\ndef square(number):\n    return number ** 2\n\n# Calling the function and printing the result\nresult = square(5)\nprint(f&quot;The result is: {result}&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Indentation Errors:</strong> Python relies on whitespace to define blocks of code; inconsistent tabs or spaces will cause a <code>IndentationError</code>.</li>\n<li><strong>Mutable Default Arguments:</strong> Using lists or dictionaries as default arguments in a function definition can lead to unexpected persistent state across multiple calls.</li>\n</ul>"
+      }
+    ],
+    "topic": ""
   }
 }

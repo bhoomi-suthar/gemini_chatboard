@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }} — Shared Chat</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg: #f5f5f5;
+      --input-border: #ddd;
+      --input-bg: #fff;
+      --input-text: #222;
+      --main-bg: #f5f5f5;
+      --bubble-user-bg: #e8e8e8;
+      --bubble-user-text: #222;
+      --msg-label: #999;
+      --gemini-text: #222;
+      --navbar-bg: #fff;
+      --navbar-border: #e0e0e0;
+      --navbar-text: #333;
+      --dropdown-bg: #fff;
+      --dropdown-border: #e0e0e0;
+      --dropdown-hover: #f5f5f5;
+      --history-hover: #e8eeff;
+      --divider: #ebebeb;
+      --label-color: #aaa;
+      --sidebar-bg: #fff;
+      --sidebar-border: #e0e0e0;
+      --title-color: #333;
+    }
+
+    body.dark {
+      --bg: #1a1a2e;
+      --input-border: #2a2a4a;
+      --input-bg: #16213e;
+      --input-text: #e0e0e0;
+      --main-bg: #1a1a2e;
+      --bubble-user-bg: #253560;
+      --bubble-user-text: #e0e0e0;
+      --msg-label: #666;
+      --gemini-text: #d0d0d0;
+      --navbar-bg: #16213e;
+      --navbar-border: #2a2a4a;
+      --navbar-text: #e0e0e0;
+      --dropdown-bg: #16213e;
+      --dropdown-border: #2a2a4a;
+      --dropdown-hover: #1e2a4a;
+      --history-hover: #253560;
+      --divider: #2a2a4a;
+      --label-color: #666;
+      --sidebar-bg: #16213e;
+      --sidebar-border: #2a2a4a;
+      --title-color: #e0e0e0;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 52px;
+      background: var(--navbar-bg);
+      border-bottom: 1px solid var(--navbar-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      flex-shrink: 0;
+      z-index: 200;
+      gap: 16px;
+      transition: background 0.3s;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #4a90e2;
+    }
+
+    .navbar-title {
+      font-size: 0.82rem;
+      color: var(--label-color);
+      max-width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .shared-badge {
+      font-size: 0.72rem;
+      color: #fff;
+      background: #4a90e2;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .nav-btn {
+      all: unset;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--navbar-text);
+      transition: background 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--history-hover);
+    }
+
+    .theme-btn {
+      all: unset;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 8px;
+      border-radius: 8px;
+      color: var(--navbar-text);
+      transition: background 0.2s;
+    }
+
+    .theme-btn:hover {
+      background: var(--history-hover);
+    }
+
+    .topic-btn {
+      all: unset;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--navbar-text);
+      transition: background 0.2s;
+      border: 1.5px solid transparent;
+    }
+
+    .topic-btn:hover {
+      background: var(--history-hover);
+    }
+
+    .topic-btn.active {
+      border-color: #4a90e2;
+      color: #4a90e2;
+      background: #e8f0fe;
+    }
+
+    body.dark .topic-btn.active {
+      background: #1e2a4a;
+      color: #90b8f8;
+      border-color: #90b8f8;
+    }
+
+    .chart-mode-wrapper {
+      position: relative;
+    }
+
+    .chart-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      right: 0;
+      background: var(--dropdown-bg);
+      border: 1px solid var(--dropdown-border);
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      z-index: 300;
+      min-width: 150px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chart-dropdown.open {
+      display: flex;
+    }
+
+    .chart-option {
+      all: unset;
+      cursor: pointer;
+      padding: 9px 14px;
+      font-size: 0.82rem;
+      color: var(--title-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .chart-option:last-child {
+      border-bottom: none;
+    }
+
+    .chart-option:hover {
+      background: var(--dropdown-hover);
+    }
+
+    .chart-option.active {
+      color: #4a90e2;
+      font-weight: 600;
+    }
+
+    .topic-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 400;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .topic-modal-overlay.open {
+      display: flex;
+    }
+
+    .topic-modal {
+      background: var(--sidebar-bg);
+      border: 1px solid var(--sidebar-border);
+      border-radius: 14px;
+      padding: 24px;
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .topic-modal-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--title-color);
+    }
+
+    .topic-modal-desc {
+      font-size: 0.82rem;
+      color: var(--label-color);
+      line-height: 1.5;
+    }
+
+    .topic-inp {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--input-border);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      background: var(--input-bg);
+      color: var(--input-text);
+      outline: none;
+      font-family: sans-serif;
+    }
+
+    .topic-inp:focus {
+      border-color: #4a90e2;
+    }
+
+    .topic-modal-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+
+    .topic-save-btn {
+      all: unset;
+      cursor: pointer;
+      padding: 8px 18px;
+      background: #4a90e2;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .topic-save-btn:hover {
+      background: #357abd;
+    }
+
+    .topic-clear-btn {
+      all: unset;
+      cursor: pointer;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--label-color);
+      border: 1px solid var(--input-border);
+    }
+
+    .topic-clear-btn:hover {
+      background: var(--history-hover);
+      color: #e74c3c;
+      border-color: #e74c3c;
+    }
+
+    .topic-badge {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 10px;
+      background: #e8f0fe;
+      color: #4a90e2;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin: 4px auto 0;
+      max-width: 820px;
+      width: 100%;
+    }
+
+    .topic-badge.show {
+      display: flex;
+    }
+
+    body.dark .topic-badge {
+      background: #1e2a4a;
+      color: #90b8f8;
+    }
+
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 24px 10px;
+      max-width: 820px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      scrollbar-width: none;
+    }
+
+    .messages::-webkit-scrollbar {
+      display: none;
+    }
+
+    .msg-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .msg-row.user {
+      align-items: flex-end;
+    }
+
+    .msg-row.gemini {
+      align-items: flex-start;
+    }
+
+    .msg-row.gemini canvas {
+      display: block;
+      margin: 12px 0;
+      width: 400px !important;
+      height: 260px !important;
+      max-width: 100%;
+    }
+
+    .msg-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--msg-label);
+      margin-bottom: 3px;
+    }
+
+    .msg-row.gemini .msg-label {
+      color: #4a90e2;
+    }
+
+    .msg-row.gemini canvas {
+      display: block;
+      margin: 12px 0;
+      width: 400px !important;
+      height: 260px !important;
+      max-width: 100%;
+    }
+
+    .msg-row.gemini .bubble {
+      max-width: 80%;
+      padding: 4px 2px;
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--gemini-text);
+    }
+
+    .msg-row.gemini .bubble p {
+      margin-bottom: 8px;
+    }
+
+    .msg-row.gemini .bubble strong {
+      font-weight: 700;
+      color: #111;
+    }
+
+    .msg-row.gemini .bubble h1,
+    .msg-row.gemini .bubble h2,
+    .msg-row.gemini .bubble h3 {
+      margin: 8px 0 4px;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    .msg-row.gemini .bubble ul,
+    .msg-row.gemini .bubble ol {
+      padding-left: 20px;
+      margin: 6px 0;
+    }
+
+    .msg-row.gemini .bubble li {
+      margin-bottom: 4px;
+      line-height: 1.6;
+    }
+
+    .msg-row.gemini .bubble pre {
+      background: #1e1e1e;
+      color: #f8f8f2;
+      padding: 12px 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      margin: 8px 0;
+    }
+
+    .msg-row.gemini .bubble code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #2c5c94;
+    }
+
+    .msg-row.gemini .bubble pre code {
+      background: none;
+      padding: 0;
+      color: #f8f8f2;
+    }
+
+    .msg-row.gemini .bubble table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    .msg-row.gemini .bubble th,
+    .msg-row.gemini .bubble td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .msg-row.gemini .bubble th {
+      background: #f0f4ff;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .msg-row.gemini .bubble tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    body.dark .msg-row.gemini .bubble strong {
+      color: #fff;
+    }
+
+    body.dark .msg-row.gemini .bubble h1,
+    body.dark .msg-row.gemini .bubble h2,
+    body.dark .msg-row.gemini .bubble h3 {
+      color: #fff;
+    }
+
+    body.dark .msg-row.gemini .bubble th {
+      background: #2a2b32;
+      color: #fff;
+      border-color: #3a3b42;
+    }
+
+    body.dark .msg-row.gemini .bubble td {
+      border-color: #3a3b42;
+    }
+
+    body.dark .msg-row.gemini .bubble tbody tr:nth-child(odd) {
+      background: #202123;
+    }
+
+    body.dark .msg-row.gemini .bubble tbody tr:nth-child(even) {
+      background: #2a2b32;
+    }
+
+    body.dark .msg-row.gemini .bubble table {
+      color: #e6e6e6;
+    }
+
+    .divider-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 8px 0;
+      color: #aaa;
+      font-size: 0.75rem;
+    }
+
+    .divider-line::before,
+    .divider-line::after {
+      content: '';
+      flex: 1;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .input-bar {
+      background: var(--main-bg);
+      padding: 12px 24px 24px;
+      transition: background 0.3s;
+      flex-shrink: 0;
+    }
+
+    .pdf-tag {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #e8f0fe;
+      color: #4a90e2;
+      border-radius: 18px;
+      font-size: 0.75rem;
+      width: fit-content;
+      max-width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0 auto 6px;
+      max-width: 820px;
+    }
+
+    .pdf-tag-inner {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #e8f0fe;
+      color: #4a90e2;
+      border-radius: 18px;
+      font-size: 0.75rem;
+      width: fit-content;
+      max-width: 260px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 52px;
+      margin-bottom: 6px;
+    }
+
+    .pdf-tag-inner.show {
+      display: flex;
+    }
+
+    body.dark .pdf-tag-inner {
+      background: #1e2a4a;
+      color: #90b8f8;
+    }
+
+    .pdf-remove {
+      cursor: pointer;
+      margin-left: 2px;
+      font-size: 0.78rem;
+    }
+
+    .input-form {
+      display: flex;
+      gap: 8px;
+      max-width: 820px;
+      margin: 0 auto;
+      align-items: flex-end;
+    }
+
+    .attach-btn {
+      all: unset;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--input-bg);
+      border: 1.5px solid #4a90e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #4a90e2;
+      transition: background 0.2s;
+    }
+
+    .attach-btn:hover {
+      background: rgba(74, 144, 226, 0.11);
+      transform: scale(1.05);
+    }
+
+    .input-wrapper {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+    }
+
+    textarea.share-input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid var(--input-border);
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+      background: var(--input-bg);
+      color: var(--input-text);
+      resize: none;
+      font-family: sans-serif;
+      min-height: 48px;
+      max-height: 120px;
+      overflow-y: auto;
+      line-height: 1.5;
+      scrollbar-width: none;
+      transition: border 0.2s;
+      position: relative;
+      z-index: 1;
+    }
+
+    textarea.share-input:focus {
+      border-color: #4a90e2;
+    }
+
+    textarea.share-input::-webkit-scrollbar {
+      display: none;
+    }
+
+    .voice-wave {
+      position: absolute;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 14px;
+      pointer-events: none;
+      z-index: 2;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .voice-wave span {
+      width: 3px;
+      height: 10px;
+      background: #4a90e2;
+      border-radius: 3px;
+      animation: waveBars 1s infinite ease-in-out;
+    }
+
+    .voice-wave span:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+
+    .voice-wave span:nth-child(even) {
+      animation-delay: 0.3s;
+    }
+
+    @keyframes waveBars {
+
+      0%,
+      100% {
+        height: 8px;
+        opacity: 0.5;
+      }
+
+      50% {
+        height: 24px;
+        opacity: 1;
+      }
+    }
+
+    .mic-btn {
+      all: unset;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid #4a90e2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #4a90e2;
+      transition: background 0.2s;
+    }
+
+    .mic-btn:hover {
+      background: rgba(74, 144, 226, 0.11);
+      transform: scale(1.05);
+    }
+
+    .mic-btn.listening {
+      background: #fee8f0;
+      border-color: #e74c3c;
+      color: #e74c3c;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(231, 76, 60, 0);
+      }
+    }
+
+    .send-btn {
+      padding: 13px 26px;
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      min-width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 48px;
+    }
+
+    .send-btn:hover {
+      background: #357abd;
+    }
+
+    .send-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .dots {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .dots span {
+      width: 7px;
+      height: 7px;
+      background: #fff;
+      border-radius: 50%;
+      animation: fade 1.2s infinite;
+    }
+
+    .dots span:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .dots span:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+    @keyframes fade {
+
+      0%,
+      100% {
+        opacity: 0.2;
+        transform: scale(0.8);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+
+    .loading-row {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .loading-bubble {
+      padding: 10px 16px;
+      border-radius: 12px;
+      background: #f0f0f0;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+
+    body.dark .loading-bubble {
+      background: #2a2a4a;
+    }
+
+    .loading-dot {
+      width: 7px;
+      height: 7px;
+      background: #aaa;
+      border-radius: 50%;
+      animation: fade 1.2s infinite;
+    }
+
+    .loading-dot:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .loading-dot:nth-child(3) {
+      animation-delay: 0.8s;
+    }
+
+
+    .scroll-bottom-btn {
+      all: unset;
+      cursor: pointer;
+      position: fixed;
+      bottom: 90px;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 28px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #4a90e2;
+      color: #fff;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+      transition: background 0.2s;
+    }
+
+    .scroll-bottom-btn:hover {
+      background: #357abd;
+    }
+
+    .scroll-bottom-btn.show {
+      display: flex;
+    }
+
+    .table-wrapper {
+      position: relative;
+      margin: 10px 0;
+      padding-top: 28px;
+    }
+
+    .table-export-btn {
+      all: unset;
+      cursor: pointer;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 0.73rem;
+      font-weight: 500;
+      color: #333;
+      z-index: 10;
+      transition: background 0.15s;
+    }
+
+    .table-export-btn:hover {
+      background: #e8eeff;
+    }
+
+    .table-export-dropdown {
+      display: none;
+      position: absolute;
+      top: 30px;
+      right: 0;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+      z-index: 200;
+      min-width: 110px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .table-export-dropdown.open {
+      display: flex;
+    }
+
+    .table-export-option {
+      all: unset;
+      cursor: pointer;
+      padding: 8px 14px;
+      font-size: 0.8rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid #ebebeb;
+      transition: background 0.15s;
+    }
+
+    .table-export-option:last-child {
+      border-bottom: none;
+    }
+
+    .table-export-option:hover {
+      background: #e8eeff;
+      color: #4a90e2;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="navbar-logo">Gemini Chat</span>
+      <span class="navbar-title">{{ title }}</span>
+    </div>
+    <div class="navbar-right">
+      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
+      <button class="topic-btn" id="topic-btn" onclick="openTopicModal()">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <span id="topic-btn-label">Topic</span>
+      </button>
+
+      <div class="chart-mode-wrapper" id="chart-mode-wrapper">
+        <button class="nav-btn" id="mode-btn" onclick="toggleResponseMode()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+          <span id="mode-label">Table</span>
+        </button>
+        <div class="chart-dropdown" id="chart-dropdown">
+          <button class="chart-option" onclick="selectChart('bar')"><svg width="13" height="13" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>Bar Chart</button>
+          <button class="chart-option" onclick="selectChart('pie')"><svg width="13" height="13" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+              <path d="M22 12A10 10 0 0 0 12 2v10z" />
+            </svg>Pie Chart</button>
+          <button class="chart-option" onclick="selectChart('line')"><svg width="13" height="13" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>Line Chart</button>
+          <button class="chart-option" onclick="selectChart('doughnut')"><svg width="13" height="13" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="4" />
+            </svg>Doughnut</button>
+          <button class="chart-option" onclick="selectChart('radar')"><svg width="13" height="13" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5" />
+            </svg>Radar Chart</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Topic Modal -->
+  <div class="topic-modal-overlay" id="topic-modal-overlay" onclick="closeTopicModal(event)">
+    <div class="topic-modal" onclick="event.stopPropagation()">
+      <div class="topic-modal-title">Set Topic Mode</div>
+      <div class="topic-modal-desc">Chat is limited to this topic.</div>
+      <input type="text" class="topic-inp" id="topic-input" placeholder="Enter topic..." />
+      <div class="topic-modal-actions">
+        <button class="topic-clear-btn" onclick="clearTopic()">Clear Topic</button>
+        <button class="topic-save-btn" onclick="saveTopic()">Set Topic</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to bottom -->
+  <button class="scroll-bottom-btn" id="scroll-bottom-btn" onclick="scrollToBottomShare()" title="Scroll to bottom">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  </button>
+
+  <div class="topic-badge" id="topic-badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="3" />
+      <path
+        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+    Topic: <span id="topic-badge-text"></span>
+  </div>
+
+
+  <div class="messages" id="messages">
+    {% if messages %}
+    {% for msg in messages %}
+    <div class="msg-row {{ 'user' if msg.role == 'user' else 'gemini' }}">
+      <div class="msg-label">{{ 'You' if msg.role == 'user' else 'Gemini' }}</div>
+      <div class="bubble">{{ msg.text | safe }}</div>
+    </div>
+    {% endfor %}
+    <div class="divider-line" id="continue-divider" style="display:none">Continue from here</div>
+    {% else %}
+
+    <div
+      style="display:flex;flex-direction:column;align-items:center;justify-content:center;flex:1;gap:12px;padding:60px 24px;text-align:center;">
+      <div style="font-size:1.1rem;font-weight:600;color:var(--title-color, #333);">This chat is no longer shared</div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="input-bar">
+    <div style="max-width:820px; margin:0 auto;">
+
+      <div class="pdf-tag-inner" id="pdf-tag">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+        </svg>
+        <span id="pdf-name-text"></span>
+        <span class="pdf-remove" onclick="removePdf()">✕</span>
+      </div>
+    </div>
+    <div class="input-form">
+      <input type="file" id="pdf-input" accept=".pdf" style="display:none" onchange="showPdfTag(this)" />
+      <button class="attach-btn" onclick="document.getElementById('pdf-input').click()" title="Attach PDF">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19" />
+          <line x1="5" y1="12" x2="19" y2="12" />
+        </svg>
+      </button>
+      <div class="input-wrapper">
+        <textarea class="share-input" id="share-textarea" placeholder="Continue this chat..." rows="1"
+          onkeydown="handleShareEnter(event)" oninput="autoResizeShare(this)"></textarea>
+        <div class="voice-wave" id="voice-wave">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <button class="mic-btn" id="mic-btn" onclick="toggleSpeech()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />
+          <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+          <line x1="12" y1="19" x2="12" y2="23" />
+          <line x1="8" y1="23" x2="16" y2="23" />
+        </svg>
+      </button>
+
+      <button class="send-btn" id="send-btn" onclick="sendShareMessage()">
+        <span id="btn-text">Send</span>
+        <div class="dots" id="dots"><span></span><span></span><span></span></div>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const sharedMessages = {{ messages | tojson }};
+    const shareId = '{{ share_id }}';
+    const storageKey = 'share_chat_' + shareId;
+
+    let localMessages = [];
+    try {
+      const saved = localStorage.getItem(storageKey);
+      if (saved) localMessages = JSON.parse(saved);
+    } catch (e) { localMessages = []; }
+
+    // theme
+    const moonSVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+    const sunSVG = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+      const isDark = document.body.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('theme-btn').innerHTML = isDark ? sunSVG : moonSVG;
+    }
+
+    // chart/table
+    let responseMode = localStorage.getItem('responseMode') || 'table';
+    let chartType = localStorage.getItem('chartType') || 'bar';
+    const chartIcons = {
+      bar: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
+      pie: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>`,
+      line: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
+      doughnut: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>`,
+      radar: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5"/></svg>`
+    };
+    const chartLabels = { bar: 'Bar', pie: 'Pie', line: 'Line', doughnut: 'Doughnut', radar: 'Radar' };
+    const tableIcon = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>`;
+
+    function updateModeBtn() {
+      const btn = document.getElementById('mode-btn');
+      if (!btn) return;
+      if (responseMode === 'chart') {
+        btn.innerHTML = `${chartIcons[chartType]} <span id="mode-label">${chartLabels[chartType]}</span> <svg onclick="toggleDropdown(event)" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left:2px;cursor:pointer;"><polyline points="6 9 12 15 18 9"/></svg>`;
+      } else {
+        btn.innerHTML = `${tableIcon} <span id="mode-label">Table</span>`;
+      }
+    }
+
+    function toggleResponseMode() {
+      responseMode = responseMode === 'table' ? 'chart' : 'table';
+      localStorage.setItem('responseMode', responseMode);
+      updateModeBtn();
+      if (responseMode === 'table') document.getElementById('chart-dropdown').classList.remove('open');
+    }
+
+    function selectChart(type) {
+      chartType = type;
+      localStorage.setItem('chartType', type);
+      document.getElementById('chart-dropdown').classList.remove('open');
+      updateModeBtn();
+      convertLastChart(type);
+    }
+
+    function convertLastChart(newType) {
+      const canvases = document.querySelectorAll('.messages canvas');
+      if (canvases.length === 0) return;
+      const lastCanvas = canvases[canvases.length - 1];
+      const canvasId = lastCanvas.id;
+      const existingChart = Chart.getChart(canvasId);
+      if (!existingChart) return;
+      const currentData = existingChart.data;
+      existingChart.destroy();
+      new Chart(lastCanvas, {
+        type: newType,
+        data: currentData,
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: true } }
+        }
+      });
+    }
+
+    function toggleDropdown(e) {
+      e.stopPropagation();
+      if (responseMode === 'chart') document.getElementById('chart-dropdown').classList.toggle('open');
+    }
+
+    document.addEventListener('click', (e) => {
+      const wrapper = document.getElementById('chart-mode-wrapper');
+      if (wrapper && !wrapper.contains(e.target)) document.getElementById('chart-dropdown').classList.remove('open');
+      const tmo = document.getElementById('topic-modal-overlay');
+      // don't close topic modal on general click
+    });
+
+    // topic
+    let currentTopic = localStorage.getItem('share_topic_' + shareId) || '';
+
+    function openTopicModal() {
+      document.getElementById('topic-modal-overlay').classList.add('open');
+      document.getElementById('topic-input').value = currentTopic;
+      document.getElementById('topic-input').focus();
+    }
+    function closeTopicModal(e) {
+      if (!e || e.target === document.getElementById('topic-modal-overlay'))
+        document.getElementById('topic-modal-overlay').classList.remove('open');
+    }
+    function saveTopic() {
+      const topic = document.getElementById('topic-input').value.trim();
+      currentTopic = topic;
+      localStorage.setItem('share_topic_' + shareId, topic);
+      applyTopic(topic);
+      document.getElementById('topic-modal-overlay').classList.remove('open');
+    }
+    function clearTopic() {
+      currentTopic = '';
+      localStorage.removeItem('share_topic_' + shareId);
+      document.getElementById('topic-input').value = '';
+      applyTopic('');
+      document.getElementById('topic-modal-overlay').classList.remove('open');
+    }
+    function applyTopic(topic) {
+      const btn = document.getElementById('topic-btn');
+      const badge = document.getElementById('topic-badge');
+      const badgeText = document.getElementById('topic-badge-text');
+      const label = document.getElementById('topic-btn-label');
+      if (topic) {
+        btn.classList.add('active');
+        label.textContent = topic.length > 12 ? topic.substring(0, 12) + '...' : topic;
+        badge.classList.add('show');
+        badgeText.textContent = topic;
+      } else {
+        btn.classList.remove('active');
+        label.textContent = 'Topic';
+        badge.classList.remove('show');
+        badgeText.textContent = '';
+      }
+    }
+
+    // init
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') document.getElementById('theme-btn').innerHTML = sunSVG;
+      updateModeBtn();
+      applyTopic(currentTopic);
+
+      // hide input bar if chat is expired 
+      const isExpired = '{{ "true" if not messages else "false" }}' === 'true';
+      if (isExpired) {
+        document.querySelector('.input-bar').style.display = 'none';
+        document.getElementById('topic-badge').style.display = 'none';
+      } else {
+        if (localMessages.length > 0) {
+          document.getElementById('continue-divider').style.display = 'flex';
+          localMessages.forEach(msg => appendToDOM(msg.role, msg.text, true));
+        }
+      }
+      scrollBottom();
+    });
+
+    function scrollBottom() {
+      const m = document.getElementById('messages');
+      m.scrollTop = m.scrollHeight;
+    }
+
+    function appendToDOM(role, text, isHTML) {
+      const msgs = document.getElementById('messages');
+      const row = document.createElement('div');
+      row.className = 'msg-row ' + (role === 'user' ? 'user' : 'gemini');
+      const label = document.createElement('div');
+      label.className = 'msg-label';
+      label.textContent = role === 'user' ? 'You' : 'Gemini';
+      const bubble = document.createElement('div');
+      bubble.className = 'bubble';
+      if (isHTML) {
+        bubble.innerHTML = text;
+        // re-execute script tags AFTER bubble is added to DOM
+        row.appendChild(label);
+        row.appendChild(bubble);
+        msgs.appendChild(row);
+        // now execute scripts (canvas must be in DOM first)
+        bubble.querySelectorAll('script').forEach(oldScript => {
+          const newScript = document.createElement('script');
+          newScript.textContent = oldScript.textContent;
+          document.body.appendChild(newScript);
+          document.body.removeChild(newScript);
+        });
+      } else {
+        bubble.textContent = text;
+        row.appendChild(label);
+        row.appendChild(bubble);
+        msgs.appendChild(row);
+      }
+      scrollBottom();
+    }
+
+    function showLoadingBubble() {
+      const msgs = document.getElementById('messages');
+      const row = document.createElement('div');
+      row.className = 'loading-row'; row.id = 'loading-row';
+      const label = document.createElement('div');
+      label.className = 'msg-label'; label.style.color = '#4a90e2'; label.textContent = 'Gemini';
+      const bubble = document.createElement('div');
+      bubble.className = 'loading-bubble';
+      bubble.innerHTML = '<div class="loading-dot"></div><div class="loading-dot"></div><div class="loading-dot"></div>';
+      row.appendChild(label); row.appendChild(bubble);
+      msgs.appendChild(row);
+      scrollBottom();
+    }
+
+    function removeLoadingBubble() {
+      const lr = document.getElementById('loading-row');
+      if (lr) lr.remove();
+    }
+
+    async function sendShareMessage() {
+      const ta = document.getElementById('share-textarea');
+      const text = ta.value.trim();
+      if (!text) return;
+
+      const divider = document.getElementById('continue-divider');
+      if (divider.style.display === 'none') divider.style.display = 'flex';
+
+      appendToDOM('user', text, false);
+      localMessages.push({ role: 'user', text });
+      localStorage.setItem(storageKey, JSON.stringify(localMessages));
+
+      ta.value = '';
+      ta.style.height = 'auto';
+
+      const btn = document.getElementById('send-btn');
+      document.getElementById('btn-text').style.display = 'none';
+      document.getElementById('dots').style.display = 'flex';
+      btn.disabled = true;
+
+      const allHistory = [...sharedMessages, ...localMessages.slice(0, -1)];
+      const mode = responseMode === 'chart' ? chartType : 'table';
+
+      try {
+        const response = await fetch('/share/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text, history: allHistory, response_mode: mode, topic: currentTopic })
+        });
+
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const data = await response.json();
+        const aiText = data.response || 'Sorry, no response.';
+        removeLoadingBubble();
+        appendToDOM('ai', aiText, true);
+        localMessages.push({ role: 'ai', text: aiText });
+        localStorage.setItem(storageKey, JSON.stringify(localMessages));
+      } catch (err) {
+        console.error('Share chat error:', err);
+        removeLoadingBubble();
+        appendToDOM('ai', 'Error: ' + err.message, false);
+      }
+
+      document.getElementById('btn-text').style.display = '';
+      document.getElementById('dots').style.display = 'none';
+      btn.disabled = false;
+    }
+
+    function handleShareEnter(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendShareMessage(); }
+    }
+    function autoResizeShare(el) {
+      el.style.height = 'auto';
+      el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+    }
+    function showPdfTag(input) {
+      if (input.files[0]) {
+        let name = input.files[0].name;
+        if (name.length > 28) name = name.substring(0, 25) + '...';
+        document.getElementById('pdf-name-text').textContent = name;
+        document.getElementById('pdf-tag').classList.add('show');
+      }
+    }
+    function removePdf() {
+      document.getElementById('pdf-input').value = '';
+      document.getElementById('pdf-name-text').textContent = '';
+      document.getElementById('pdf-tag').classList.remove('show');
+    }
+
+    // speech
+    let recognition = null, isListening = false;
+    function toggleSpeech() {
+      if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) { alert('Use Chrome for speech.'); return; }
+      if (isListening) { stopSpeech(); return; }
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      recognition = new SR();
+      recognition.lang = 'en-US'; recognition.continuous = false; recognition.interimResults = false;
+      recognition.onstart = () => {
+        isListening = true;
+        document.getElementById('mic-btn').classList.add('listening');
+        document.getElementById('voice-wave').style.display = 'flex';
+        const ta = document.getElementById('share-textarea');
+        ta.dataset.oldText = ta.value; ta.placeholder = '';
+      };
+      recognition.onresult = (event) => {
+        let t = '';
+        for (let i = 0; i < event.results.length; i++) t += event.results[i][0].transcript;
+        const ta = document.getElementById('share-textarea');
+        ta.value = (ta.dataset.oldText || '') + ' ' + t;
+        autoResizeShare(ta);
+      };
+      recognition.onend = () => stopSpeech();
+      recognition.onerror = () => stopSpeech();
+      recognition.start();
+    }
+    function stopSpeech() {
+      isListening = false;
+      document.getElementById('mic-btn').classList.remove('listening');
+      document.getElementById('voice-wave').style.display = 'none';
+      document.getElementById('share-textarea').placeholder = 'Continue this chat...';
+      if (recognition) { recognition.stop(); recognition = null; }
+    }
+
+    /* table export  */
+    function wrapTablesWithExport() {
+      document.querySelectorAll('.msg-row.gemini .bubble table').forEach(table => {
+        if (table.parentElement.classList.contains('table-wrapper')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+        const exportBtn = document.createElement('button');
+        exportBtn.className = 'table-export-btn';
+        exportBtn.innerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Export`;
+        const dropdown = document.createElement('div');
+        dropdown.className = 'table-export-dropdown';
+        dropdown.innerHTML = `<button class="table-export-option" data-format="csv">CSV</button><button class="table-export-option" data-format="excel">Excel</button><button class="table-export-option" data-format="json">JSON</button>`;
+        exportBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          document.querySelectorAll('.table-export-dropdown.open').forEach(d => d.classList.remove('open'));
+          dropdown.classList.toggle('open');
+        });
+        dropdown.querySelectorAll('.table-export-option').forEach(opt => {
+          opt.addEventListener('click', (e) => { e.stopPropagation(); dropdown.classList.remove('open'); exportTableShare(table, opt.dataset.format); });
+        });
+        wrapper.appendChild(exportBtn);
+        wrapper.appendChild(dropdown);
+      });
+    }
+
+    function parseTable(table) {
+      const rows = [];
+      table.querySelectorAll('tr').forEach(tr => { const cells = []; tr.querySelectorAll('th,td').forEach(td => cells.push(td.innerText.trim())); if (cells.length) rows.push(cells); });
+      return rows;
+    }
+
+    function exportTableShare(table, format) {
+      const rows = parseTable(table);
+      if (!rows.length) return;
+      if (format === 'csv') {
+        downloadFileShare('table.csv', rows.map(r => r.map(c => `"${c.replace(/"/g, '""')}"`).join(',')).join('\n'), 'text/csv');
+      } else if (format === 'json') {
+        if (rows.length < 2) return;
+        const h = rows[0]; const data = rows.slice(1).map(r => { const o = {}; h.forEach((k, i) => o[k] = r[i] || ''); return o; });
+        downloadFileShare('table.json', JSON.stringify(data, null, 2), 'application/json');
+      } else if (format === 'excel') {
+        let xml = `<?xml version="1.0"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Sheet1"><Table>`;
+        rows.forEach(row => { xml += '<Row>'; row.forEach(c => { xml += `<Cell><Data ss:Type="String">${c.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</Data></Cell>`; }); xml += '</Row>'; });
+        xml += '</Table></Worksheet></Workbook>';
+        downloadFileShare('table.xls', xml, 'application/vnd.ms-excel');
+      }
+    }
+
+    function downloadFileShare(filename, content, mimeType) {
+      const blob = new Blob([content], { type: mimeType }); const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+    }
+
+    function scrollToBottomShare() {
+      const m = document.getElementById('messages');
+      if (m) m.scrollTo({ top: m.scrollHeight, behavior: 'smooth' });
+    }
+
+    // init on load
+    window.addEventListener('load', () => {
+      wrapTablesWithExport();
+      const msgs = document.getElementById('messages');
+      const btn = document.getElementById('scroll-bottom-btn');
+      if (msgs && btn) {
+        msgs.addEventListener('scroll', () => {
+          const atBottom = msgs.scrollHeight - msgs.scrollTop - msgs.clientHeight < 60;
+          btn.classList.toggle('show', !atBottom);
+        });
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.table-wrapper')) {
+        document.querySelectorAll('.table-export-dropdown')
+          .forEach(d => d.classList.remove('open'));
+      }
+    });
+
+  </script>
+</body>
+
+</html>
