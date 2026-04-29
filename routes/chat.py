@@ -12,11 +12,11 @@ import time
 from fastapi import Body
 
 
-SHARES_FILE = "shares.json"
+SHARES_FILE = "/tmp/shares.json"
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
-HISTORY_FILE = "history.json"
-PDF_DIR = pathlib.Path("uploaded_pdfs")
+HISTORY_FILE = "/tmp/history.json"
+PDF_DIR = pathlib.Path("/tmp/uploaded_pdfs")
 PDF_DIR.mkdir(exist_ok=True)
 
 def load_history():
