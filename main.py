@@ -94,7 +94,7 @@ async def callback(request: Request):
 async def logout(request: Request):
     request.session.clear()
 
-    return_to = quote_plus("http://localhost:8000")
+    return_to = quote_plus("https://gemini-chatboard-11.onrender.com")
 
     return RedirectResponse(
         url=f"https://{AUTH0_DOMAIN}/v2/logout?returnTo={return_to}&client_id={AUTH0_CLIENT_ID}"
