@@ -48,9 +48,9 @@ async def root(request: Request):
         return RedirectResponse(url='/login')
 
     history = {}
-    if os.path.exists("/tmp/history.json"):
-      with open("/tmp/history.json", "r") as f:
-        history = json.load(f)
+    if os.path.exists("history.json"):
+        with open("history.json", "r") as f:
+            history = json.load(f)
 
     return templates.TemplateResponse(
         request=request,

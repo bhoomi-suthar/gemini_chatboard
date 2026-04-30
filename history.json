@@ -176,7 +176,9 @@
         "role": "ai",
         "text": "<p><strong>Cisco Packet Tracer</strong> is a cross-platform visual simulation tool designed by Cisco Systems. It allows users to create network topologies, configure devices, and troubleshoot network behavior in a virtual environment.</p>\n<h3>Key Features</h3>\n<ul>\n<li><strong>Device Simulation:</strong> Supports a wide variety of Cisco routers, switches, wireless devices, and end-user devices (PCs, servers, IoT).</li>\n<li><strong>Protocol Modeling:</strong> Simulates common networking protocols such as HTTP, SMTP, POP3, DHCP, DNS, and various routing protocols (OSPF, EIGRP, BGP).</li>\n<li><strong>Virtual Environments:</strong> Provides both \"Real-time\" mode (immediate feedback) and \"Simulation\" mode (step-by-step packet inspection).</li>\n<li><strong>Learning Tool:</strong> Primarily used by students studying for the CCNA certification to practice configuration without needing physical hardware.</li>\n</ul>\n<h3>Example Usage</h3>\n<p>To verify connectivity between two PCs connected via a switch, you would use the Command Line Interface (CLI) within the simulated PC:</p>\n<pre class=\"codehilite\"><code class=\"language-bash\"># Language: Cisco IOS CLI\n# Objective: Test connectivity between two network devices\nping 192.168.1.5  # Send ICMP echo requests to the destination IP address\n</code></pre>\n\n<p><strong>Common Mistakes to Avoid:</strong><br />\n*   <strong>Forgetting to enable ports:</strong> A common error is failing to run the <code>no shutdown</code> command on router interfaces, leaving them administratively down.<br />\n*   <strong>Incorrect Cabling:</strong> Using a straight-through cable where a crossover cable is required (though modern devices often auto-sense this).<br />\n*   <strong>Ignoring IP Subnetting:</strong> Placing devices on different subnets without a router to act as a gateway will prevent communication.</p>"
       }
-    ]
+    ],
+    "shared": true,
+    "share_id": "7dcc40b9a1"
   },
   "ab94de9d": {
     "title": "Key Differences Between iPhone and Samsu",
@@ -278,30 +280,79 @@
     ],
     "topic": ""
   },
-  "e5f22c2d": {
-    "title": "Title: Network topic restriction notific",
+  "1e9bae63": {
+    "title": "Understanding the Basics of Computer Net",
     "messages": [
       {
         "role": "user",
-        "text": "expline about  java",
+        "text": "what is network",
         "pdf": null
       },
       {
         "role": "ai",
-        "text": "<p>This question is not from selected topic <strong>network</strong>. Please ask something related to selected topic <strong>network</strong>.</p>"
-      },
-      {
-        "role": "user",
-        "text": "what is python",
-        "pdf": null
-      },
-      {
-        "role": "ai",
-        "text": "<p>Python is a high-level, interpreted programming language known for its clear syntax and readability. It is widely used in web development, data science, artificial intelligence, and automation.</p>\n<h3>Key Characteristics</h3>\n<ul>\n<li><strong>Interpreted:</strong> Code is executed line-by-line, which simplifies debugging.</li>\n<li><strong>Dynamically Typed:</strong> Variable types are determined at runtime rather than during compilation.</li>\n<li><strong>Extensive Libraries:</strong> A vast ecosystem of modules supports tasks ranging from web scraping to machine learning.</li>\n<li><strong>Cross-platform:</strong> Python scripts run on Windows, macOS, and Linux without modification.</li>\n</ul>\n<h3>Code Example</h3>\n<p>This example demonstrates a basic function in <strong>Python 3.x</strong>:</p>\n<pre class=\"codehilite\"><code class=\"language-python\"># Function to calculate the square of a number\ndef square(number):\n    return number ** 2\n\n# Calling the function and printing the result\nresult = square(5)\nprint(f&quot;The result is: {result}&quot;)\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Indentation Errors:</strong> Python relies on whitespace to define blocks of code; inconsistent tabs or spaces will cause a <code>IndentationError</code>.</li>\n<li><strong>Mutable Default Arguments:</strong> Using lists or dictionaries as default arguments in a function definition can lead to unexpected persistent state across multiple calls.</li>\n</ul>"
+        "text": "<p>A <strong>network</strong> is a collection of interconnected devices\u2014such as computers, servers, smartphones, and IoT devices\u2014that can communicate and share resources, such as data, printers, or internet access. These devices are linked via physical cables (like Ethernet) or wireless technologies (like Wi-Fi).</p>\n<h3>Key Components of a Network</h3>\n<ul>\n<li><strong>Nodes:</strong> The devices connected to the network (e.g., PCs, servers, printers).</li>\n<li><strong>Links:</strong> The media connecting the nodes (e.g., fiber optic cables, copper wires, radio waves).</li>\n<li><strong>Network Hardware:</strong> Devices that manage traffic, such as <strong>routers</strong>, <strong>switches</strong>, and <strong>hubs</strong>.</li>\n<li><strong>Protocols:</strong> Standard rules that govern how data is formatted and transmitted (e.g., <strong>TCP/IP</strong>).</li>\n</ul>\n<h3>Types of Networks</h3>\n<ol>\n<li><strong>LAN (Local Area Network):</strong> Covers a small geographic area, like a home, office, or building.</li>\n<li><strong>WAN (Wide Area Network):</strong> Spans a large physical distance, such as a country or the entire globe (the Internet is the largest WAN).</li>\n<li><strong>WLAN (Wireless LAN):</strong> A network that allows devices to connect without physical cables using wireless standards like IEEE 802.11.</li>\n</ol>\n<h3>Example</h3>\n<p>In a standard home network:<br />\n*   Your <strong>ISP (Internet Service Provider)</strong> brings a connection to a modem.<br />\n*   The <strong>router</strong> assigns private IP addresses to your phone, laptop, and smart TV.<br />\n*   These devices communicate over <strong>Wi-Fi</strong>, allowing your laptop to print to a wireless printer or your phone to stream content to the TV.</p>"
       }
     ],
-    "topic": "",
-    "shared": true,
-    "share_id": "c925f4aa01"
+    "topic": ""
+  },
+  "58383534": {
+    "title": "Common Types and Comparisons of Operatin",
+    "messages": [
+      {
+        "role": "user",
+        "text": "types of operatng syatem",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Operating systems are categorized based on their intended use, architecture, and the types of tasks they are designed to perform.</p>\n<h3>Common Types of Operating Systems</h3>\n<ul>\n<li><strong>Batch Operating System:</strong> Users do not interact with the computer directly. Jobs are grouped into \"batches\" and processed sequentially by the CPU. <ul>\n<li><em>Example:</em> Payroll processing systems.</li>\n</ul>\n</li>\n<li><strong>Time-Sharing (Multitasking) OS:</strong> Allows multiple users or tasks to share the same CPU time simultaneously by switching between processes rapidly.<ul>\n<li><em>Example:</em> macOS, Linux.</li>\n</ul>\n</li>\n<li><strong>Distributed Operating System:</strong> Manages a group of independent computers and makes them appear as a single system. Data is spread across multiple nodes.<ul>\n<li><em>Example:</em> LOCUS.</li>\n</ul>\n</li>\n<li><strong>Network Operating System:</strong> Runs on a server and provides the capability to manage data, users, groups, security, and applications over a local area network (LAN).<ul>\n<li><em>Example:</em> Windows Server.</li>\n</ul>\n</li>\n<li><strong>Real-Time Operating System (RTOS):</strong> Designed for systems where time requirements are strict and must be met within a defined constraint.<ul>\n<li><em>Example:</em> Air traffic control systems.</li>\n</ul>\n</li>\n<li><strong>Mobile Operating System:</strong> Specifically designed to run on mobile devices like smartphones and tablets, focusing on touch interfaces and power efficiency.<ul>\n<li><em>Example:</em> Android, iOS.</li>\n</ul>\n</li>\n</ul>\n<h3>Comparison of Popular Desktop Operating Systems</h3>\n<table>\n<thead>\n<tr>\n<th style=\"text-align: left;\">Feature</th>\n<th style=\"text-align: left;\">Windows</th>\n<th style=\"text-align: left;\">macOS</th>\n<th style=\"text-align: left;\">Linux</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td style=\"text-align: left;\"><strong>Kernel</strong></td>\n<td style=\"text-align: left;\">NT Kernel</td>\n<td style=\"text-align: left;\">XNU</td>\n<td style=\"text-align: left;\">Linux Kernel</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>License</strong></td>\n<td style=\"text-align: left;\">Proprietary</td>\n<td style=\"text-align: left;\">Proprietary</td>\n<td style=\"text-align: left;\">Open Source</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Customizability</strong></td>\n<td style=\"text-align: left;\">Moderate</td>\n<td style=\"text-align: left;\">Low</td>\n<td style=\"text-align: left;\">Very High</td>\n</tr>\n<tr>\n<td style=\"text-align: left;\"><strong>Target Audience</strong></td>\n<td style=\"text-align: left;\">General/Enterprise</td>\n<td style=\"text-align: left;\">Creative Professionals</td>\n<td style=\"text-align: left;\">Developers/Servers</td>\n</tr>\n</tbody>\n</table>\n<p><strong>Which is better?</strong><br />\n*   <strong>Windows</strong> is best for general users and enterprise software compatibility.<br />\n*   <strong>macOS</strong> is ideal for creative professionals and users integrated into the Apple ecosystem.<br />\n*   <strong>Linux</strong> is recommended for developers, system administrators, and those prioritizing privacy and customizability.</p>"
+      }
+    ],
+    "topic": ""
+  },
+  "c002c264": {
+    "title": "types of operatng syatem",
+    "messages": [
+      {
+        "role": "user",
+        "text": "types of operatng syatem",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ],
+    "topic": ""
+  },
+  "86904e9b": {
+    "title": "Guide to Creating Your First Game Using ",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to create a game in coding",
+        "pdf": null
+      },
+      {
+        "role": "ai",
+        "text": "<p>Creating a game involves several core stages, ranging from conceptualization to programming and deployment.</p>\n<h3>Development Workflow</h3>\n<ol>\n<li><strong>Select a Game Engine/Framework:</strong> Choose based on your programming language preference and the type of game (2D vs. 3D).</li>\n<li><strong>Define Core Mechanics:</strong> Determine how the player interacts with the game (e.g., jumping, shooting, solving puzzles).</li>\n<li><strong>Manage the Game Loop:</strong> Implement the cycle of updating game logic and rendering frames to the screen.</li>\n<li><strong>Add Assets:</strong> Integrate graphics, sounds, and animations.</li>\n<li><strong>Test and Debug:</strong> Regularly run your code to identify logic errors or performance bottlenecks.</li>\n</ol>\n<h3>Popular Tools</h3>\n<ul>\n<li><strong>Unity:</strong> Uses C#; industry standard for both 2D and 3D.</li>\n<li><strong>Godot:</strong> Uses GDScript (Python-like) or C#; excellent for 2D.</li>\n<li><strong>Pygame:</strong> A library for Python; ideal for beginners learning the fundamentals.</li>\n</ul>\n<h3>Example: Basic Game Loop (Python with Pygame)</h3>\n<p>This snippet demonstrates a simple structure for a game window in <strong>Python 3.x</strong>.</p>\n<pre class=\"codehilite\"><code class=\"language-python\">import pygame\n\n# Initialize pygame\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\nrunning = True\n\n# Main Game Loop\nwhile running:\n    # 1. Handle Events (input like keys or mouse clicks)\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    # 2. Update Game Logic (move characters, check collisions)\n\n    # 3. Draw/Render Everything\n    screen.fill((0, 0, 0)) # Clears the screen with black\n    pygame.display.flip()  # Refreshes the display\n\npygame.quit()\n</code></pre>\n\n<h3>Common Mistakes to Avoid</h3>\n<ul>\n<li><strong>Scope Creep:</strong> Trying to build a massive open-world game as your first project. Start with a \"Pong\" or \"Flappy Bird\" clone.</li>\n<li><strong>Hardcoding Values:</strong> Avoid writing specific values (like speed or gravity) directly into your logic. Use variables so you can easily tweak them later.</li>\n<li><strong>Ignoring Optimization:</strong> Calculating heavy physics or complex calculations every single frame, which can cause lag.</li>\n</ul>"
+      }
+    ],
+    "topic": ""
+  },
+  "2b2de240": {
+    "title": "how to make a house with blocks",
+    "messages": [
+      {
+        "role": "user",
+        "text": "how to make a house with blocks",
+        "pdf": ""
+      },
+      {
+        "role": "ai",
+        "text": "Error: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+      }
+    ],
+    "topic": ""
   }
 }

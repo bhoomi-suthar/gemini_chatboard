@@ -771,107 +771,164 @@ function scrollToBottom() {
   if (msgs) msgs.scrollTo({ top: msgs.scrollHeight, behavior: 'smooth' });
 }
 
+
+
 // run on page load — wrap existing tables and init scroll button
 window.addEventListener('load', () => {
   wrapTablesWithExport();
   initScrollButton();
+
+  // get suggestions only from last AI response
+  const aiMessages = document.querySelectorAll('.msg-row.gemini .bubble');
+
+  if (aiMessages.length > 0) {
+    const lastBubble = aiMessages[aiMessages.length - 1];
+    lastAISuggestions = extractSuggestionsFromText(lastBubble.innerText);
+  } else {
+    lastAISuggestions = [];
+  }
+
   initSuggestions();
+
+  const msgs = document.querySelector('.messages');
+  if (msgs) msgs.scrollTop = msgs.scrollHeight;
 });
 
 
 /* ── Suggestions ── */
 
-// default suggestions shown when input is empty
+
 const defaultSuggestions = [
-  'Explain this topic in simple terms',
-  'Compare these two things in a table',
-  'Give me a step-by-step guide'
+  'What can you help me with?',
+  'Summarize something for me',
+  'Explain any topic simply',
+  'Create a table from data',
+  'Make a chart from numbers',
+  'Answer general questions'
 ];
 
+let lastAISuggestions = [];
+
+/* extract suggestions from latest AI response */
+function extractSuggestionsFromText(text) {
+  if (!text) return [];
+
+  const plain = text
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (!plain) return [];
+
+  // split into sentences
+  const sentences = plain
+    .split(/[.!?]/)
+    .map(s => s.trim())
+    .filter(s => s.length > 15);
+
+  const suggestions = [];
+  sentences.slice(0, 5).forEach(sentence => {
+    const words = sentence.split(' ');
+
+    if (words.length >= 4) {
+      const topic = words.slice(0, 6).join(' ');
+      suggestions.push(topic);
+    }
+  });
+  return [...new Set(suggestions)].slice(0, 3);
+}
+
+/* render suggestions */
 function renderSuggestions(items) {
   const box = document.getElementById('suggestions-box');
   if (!box) return;
-  if (items.length === 0) {
-    box.innerHTML = `<div style="padding:10px 16px;font-size:0.82rem;color:var(--label-color);">No suggestions found.</div>`;
-    box.style.display = 'flex';
-    return;
-  }
-  const svgIcon = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`;
-  box.innerHTML = items.slice(0, 3).map(s =>
-    `<div class="suggestion-item" onclick="useSuggestion(this)">${svgIcon}${s}</div>`
-  ).join('');
+
+  box.innerHTML = '';
+
+  items.slice(0, 3).forEach(text => {   // only first 3
+    const div = document.createElement('div');
+    div.className = 'suggestion-item';
+    div.textContent = text;
+    div.onclick = () => useSuggestion(text);
+    box.appendChild(div);
+  });
+
+  box.style.display = items.length ? 'flex' : 'none';
 }
 
+/* get suggestions */
 function getSuggestionsForQuery(query) {
-  // filter chat history titles that match what user typed
-  const q = query.toLowerCase().trim();
-  const matched = Object.values(historyData)
-    .map(c => c.title)
-    .filter(t => t && t.toLowerCase().includes(q))
-    .slice(0, 3);
+  query = query.toLowerCase().trim();
 
-  if (matched.length >= 1) return matched;
+  // choose source:
+  // if AI suggestions exist use them, otherwise use default ones
+  const source = lastAISuggestions.length
+    ? lastAISuggestions
+    : defaultSuggestions;
 
-  // filter defaults by query
-  const filtered = defaultSuggestions.filter(s => s.toLowerCase().includes(q));
-  return filtered.length > 0 ? filtered : [];
+  // empty input = show defaults/AI suggestions
+  if (!query) {
+    return source;
+  }
+
+  const filtered = source.filter(item =>
+    item.toLowerCase().includes(query)
+  );
+
+  return filtered.length ? filtered : ['No suggestions found'];
 }
 
+/* init */
 function initSuggestions() {
   const textarea = document.querySelector('.msg-input');
   const box = document.getElementById('suggestions-box');
+
   if (!textarea || !box) return;
 
-  // only on new chat (no messages)
-  const msgCount = document.querySelectorAll('.msg-row').length;
-  if (msgCount > 0) {
-    box.style.display = 'none';
-    return;
+  function updateSuggestions() {
+    renderSuggestions(getSuggestionsForQuery(textarea.value));
   }
 
-  // show only when user focuses the textbox
-  box.style.display = 'none';
+  textarea.addEventListener('focus', updateSuggestions);
+  textarea.addEventListener('input', updateSuggestions);
+  textarea.addEventListener('click', updateSuggestions);
 
-  textarea.addEventListener('focus', () => {
-    if (textarea.value.trim() === '') {
-      renderSuggestions(defaultSuggestions);
-    }
-    box.style.display = 'flex';
-  });
-
-  // update suggestions as user types
-  textarea.addEventListener('input', () => {
-    const val = textarea.value.trim();
-    if (val === '') {
-      renderSuggestions(defaultSuggestions);
-      box.style.display = 'flex';
-    } else {
-      const matches = getSuggestionsForQuery(val);
-      renderSuggestions(matches); // render no suggestion
-      box.style.display = 'flex'; // always show — renderSuggestions controls the content
-    }
-  });
-
-  // hide when clicking outside
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.suggestions-box') &&
-        !e.target.closest('.input-bar') &&
-        !e.target.closest('.msg-input')) {
+    if (
+      !e.target.closest('#suggestions-box') &&
+      !e.target.closest('.msg-input')
+    ) {
       box.style.display = 'none';
     }
   });
 }
 
-function useSuggestion(item) {
+/* click suggestion */
+function useSuggestion(text) {
   const textarea = document.querySelector('.msg-input');
   if (!textarea) return;
-  const text = [...item.childNodes]
-    .filter(n => n.nodeType === Node.TEXT_NODE)
-    .map(n => n.textContent.trim())
-    .filter(Boolean)
-    .join('');
   textarea.value = text;
   textarea.focus();
   autoResize(textarea);
   document.getElementById('suggestions-box').style.display = 'none';
 }
+
+/* run after everything fully loads */
+window.addEventListener('load', () => {
+  wrapTablesWithExport();
+  initScrollButton();
+
+  const aiMessages = document.querySelectorAll('.msg-row.gemini .bubble');
+
+  if (aiMessages.length > 0) {
+    const lastBubble = aiMessages[aiMessages.length - 1];
+    lastAISuggestions = extractSuggestionsFromText(lastBubble.innerText);
+  } else {
+  lastAISuggestions = [];
+}
+
+  initSuggestions();
+
+  const msgs = document.querySelector('.messages');
+  if (msgs) msgs.scrollTop = msgs.scrollHeight;
+});
