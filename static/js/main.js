@@ -2,7 +2,9 @@
 
 const el = id => document.getElementById(id);
 
-if (localStorage.getItem('theme') === 'dark') {
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+if (savedTheme === 'dark') {
   document.body.classList.add('dark');
 }
 
