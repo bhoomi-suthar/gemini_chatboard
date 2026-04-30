@@ -801,12 +801,13 @@ window.addEventListener('load', () => {
 
 
 const defaultSuggestions = [
-  'What can you help me with?',
-  'Summarize something for me',
-  'Explain any topic simply',
-  'Create a table from data',
-  'Make a chart from numbers',
-  'Answer general questions'
+  'What is this topic about?',
+  'How does this work?',
+  'Explain this concept simply',
+  'Create a table from this data',
+  'Generate a chart from numbers',
+  'Summarize this information',
+  'how to create this?',
 ];
 
 let lastAISuggestions = [];
