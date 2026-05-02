@@ -15,18 +15,33 @@ from fastapi import Body
 SHARES_FILE = "shares.json"
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
-HISTORY_FILE = "history.json"
+
+def get_history_file(user_id: str) -> str:
+    # sanitize user_id to be safe for filenames
+    safe_id = user_id.replace("|", "_").replace("/", "_").replace("\\", "_")
+    return f"history_{safe_id}.json"
+
+
 PDF_DIR = pathlib.Path("uploaded_pdfs")
 PDF_DIR.mkdir(exist_ok=True)
 
-def load_history():
-    if not os.path.exists(HISTORY_FILE):
+def get_user_id(request: Request) -> str:
+    try:
+        user = request.session.get("user", {})
+        return user.get("sub", "default")
+    except:
+        return "default"
+
+def load_history(user_id: str = "default"):
+    fname = get_history_file(user_id)
+    if not os.path.exists(fname):
         return {}
-    with open(HISTORY_FILE, "r") as f:
+    with open(fname, "r") as f:
         return json.load(f)
 
-def save_history(history):
-    with open(HISTORY_FILE, "w") as f:
+def save_history(history, user_id: str = "default"):
+    fname = get_history_file(user_id)
+    with open(fname, "w") as f:
         json.dump(history, f, indent=2)
 
 
@@ -60,7 +75,8 @@ async def chat_ui(
     response_mode: str = Form("table"),
     topic: str = Form("")  
 ):
-    history = load_history()
+    user_id = get_user_id(request)
+    history = load_history(user_id)
 
     is_new_chat = not chat_id
     if not chat_id:
@@ -129,7 +145,7 @@ async def chat_ui(
             "text": f"Error: {str(e)}"
         })
 
-    save_history(history)
+    save_history(history, user_id)
 
     return templates.TemplateResponse(
         request=request,
@@ -145,7 +161,8 @@ async def chat_ui(
 
 @router.get("/chat/{chat_id}", response_class=HTMLResponse)
 async def load_chat(request: Request, chat_id: str):
-    history = load_history()
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     messages = history.get(chat_id, {}).get("messages", [])
     return templates.TemplateResponse(
         request=request,
@@ -160,31 +177,34 @@ async def load_chat(request: Request, chat_id: str):
 
 
 @router.post("/chat/{chat_id}/rename")
-async def rename_chat(chat_id: str, new_title: str = Form(...)):
-    history = load_history()
+async def rename_chat(request: Request, chat_id: str, new_title: str = Form(...)):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     if chat_id in history:
         history[chat_id]["title"] = new_title[:30]
-        save_history(history)
+        save_history(history, user_id)
     from fastapi.responses import RedirectResponse
     return RedirectResponse(url=f"/chat/{chat_id}", status_code=303)
 
 
 @router.post("/chat/{chat_id}/delete")
-async def delete_chat(chat_id: str):
-    history = load_history()
+async def delete_chat(request: Request, chat_id: str):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     if chat_id in history:
         del history[chat_id]
-        save_history(history)
+        save_history(history, user_id)
     from fastapi.responses import RedirectResponse
     return RedirectResponse(url="/", status_code=303)
 
 
 @router.post("/chat/{chat_id}/pin")
-async def pin_chat(chat_id: str):
-    history = load_history()
+async def pin_chat(request: Request, chat_id: str):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     if chat_id in history:
         history[chat_id]["pinned"] = not history[chat_id].get("pinned", False)
-        save_history(history)
+        save_history(history, user_id)
     from fastapi.responses import JSONResponse
     return JSONResponse({"status": "ok"})
 
@@ -207,7 +227,8 @@ async def chat_edit(
     topic: str = Form(""),
     edit_from_index: str = Form("0")
 ):
-    history = load_history()
+    user_id = get_user_id(request)
+    history = load_history(user_id)
 
     if not chat_id or chat_id not in history:
         from fastapi.responses import RedirectResponse
@@ -238,7 +259,7 @@ async def chat_edit(
         history[chat_id]["messages"].append({"role": "user", "text": message, "pdf": None})
         history[chat_id]["messages"].append({"role": "ai", "text": f"Error: {str(e)}"})
 
-    save_history(history)
+    save_history(history, user_id)
 
     return templates.TemplateResponse(
         request=request,
@@ -252,25 +273,13 @@ async def chat_edit(
     )
 
 
-@router.get("/chat/{chat_id}", response_class=HTMLResponse)
-async def load_chat(request: Request, chat_id: str):
-    history = load_history()
-    messages = history.get(chat_id, {}).get("messages", [])
-    return templates.TemplateResponse(
-        request=request,
-        name="index.html",
-        context={
-            "messages": messages,
-            "chat_id": chat_id,
-            "history": history,
-            "current_topic": history.get(chat_id, {}).get("topic", "")
-        }
-    )
+
 
 # sharing chart
 @router.post("/chat/{chat_id}/share")
-async def create_share(chat_id: str):
-    history = load_history()
+async def create_share(request: Request, chat_id: str):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     if chat_id not in history:
         raise HTTPException(status_code=404, detail="Chat not found")
 
@@ -286,7 +295,7 @@ async def create_share(chat_id: str):
     # mark this chat as shared in history
     history[chat_id]["shared"] = True
     history[chat_id]["share_id"] = share_id
-    save_history(history)
+    save_history(history, user_id)
 
     from fastapi.responses import JSONResponse
     return JSONResponse({"share_id": share_id})
@@ -345,8 +354,9 @@ async def share_chat_api(payload: dict = Body(...)):
 
 
 @router.post("/chat/{chat_id}/unshare")
-async def unshare_chat(chat_id: str):
-    history = load_history()
+async def unshare_chat(request: Request, chat_id: str):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
     if chat_id in history:
         # get the share_id before removing
         share_id = history[chat_id].get("share_id")
@@ -354,7 +364,7 @@ async def unshare_chat(chat_id: str):
         # remove shared from history
         history[chat_id]["shared"] = False
         history[chat_id].pop("share_id", None)
-        save_history(history)
+        save_history(history, user_id)
         
         # remove from shares.json so the link stops working
         if share_id:

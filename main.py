@@ -36,6 +36,11 @@ oauth.register(
     client_kwargs={'scope': 'openid profile email'}
 )
 
+# create shares.json if missing (Render ephemeral filesystem)
+if not os.path.exists("shares.json"):
+    with open("shares.json", "w") as f:
+        json.dump({}, f)
+
 app.include_router(router)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
@@ -47,10 +52,10 @@ async def root(request: Request):
     if not user:
         return RedirectResponse(url='/login')
 
-    history = {}
-    if os.path.exists("history.json"):
-        with open("history.json", "r") as f:
-            history = json.load(f)
+    # load per-user history
+    from routes.chat import load_history, get_history_file
+    user_id = user.get("sub", "default")
+    history = load_history(user_id)
 
     return templates.TemplateResponse(
         request=request,
@@ -59,10 +64,10 @@ async def root(request: Request):
             "messages": [],
             "chat_id": None,
             "history": history,
-            "user": user   
+            "current_topic": "",
+            "user": user
         }
     )
-
 
 
 @app.get("/login")
