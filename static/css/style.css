@@ -355,6 +355,7 @@ body.dark .nav-btn.active-fav {
   display: flex;
   flex: 1;
   overflow: hidden;
+  min-height: 0;
 }
 
 .sidebar {
@@ -367,9 +368,8 @@ body.dark .nav-btn.active-fav {
   gap: 10px;
   flex-shrink: 0;
   transition: background 0.3s, border 0.3s;
-  height: 100%;
-  max-height: 100%;
   overflow: hidden;
+  align-self: stretch;
 }
 
 .new-chat-btn {
@@ -411,13 +411,12 @@ body.dark .nav-btn.active-fav {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: var(--label-color) transparent;
   padding-bottom: 20px;
   flex: 1;
   min-height: 0;
-  height: 0;
 }
 
 .history-list::-webkit-scrollbar {
