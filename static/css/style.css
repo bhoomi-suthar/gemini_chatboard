@@ -367,6 +367,8 @@ body.dark .nav-btn.active-fav {
   gap: 10px;
   flex-shrink: 0;
   transition: background 0.3s, border 0.3s;
+  height: 100%;
+  overflow: hidden;
 }
 
 .new-chat-btn {
@@ -411,10 +413,33 @@ body.dark .nav-btn.active-fav {
   overflow-y: auto;
   scrollbar-width: none;
   padding-bottom: 20px;
+  flex: 1;
+  min-height: 0;
 }
 
 .history-list::-webkit-scrollbar {
-  display: none;
+  width: 5px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: var(--divider);
+  border-radius: 4px;
+}
+
+
+.history-list::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: var(--label-color);
+  border-radius: 4px;
+  min-height: 60px;
+}
+
+.history-list::-webkit-scrollbar-thumb:hover {
+  background: #4a90e2;
 }
 
 .history-row {
@@ -489,14 +514,12 @@ body.dark .pinned-badge {
 }
 
 .dropdown {
-  position: absolute;
-  right: 0;
-  top: 100%;
+  position: fixed;
   background: var(--dropdown-bg);
   border: 1px solid var(--dropdown-border);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 100;
+  z-index: 99999;
   min-width: 160px;
   display: none;
   flex-direction: column;
