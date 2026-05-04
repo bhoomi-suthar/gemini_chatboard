@@ -268,6 +268,7 @@
         <!-- History items -->
         {% if history %}
         {% for id, chat in history.items() %}
+        {% if not chat.get('shared') %}
         <div class="history-row {% if id == chat_id %}active{% endif %}" id="row-{{ id }}">
           <div class="row-normal" id="normal-{{ id }}">
             {% if chat.get('pinned') %}
@@ -308,6 +309,7 @@
             <button type="button" class="cancel-btn" onclick="closeRename('{{ id }}')">x</button>
           </form>
         </div>
+        {% endif %}
         {% endfor %}
         {% else %}
         <div class="sidebar-empty">No history yet</div>
