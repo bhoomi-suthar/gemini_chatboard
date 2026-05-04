@@ -280,14 +280,28 @@ function updateModeBtn() {
 }
 
 // close chart dropdown on outside click 
+// close chart dropdown on outside click 
 document.addEventListener('click', (e) => {
-  if (!el('search-input').contains(e.target) && !el('search-results').contains(e.target))
+  if (!el('search-input').contains(e.target) && !el('search-results').contains(e.target)) {
     el('search-results').classList.remove('open');
+  }
+
+  // close sidebar dropdowns only
   document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
+
+  // close chart dropdown only if clicked outside chart wrapper
   const wrapper = el('chart-mode-wrapper');
-  if (wrapper && !wrapper.contains(e.target))
+  if (wrapper && !wrapper.contains(e.target)) {
     el('chart-dropdown').classList.remove('open');
+  }
+
+  // close table export dropdown ONLY if click outside table
+  if (!e.target.closest('.table-wrapper')) {
+    document.querySelectorAll('.table-export-dropdown')
+      .forEach(d => d.classList.remove('open'));
+  }
 });
+
 
 // open close the chart dropdown
 function toggleDropdown(e) {
