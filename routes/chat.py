@@ -12,7 +12,7 @@ import time
 from fastapi import Body
 
 
-SHARES_FILE = "shares.json"
+SHARES_FILE = "/tmp/shares.json"
 router = APIRouter()
 templates = Jinja2Templates(directory="templates")
 
@@ -25,25 +25,25 @@ def get_history_file(user_id: str) -> str:
 PDF_DIR = pathlib.Path("uploaded_pdfs")
 PDF_DIR.mkdir(exist_ok=True)
 
-def get_user_id(request: Request) -> str:
-    try:
-        user = request.session.get("user", {})
-        return user.get("sub", "default")
-    except:
-        return "default"
+def get_history_file(user_id: str) -> str:
+    safe_id = user_id.replace("|", "_").replace("/", "_")
+    return f"/tmp/history_{safe_id}.json"
 
 def load_history(user_id: str = "default"):
-    fname = get_history_file(user_id)
-    if not os.path.exists(fname):
+    path = get_history_file(user_id)
+    if not os.path.exists(path):
         return {}
-    with open(fname, "r") as f:
+    with open(path, "r") as f:
         return json.load(f)
 
 def save_history(history, user_id: str = "default"):
-    fname = get_history_file(user_id)
-    with open(fname, "w") as f:
+    path = get_history_file(user_id)
+    with open(path, "w") as f:
         json.dump(history, f, indent=2)
 
+def get_user_id(request: Request) -> str:
+    user = request.session.get("user", {})
+    return user.get("sub", "default")
 
 
 def load_shares():
