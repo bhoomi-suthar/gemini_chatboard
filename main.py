@@ -73,7 +73,8 @@ async def root(request: Request):
 @app.get("/login")
 async def login(request: Request):
     return await oauth.auth0.authorize_redirect(
-        request, AUTH0_CALLBACK_URL
+        request, AUTH0_CALLBACK_URL,
+        prompt="consent"
     )
 
 
