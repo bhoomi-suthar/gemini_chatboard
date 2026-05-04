@@ -544,13 +544,13 @@ document.addEventListener('click', function (e) {
 
 
 /* share chat */
+
 function openShareModal() {
   const chatId = document.querySelector('input[name="chat_id"]').value;
   if (!chatId) {
     alert('No chat to share.');
     return;
   }
-
   // generate share link from backend
   fetch(`/chat/${chatId}/share`, { method: 'POST' })
     .then(r => r.json())
@@ -568,25 +568,32 @@ function openShareModal() {
       // save to localStorage so it shows in "Shared Chats" section
       const shareKey = 'shared_chats';
       let sharedList = [];
-      try {
-        sharedList = JSON.parse(localStorage.getItem(shareKey) || '[]');
-      } catch (e) {}
+      try { sharedList = JSON.parse(localStorage.getItem(shareKey) || '[]'); } catch (e) { }
+      const chatTitle = document.querySelector('.history-row.active .history-item')?.textContent?.trim() || 'Shared Chat';
+      sharedList.unshift({ share_id: data.share_id, title: chatTitle, link: link, time: Date.now() });
+      localStorage.setItem(shareKey, JSON.stringify(sharedList.slice(0, 20)));
 
-      const chatTitle =
-        document.querySelector('.history-row.active .history-item')?.textContent?.trim() ||
-        'Shared Chat';
+      /* instantly add shared chat to sidebar without refresh */
+      const sharedContainer = document.getElementById('shared-chats-list');
 
-      sharedList.unshift({
-        share_id: data.share_id,
-        title: chatTitle,
-        link: link,
-        time: Date.now()
-      });
+      if (sharedContainer) {
+        const existing = sharedContainer.querySelector(`[data-share-id="${data.share_id}"]`);
 
-      localStorage.setItem(
-        shareKey,
-        JSON.stringify(sharedList.slice(0, 20))
-      );
+        if (!existing) {
+          const item = document.createElement('a');
+          item.href = `/share/${data.share_id}`;
+          item.className = 'history-item';
+          item.setAttribute('data-share-id', data.share_id);
+          item.textContent = chatTitle;
+
+          const row = document.createElement('div');
+          row.className = 'history-row';
+          row.appendChild(item);
+
+          // add at top
+          sharedContainer.prepend(row);
+        }
+      }
 
       el('share-modal-overlay').classList.add('open');
 
@@ -597,7 +604,6 @@ function openShareModal() {
     })
     .catch(() => alert('Could not generate share link.'));
 }
-
 
 function closeShareModal(e) {
   if (!e || e.target === el('share-modal-overlay'))
@@ -610,6 +616,21 @@ function copyShareText() {
   navigator.clipboard.writeText(input.value).then(() => {
     const btn = el('share-copy-btn');
     btn.classList.add('copied');
+
+    // move current chat from History to Shared Chats
+    const activeRow = document.querySelector('.history-row.active');
+    const sharedContainer = document.getElementById('shared-chats-list');
+
+    if (activeRow && sharedContainer) {
+      const clone = activeRow.cloneNode(true);
+
+      // remove from history
+      activeRow.remove();
+
+      // add to shared section top
+      sharedContainer.prepend(clone);
+    }
+    
     btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
     setTimeout(() => {
       btn.classList.remove('copied');
