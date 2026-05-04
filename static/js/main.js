@@ -551,6 +551,7 @@ function openShareModal() {
     alert('No chat to share.');
     return;
   }
+
   // generate share link from backend
   fetch(`/chat/${chatId}/share`, { method: 'POST' })
     .then(r => r.json())
@@ -568,32 +569,25 @@ function openShareModal() {
       // save to localStorage so it shows in "Shared Chats" section
       const shareKey = 'shared_chats';
       let sharedList = [];
-      try { sharedList = JSON.parse(localStorage.getItem(shareKey) || '[]'); } catch (e) { }
-      const chatTitle = document.querySelector('.history-row.active .history-item')?.textContent?.trim() || 'Shared Chat';
-      sharedList.unshift({ share_id: data.share_id, title: chatTitle, link: link, time: Date.now() });
-      localStorage.setItem(shareKey, JSON.stringify(sharedList.slice(0, 20)));
+      try {
+        sharedList = JSON.parse(localStorage.getItem(shareKey) || '[]');
+      } catch (e) {}
 
-      /* instantly add shared chat to sidebar without refresh */
-      const sharedContainer = document.getElementById('shared-chats-list');
+      const chatTitle =
+        document.querySelector('.history-row.active .history-item')?.textContent?.trim() ||
+        'Shared Chat';
 
-      if (sharedContainer) {
-        const existing = sharedContainer.querySelector(`[data-share-id="${data.share_id}"]`);
+      sharedList.unshift({
+        share_id: data.share_id,
+        title: chatTitle,
+        link: link,
+        time: Date.now()
+      });
 
-        if (!existing) {
-          const item = document.createElement('a');
-          item.href = `/share/${data.share_id}`;
-          item.className = 'history-item';
-          item.setAttribute('data-share-id', data.share_id);
-          item.textContent = chatTitle;
-
-          const row = document.createElement('div');
-          row.className = 'history-row';
-          row.appendChild(item);
-
-          // add at top
-          sharedContainer.prepend(row);
-        }
-      }
+      localStorage.setItem(
+        shareKey,
+        JSON.stringify(sharedList.slice(0, 20))
+      );
 
       el('share-modal-overlay').classList.add('open');
 
@@ -604,6 +598,7 @@ function openShareModal() {
     })
     .catch(() => alert('Could not generate share link.'));
 }
+
 
 function closeShareModal(e) {
   if (!e || e.target === el('share-modal-overlay'))
