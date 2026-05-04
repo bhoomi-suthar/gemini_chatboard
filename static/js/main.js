@@ -573,6 +573,28 @@ function openShareModal() {
       sharedList.unshift({ share_id: data.share_id, title: chatTitle, link: link, time: Date.now() });
       localStorage.setItem(shareKey, JSON.stringify(sharedList.slice(0, 20)));
 
+/* instantly add shared chat to sidebar without refresh */
+const sharedContainer = document.getElementById('shared-chats-list');
+
+if (sharedContainer) {
+  const existing = sharedContainer.querySelector(`[data-share-id="${data.share_id}"]`);
+
+  if (!existing) {
+    const item = document.createElement('a');
+    item.href = `/share/${data.share_id}`;
+    item.className = 'history-item';
+    item.setAttribute('data-share-id', data.share_id);
+    item.textContent = chatTitle;
+
+    const row = document.createElement('div');
+    row.className = 'history-row';
+    row.appendChild(item);
+
+    // add at top
+    sharedContainer.prepend(row);
+  }
+}
+
       el('share-modal-overlay').classList.add('open');
 
       // reset copy button
