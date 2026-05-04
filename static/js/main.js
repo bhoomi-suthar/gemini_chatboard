@@ -613,21 +613,67 @@ function closeShareModal(e) {
 function copyShareText() {
   const input = el('share-link-input');
   if (!input) return;
+
   navigator.clipboard.writeText(input.value).then(() => {
     const btn = el('share-copy-btn');
     btn.classList.add('copied');
+
+    // move current chat from History to Shared Chats
+    const activeRow = document.querySelector('.history-row.active');
+    const sharedContainer = document.getElementById('shared-chats-list');
+
+    if (activeRow && sharedContainer) {
+      // remove from history first
+      activeRow.remove();
+
+      // add same row into shared chats
+      sharedContainer.prepend(activeRow);
+    }
+
     btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!`;
+
     setTimeout(() => {
       btn.classList.remove('copied');
       btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy Link`;
     }, 2000);
-
-    // add to shared chats sidebar instantly
-    addToSharedSidebar();
   });
 }
 
 
+function addToSharedSidebar() {
+  const sharedList = document.getElementById('shared-chats-list');
+  if (!sharedList) return;
+
+  const chatTitle = document.querySelector('.history-row.active .history-item')?.textContent?.trim() || 'Shared Chat';
+  const input = el('share-link-input');
+  if (!input) return;
+  const link = input.value;
+
+  // check if already added
+  if (sharedList.querySelector(`[href="${link}"]`)) return;
+
+  // show the shared chats label if hidden
+  const label = document.querySelector('.sidebar-section-label[style*="4a90e2"]');
+  if (label) label.style.display = '';
+
+  const row = document.createElement('div');
+  row.className = 'history-row';
+  row.innerHTML = `
+    <div class="row-normal">
+      <a href="${link}" class="history-item" style="color:#4a90e2;">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:3px;vertical-align:middle;flex-shrink:0">
+          <circle cx="18" cy="5" r="3"/>
+          <circle cx="6" cy="12" r="3"/>
+          <circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+        ${chatTitle}
+      </a>
+    </div>
+  `;
+  sharedList.prepend(row);
+}
 
 /* unshare chat */
 
