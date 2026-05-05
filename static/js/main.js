@@ -86,7 +86,7 @@ function togglePin(id, e) {
 /* loading */
 function showLoading() {
   const messages = document.querySelector(".messages");
-
+  if (messages) sessionStorage.setItem("scrollPos", messages.scrollTop);
 
   document.getElementById('response-mode-input').value = responseMode === 'chart' ? chartType : 'table';
   document.getElementById('btn-text').style.display = 'none';
@@ -121,9 +121,8 @@ function closeRename(id) {
 
 window.addEventListener("load", () => {
   const messages = document.querySelector(".messages");
-  // always scroll to bottom after page load to show latest message
-  if (messages) messages.scrollTop = messages.scrollHeight;
-  sessionStorage.removeItem("scrollPos");
+  const saved = sessionStorage.getItem("scrollPos");
+  if (messages && saved !== null) messages.scrollTop = saved;
 });
 
 /* PDF viewer */
