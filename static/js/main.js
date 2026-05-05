@@ -174,13 +174,137 @@ function autoResize(el) {
   el.classList.add('animate-text');
 }
 
+
+
+
 function handleEnter(e) {
   if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
-    if (el('send-btn') && !el('send-btn').disabled) {
-      el('send-btn').closest('form').requestSubmit();
-    }
+    sendMessage();
   }
+}
+
+async function sendMessage() {
+  const form = document.querySelector('form[action="/chat/ui"]');
+  const textarea = document.querySelector('.msg-input');
+  if (!form || !textarea) return;
+
+  const msgText = textarea.value.trim();
+  if (!msgText) return;
+
+  // sync hidden inputs before send
+  document.getElementById('response-mode-input').value = responseMode === 'chart' ? chartType : 'table';
+  const topicHidden = document.getElementById('topic-hidden');
+  if (topicHidden) topicHidden.value = currentTopic || '';
+
+  // show user message instantly
+  const messages = document.querySelector('.messages');
+  const userRow = document.createElement('div');
+  userRow.className = 'msg-row user';
+  userRow.innerHTML = `<div class="msg-label">You</div><div class="bubble">${msgText.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>`;
+  messages.appendChild(userRow);
+
+  // show loading dots
+  const loadingRow = document.createElement('div');
+  loadingRow.className = 'msg-row gemini';
+  loadingRow.id = 'loading-bubble';
+  loadingRow.innerHTML = `
+    <div class="msg-label" style="color:#4a90e2">Gemini</div>
+    <div class="bubble" style="padding:10px 16px">
+      <div style="display:flex;gap:5px;align-items:center">
+        <span style="width:7px;height:7px;background:#aaa;border-radius:50%;display:inline-block;animation:fade 1.2s infinite"></span>
+        <span style="width:7px;height:7px;background:#aaa;border-radius:50%;display:inline-block;animation:fade 1.2s 0.4s infinite"></span>
+        <span style="width:7px;height:7px;background:#aaa;border-radius:50%;display:inline-block;animation:fade 1.2s 0.8s infinite"></span>
+      </div>
+    </div>`;
+  messages.appendChild(loadingRow);
+
+  // scroll to show user message (not bottom)
+  userRow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // disable send button
+  el('btn-text').style.display = 'none';
+  el('dots').style.display = 'flex';
+  el('send-btn').disabled = true;
+
+  // hide suggestions
+  const box = document.getElementById('suggestions-box');
+  if (box) box.style.display = 'none';
+
+  // clear textarea
+  textarea.value = '';
+  textarea.style.height = 'auto';
+
+  // send via fetch
+  const formData = new FormData(form);
+  try {
+    const response = await fetch('/chat/ui', { method: 'POST', body: formData });
+    const html = await response.text();
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+
+    // get last AI message from response
+    const allRows = doc.querySelectorAll('.msg-row.gemini');
+    const lastAI = allRows[allRows.length - 1];
+
+    // remove loading
+    const lb = document.getElementById('loading-bubble');
+    if (lb) lb.remove();
+
+    if (lastAI) {
+      messages.appendChild(lastAI);
+      wrapTablesWithExport();
+
+      // re-run scripts inside AI bubble (for charts)
+      lastAI.querySelectorAll('script').forEach(s => {
+        const ns = document.createElement('script');
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
+        document.body.removeChild(ns);
+      });
+
+      // scroll to show new AI reply start
+      lastAI.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // update chat_id if new chat
+    const newChatIdEl = doc.querySelector('input[name="chat_id"]');
+    const currentChatIdEl = document.querySelector('input[name="chat_id"]');
+    if (newChatIdEl && currentChatIdEl && newChatIdEl.value) {
+      currentChatIdEl.value = newChatIdEl.value;
+      // update URL without reload
+      window.history.pushState({}, '', `/chat/${newChatIdEl.value}`);
+
+      // update sidebar — add new chat to history list
+      const newTitle = doc.querySelector('.history-row.active .history-item')?.textContent?.trim();
+      if (newTitle) {
+        const histList = document.querySelector('.history-list');
+        const label = histList?.querySelector('.sidebar-section-label:last-of-type');
+        if (label && histList) {
+          const newRow = document.createElement('div');
+          newRow.className = 'history-row active';
+          newRow.innerHTML = `<div class="row-normal"><a href="/chat/${newChatIdEl.value}" class="history-item" style="color:#4a90e2;font-weight:600">${newTitle}</a></div>`;
+          label.after(newRow);
+        }
+      }
+    }
+
+    // update suggestions from new AI reply
+    if (lastAI) {
+      lastAISuggestions = extractSuggestionsFromText(lastAI.innerText);
+    }
+
+  } catch (err) {
+    const lb = document.getElementById('loading-bubble');
+    if (lb) lb.remove();
+    console.error('Send error:', err);
+  }
+
+  // re-enable send
+  el('btn-text').style.display = '';
+  el('dots').style.display = 'none';
+  el('send-btn').disabled = false;
 }
 
 /* table-chart mode toggle */
