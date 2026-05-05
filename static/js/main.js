@@ -571,7 +571,7 @@ function openShareModal() {
       let sharedList = [];
       try {
         sharedList = JSON.parse(localStorage.getItem(shareKey) || '[]');
-      } catch (e) {}
+      } catch (e) { }
 
       const chatTitle =
         document.querySelector('.history-row.active .history-item')?.textContent?.trim() ||
@@ -648,7 +648,7 @@ function addToSharedSidebar() {
   if (sharedList.querySelector(`[href="${link}"]`)) return;
 
   // show the shared chats label if hidden
-  const label = document.querySelector('.sidebar-section-label[style*="4a90e2"]');
+  const label = document.getElementById('shared-chats-label');
   if (label) label.style.display = '';
 
   const row = document.createElement('div');
