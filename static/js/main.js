@@ -649,7 +649,11 @@ function addToSharedSidebar() {
 
   // show the shared chats label if hidden
   const label = document.getElementById('shared-chats-label');
-  if (label) label.style.display = '';
+  if (label) {
+    label.style.display = 'block';   // FIXED
+    label.style.color = '#4a90e2';
+    label.removeAttribute('hidden');
+  }
 
   const row = document.createElement('div');
   row.className = 'history-row';
@@ -669,6 +673,7 @@ function addToSharedSidebar() {
   `;
   sharedList.prepend(row);
 }
+
 
 /* unshare chat */
 
