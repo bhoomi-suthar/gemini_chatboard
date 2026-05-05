@@ -417,7 +417,10 @@
           <span id="pdf-name-text"></span>
           <span class="pdf-remove" onclick="removePdf()">✕</span>
         </div>
-        <form method="POST" action="/chat/ui" onsubmit="showLoading()" enctype="multipart/form-data">
+
+
+
+        <form method="POST" action="/chat/ui" enctype="multipart/form-data" id="chat-form">
           <input type="hidden" name="chat_id" value="{{ chat_id or '' }}" />
           <input type="hidden" name="response_mode" id="response-mode-input" value="table" />
           <input type="hidden" name="topic" id="topic-hidden" value="{{ current_topic or '' }}" />
@@ -459,7 +462,7 @@
             </svg>
           </button>
 
-          <button type="submit" id="send-btn">
+          <button type="button" id="send-btn" onclick="sendMessage()">
             <span id="btn-text">Send</span>
             <div class="dots" id="dots">
               <span></span><span></span><span></span>
