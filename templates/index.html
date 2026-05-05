@@ -419,8 +419,8 @@
         </div>
 
 
-        
-        <form method="POST" action="/chat/ui" onsubmit="showLoading()" enctype="multipart/form-data">
+        <form method="POST" action="/chat/ui" onsubmit="handleSubmit()" enctype="multipart/form-data">
+          
           <input type="hidden" name="chat_id" value="{{ chat_id or '' }}" />
           <input type="hidden" name="response_mode" id="response-mode-input" value="table" />
           <input type="hidden" name="topic" id="topic-hidden" value="{{ current_topic or '' }}" />

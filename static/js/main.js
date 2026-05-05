@@ -85,13 +85,57 @@ function togglePin(id, e) {
 
 /* loading */
 function showLoading() {
-  const messages = document.querySelector(".messages");
-  if (messages) sessionStorage.setItem("scrollPos", messages.scrollTop);
-
   document.getElementById('response-mode-input').value = responseMode === 'chart' ? chartType : 'table';
   document.getElementById('btn-text').style.display = 'none';
   document.getElementById('dots').style.display = 'flex';
   document.getElementById('send-btn').disabled = true;
+}
+
+function handleSubmit() {
+  // set response mode
+  document.getElementById('response-mode-input').value = responseMode === 'chart' ? chartType : 'table';
+
+  // show loading dots
+  document.getElementById('btn-text').style.display = 'none';
+  document.getElementById('dots').style.display = 'flex';
+  document.getElementById('send-btn').disabled = true;
+
+  // show loading bubble in chat immediately
+  const messages = document.querySelector('.messages');
+  if (messages) {
+    // add user message preview
+    const textarea = document.querySelector('.msg-input');
+    const userText = textarea ? textarea.value.trim() : '';
+
+    if (userText) {
+      const userRow = document.createElement('div');
+      userRow.className = 'msg-row user';
+      userRow.innerHTML = `
+        <div class="msg-label">You</div>
+        <div class="bubble">${userText}</div>
+      `;
+      messages.appendChild(userRow);
+    }
+
+    // add AI loading bubble
+    const loadingRow = document.createElement('div');
+    loadingRow.className = 'msg-row gemini';
+    loadingRow.id = 'loading-bubble';
+    loadingRow.innerHTML = `
+      <div class="msg-label" style="color:#4a90e2">Gemini</div>
+      <div class="bubble" style="padding:12px 16px;">
+        <div style="display:flex;gap:5px;align-items:center;">
+          <span style="width:7px;height:7px;background:#aaa;border-radius:50%;animation:fade 1.2s infinite;display:inline-block;"></span>
+          <span style="width:7px;height:7px;background:#aaa;border-radius:50%;animation:fade 1.2s 0.4s infinite;display:inline-block;"></span>
+          <span style="width:7px;height:7px;background:#aaa;border-radius:50%;animation:fade 1.2s 0.8s infinite;display:inline-block;"></span>
+        </div>
+      </div>
+    `;
+    messages.appendChild(loadingRow);
+
+    // smooth scroll to loading bubble
+    loadingRow.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 }
 
 /* dropdown menu */
