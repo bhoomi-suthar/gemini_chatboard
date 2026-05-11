@@ -90,6 +90,7 @@ async def chat_ui(
         if pdf_file and pdf_file.filename:
             pdf_name = pdf_file.filename
             import fitz
+            from services.rag import embed_and_store_pdf, get_relevant_chunks
 
             contents = await pdf_file.read()
 
@@ -102,7 +103,17 @@ async def chat_ui(
             doc.close()
 
             if pdf_text.strip():
-                full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
+                # store chunks in Pinecone
+                embed_and_store_pdf(pdf_text, pdf_name, chat_id)
+                
+                # get only relevant chunks for this question
+                relevant_chunks = get_relevant_chunks(message, chat_id, pdf_name)
+                
+                if relevant_chunks:
+                    full_message = f"{message}\n\n[Relevant PDF Content]:\n{relevant_chunks}"
+                else:
+                    # fallback to first 3000 chars if no matches
+                    full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
 
         #  Topic Filter Logic 
         topic = topic.strip() if topic else ""
