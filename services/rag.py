@@ -3,6 +3,23 @@ from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
 import hashlib
 import google.generativeai as genai
 
+import os
+import hashlib
+import google.generativeai as genai
+from pinecone import Pinecone
+
+# hardcoded fallback so it always works
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "pcsk_5oGKzU_RuTirbZNh9517tL8jbPsLRvkTfPywRb87BTPzue1aebiXDXcnrUjbV6YLcyUHPW")
+PINECONE_HOST = os.getenv("PINECONE_HOST", "rag-pdf-0wpd80f.svc.aped-4627-b74a.pinecone.io")
+PINECONE_INDEX = os.getenv("PINECONE_INDEX", "rag-pdf")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyBF0EwG86ehckHju1D2qVVdS1o18hBAHdQ")
+
+genai.configure(api_key=GEMINI_API_KEY)
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(name=PINECONE_INDEX, host=PINECONE_HOST)
+
+
+
 # init pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(
