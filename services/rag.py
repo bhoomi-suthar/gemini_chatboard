@@ -8,7 +8,10 @@ embedder = SentenceTransformer('all-MiniLM-L6-v2')  # 384 dimensions
 
 # init pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
-index = pc.Index(PINECONE_INDEX)
+index = pc.Index(
+    name=PINECONE_INDEX,
+    host="rag-pdf-0wpd80f.svc.aped-4627-b74a.pinecone.io"
+)
 
 
 def chunk_text(text: str, chunk_size: int = 400, overlap: int = 50) -> list[str]:

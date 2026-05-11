@@ -411,7 +411,7 @@ function stopSpeech() {
   if (recognition) {
     recognition.stop();
     recognition = null;
-  }
+  }sl
 }
 
 
