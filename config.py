@@ -10,8 +10,9 @@ AUTH0_CLIENT_SECRET = os.getenv("AUTH0_CLIENT_SECRET")
 AUTH0_CALLBACK_URL = os.getenv("AUTH0_CALLBACK_URL")
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-PINECONE_API_KEY = os.getenv("pcsk_5oGKzU_RuTirbZNh9517tL8jbPsLRvkTfPywRb87BTPzue1aebiXDXcnrUjbV6YLcyUHPW", "")
-PINECONE_INDEX = os.getenv("https://rag-pdf-0wpd80f.svc.aped-4627-b74a.pinecone.io", "rag-pdf")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
+PINECONE_INDEX = os.getenv("PINECONE_INDEX", "")
+PINECONE_HOST = os.getenv("PINECONE_HOST", "")
 
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY is missing!")
