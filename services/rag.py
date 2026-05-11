@@ -1,8 +1,7 @@
 from pinecone import Pinecone
-from config import PINECONE_API_KEY, PINECONE_INDEX
+from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
 import hashlib
 import google.generativeai as genai
-from config import GEMINI_API_KEY
 
 # init pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
@@ -33,7 +32,9 @@ def chunk_text(text: str, chunk_size: int = 400, overlap: int = 50) -> list:
     return chunks
 
 def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
+    print(f"[RAG] Storing PDF: {pdf_name}, chat: {chat_id}")
     chunks = chunk_text(pdf_text)
+    print(f"[RAG] Total chunks: {len(chunks)}")
     vectors = []
     for i, chunk in enumerate(chunks):
         chunk_id = hashlib.md5(f"{chat_id}_{pdf_name}_{i}".encode()).hexdigest()
@@ -48,8 +49,8 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
                 "text": chunk
             }
         })
-    # upsert all at once
     index.upsert(vectors=vectors)
+    print(f"[RAG] Upserted {len(vectors)} vectors successfully")
 
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
     question_vector = get_embedding(question)
