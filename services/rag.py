@@ -1,10 +1,8 @@
 from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
 from config import PINECONE_API_KEY, PINECONE_INDEX
 import hashlib
-
-# load embedding model once
-embedder = SentenceTransformer('all-MiniLM-L6-v2')  # 384 dimensions
+import google.generativeai as genai
+from config import GEMINI_API_KEY
 
 # init pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
@@ -13,9 +11,17 @@ index = pc.Index(
     host="rag-pdf-0wpd80f.svc.aped-4627-b74a.pinecone.io"
 )
 
+# init gemini
+genai.configure(api_key=GEMINI_API_KEY)
 
-def chunk_text(text: str, chunk_size: int = 400, overlap: int = 50) -> list[str]:
-    """Split text into overlapping chunks."""
+def get_embedding(text: str) -> list:
+    result = genai.embed_content(
+        model="models/text-embedding-004",
+        content=text
+    )
+    return result["embedding"]
+
+def chunk_text(text: str, chunk_size: int = 400, overlap: int = 50) -> list:
     words = text.split()
     chunks = []
     start = 0
@@ -26,20 +32,13 @@ def chunk_text(text: str, chunk_size: int = 400, overlap: int = 50) -> list[str]
         start += chunk_size - overlap
     return chunks
 
-
 def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
-    """Chunk PDF text, embed, and store in Pinecone."""
     chunks = chunk_text(pdf_text)
-    
+    vectors = []
     for i, chunk in enumerate(chunks):
-        # unique id per chunk
         chunk_id = hashlib.md5(f"{chat_id}_{pdf_name}_{i}".encode()).hexdigest()
-        
-        # embed the chunk
-        vector = embedder.encode(chunk).tolist()
-        
-        # store in pinecone with metadata
-        index.upsert(vectors=[{
+        vector = get_embedding(chunk)
+        vectors.append({
             "id": chunk_id,
             "values": vector,
             "metadata": {
@@ -48,15 +47,12 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
                 "chunk_index": i,
                 "text": chunk
             }
-        }])
-
+        })
+    # upsert all at once
+    index.upsert(vectors=vectors)
 
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
-    """Find most relevant PDF chunks for a question."""
-    # embed the question
-    question_vector = embedder.encode(question).tolist()
-    
-    # search pinecone for similar chunks from this specific pdf
+    question_vector = get_embedding(question)
     results = index.query(
         vector=question_vector,
         top_k=top_k,
@@ -66,10 +62,7 @@ def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int =
         },
         include_metadata=True
     )
-    
-    # combine top chunks
     relevant_text = ""
     for match in results.matches:
         relevant_text += match.metadata["text"] + "\n\n"
-    
     return relevant_text.strip()
