@@ -1,27 +1,24 @@
 import hashlib
+import requests
 from pinecone import Pinecone
 from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
-from google import genai
-from google.genai import types
 
-# init
-client = genai.Client(api_key=GEMINI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
 
 
 def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
-    """Get 768-dim embedding using google-genai client."""
-    try:
-        result = client.models.embed_content(
-            model="text-embedding-004",
-            contents=[text],
-            config=types.EmbedContentConfig(task_type=task_type)
-        )
-        return result.embeddings[0].values
-    except Exception as e:
-        print(f"Gemini embedding error: {e}")
-        raise
+    """Get embedding using Gemini REST API v1 directly."""
+    url = f"https://generativelanguage.googleapis.com/v1/models/text-embedding-004:embedContent?key={GEMINI_API_KEY}"
+    payload = {
+        "model": "models/text-embedding-004",
+        "content": {"parts": [{"text": text}]},
+        "taskType": task_type
+    }
+    response = requests.post(url, json=payload)
+    if response.status_code != 200:
+        raise Exception(f"Embedding API error {response.status_code}: {response.text}")
+    return response.json()["embedding"]["values"]
 
 
 def chunk_text(text: str, chunk_size: int = 300, overlap: int = 50) -> list:
