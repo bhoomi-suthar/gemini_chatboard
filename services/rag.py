@@ -14,7 +14,7 @@ def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
     """Get 768-dim embedding using google-genai client."""
     try:
         result = client.models.embed_content(
-            model="models/text-embedding-004",
+            model="text-embedding-004",
             contents=text,
             config=types.EmbedContentConfig(task_type=task_type)
         )
