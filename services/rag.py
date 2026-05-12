@@ -5,15 +5,14 @@ from config import PINECONE_API_KEY, PINECONE_INDEX
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
 
-# load once at startup
 _embedder = None
 
 def get_embedder():
     global _embedder
     if _embedder is None:
-        from sentence_transformers import SentenceTransformer
-        _embedder = SentenceTransformer('all-MiniLM-L6-v2')
-        print("✅ Embedder loaded")
+        from fastembed import TextEmbedding
+        _embedder = TextEmbedding(model_name="BAAI/bge-small-en-v1.5")
+        print("✅ FastEmbed loaded")
     return _embedder
 
 
@@ -40,7 +39,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
             f"{chat_id}_{pdf_name}_{i}".encode()
         ).hexdigest()
         try:
-            vector = embedder.encode(chunk).tolist()
+            vector = list(list(embedder.embed([chunk]))[0])
             vectors.append({
                 "id": chunk_id,
                 "values": vector,
@@ -67,7 +66,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
     try:
         embedder = get_embedder()
-        question_vector = embedder.encode(question).tolist()
+        question_vector = list(list(embedder.embed([question]))[0])
 
         results = index.query(
             vector=question_vector,
