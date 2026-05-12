@@ -1,19 +1,26 @@
 import hashlib
+import requests
+import json
 from pinecone import Pinecone
-from config import PINECONE_API_KEY, PINECONE_INDEX
+from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
 
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
 
-_embedder = None
 
-def get_embedder():
-    global _embedder
-    if _embedder is None:
-        from fastembed import TextEmbedding
-        _embedder = TextEmbedding(model_name="BAAI/bge-small-en-v1.5")
-        print("✅ FastEmbed loaded")
-    return _embedder
+def get_embedding(text: str) -> list:
+    """Use Gemini embedding via REST - v1beta works for embedding-001"""
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key={GEMINI_API_KEY}"
+    payload = {
+        "model": "models/embedding-001",
+        "content": {
+            "parts": [{"text": text[:2000]}]
+        }
+    }
+    resp = requests.post(url, json=payload, timeout=30)
+    if resp.status_code == 200:
+        return resp.json()["embedding"]["values"]
+    raise Exception(f"Embed failed {resp.status_code}: {resp.text[:200]}")
 
 
 def chunk_text(text: str, chunk_size: int = 300, overlap: int = 50) -> list:
@@ -30,7 +37,6 @@ def chunk_text(text: str, chunk_size: int = 300, overlap: int = 50) -> list:
 
 
 def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
-    embedder = get_embedder()
     chunks = chunk_text(pdf_text)
     vectors = []
 
@@ -39,7 +45,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
             f"{chat_id}_{pdf_name}_{i}".encode()
         ).hexdigest()
         try:
-            vector = list(list(embedder.embed([chunk]))[0])
+            vector = get_embedding(chunk)
             vectors.append({
                 "id": chunk_id,
                 "values": vector,
@@ -50,8 +56,9 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
                     "text": chunk
                 }
             })
+            print(f"✅ Embedded chunk {i}")
         except Exception as e:
-            print(f"Chunk {i} embedding failed: {e}")
+            print(f"Chunk {i} failed: {e}")
             continue
 
     for i in range(0, len(vectors), 50):
@@ -65,8 +72,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
 
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
     try:
-        embedder = get_embedder()
-        question_vector = list(list(embedder.embed([question]))[0])
+        question_vector = get_embedding(question)
 
         results = index.query(
             vector=question_vector,
@@ -85,7 +91,7 @@ def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int =
             relevant_text += chunk + "\n\n"
 
         if not relevant_text:
-            print("⚠️ RAG returned nothing, using fallback.")
+            print("⚠️ RAG returned nothing.")
 
         return relevant_text.strip()
 
