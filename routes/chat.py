@@ -102,7 +102,20 @@ async def chat_ui(
             doc.close()
 
             if pdf_text.strip():
-                full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
+                try:
+                    from services.rag import embed_and_store_pdf, get_relevant_chunks
+                    embed_and_store_pdf(pdf_text, pdf_name, chat_id)
+                    relevant_chunks = get_relevant_chunks(message, chat_id, pdf_name)
+                    if relevant_chunks:
+                        full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant_chunks}"
+                        print("✅ Using RAG chunks for response.")
+                    else:
+                        full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
+                        print("⚠️ RAG returned nothing, using fallback.")
+                except Exception as rag_error:
+                    print(f"❌ RAG failed, using fallback: {rag_error}")
+                    full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
+                    
 
         #  Topic Filter Logic 
         topic = topic.strip() if topic else ""
