@@ -15,7 +15,7 @@ def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
     try:
         result = client.models.embed_content(
             model="text-embedding-004",
-            contents=text,
+            contents=[text],
             config=types.EmbedContentConfig(task_type=task_type)
         )
         return result.embeddings[0].values
