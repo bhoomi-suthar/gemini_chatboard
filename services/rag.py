@@ -17,7 +17,8 @@ def get_embedding(text: str) -> list:
     try:
         result = client.models.embed_content(
             model="text-embedding-004",
-            contents=text
+            contents=text,
+            config={"output_dimensionality": 768}
         )
         return result.embeddings[0].values
     except Exception as e:
