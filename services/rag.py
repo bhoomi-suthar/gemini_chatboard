@@ -9,9 +9,9 @@ index = pc.Index(PINECONE_INDEX)
 
 def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
     """Get embedding using Gemini REST API v1 directly."""
-    url = f"https://generativelanguage.googleapis.com/v1/models/text-embedding-004:embedContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key={GEMINI_API_KEY}"
     payload = {
-        "model": "models/text-embedding-004",
+        "model": "models/embedding-001",
         "content": {"parts": [{"text": text}]},
         "taskType": task_type
     }
