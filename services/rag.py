@@ -13,10 +13,10 @@ index = pc.Index(name=PINECONE_INDEX, host=PINECONE_HOST)
 
 
 def get_embedding(text: str) -> list:
-    url = f"https://generativelanguage.googleapis.com/v1/models/text-embedding-004:embedContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key={GEMINI_API_KEY}"
     payload = {
-        "model": "models/text-embedding-004",
-        "content": {"parts": [{"text": text}]}
+      "model": "models/embedding-001",
+       "content": {"parts": [{"text": text}]}
     }
     response = http_requests.post(url, json=payload)
     response.raise_for_status()
