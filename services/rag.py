@@ -1,23 +1,24 @@
 import hashlib
 from pinecone import Pinecone
 from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
 # init
-genai.configure(api_key=GEMINI_API_KEY)
+client = genai.Client(api_key=GEMINI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
 
 
-def get_embedding(text: str, task_type: str = "retrieval_document") -> list:
-    """Get 768-dim embedding using Gemini."""
+def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
+    """Get 768-dim embedding using google-genai client."""
     try:
-        result = genai.embed_content(
+        result = client.models.embed_content(
             model="models/text-embedding-004",
-            content=text,
-            task_type=task_type
+            contents=text,
+            config=types.EmbedContentConfig(task_type=task_type)
         )
-        return result["embedding"]
+        return result.embeddings[0].values
     except Exception as e:
         print(f"Gemini embedding error: {e}")
         raise
@@ -45,7 +46,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
             f"{chat_id}_{pdf_name}_{i}".encode()
         ).hexdigest()
         try:
-            vector = get_embedding(chunk, task_type="retrieval_document")
+            vector = get_embedding(chunk, task_type="RETRIEVAL_DOCUMENT")
             vectors.append({
                 "id": chunk_id,
                 "values": vector,
@@ -71,7 +72,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
 
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
     try:
-        question_vector = get_embedding(question, task_type="retrieval_query")
+        question_vector = get_embedding(question, task_type="RETRIEVAL_QUERY")
 
         results = index.query(
             vector=question_vector,
