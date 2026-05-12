@@ -1,24 +1,26 @@
 import hashlib
-import requests
 from pinecone import Pinecone
 from config import PINECONE_API_KEY, PINECONE_INDEX, GEMINI_API_KEY
+import google.generativeai as genai
 
+# init
+genai.configure(api_key=GEMINI_API_KEY)
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
 
 
-def get_embedding(text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list:
-    """Get embedding using Gemini REST API v1 directly."""
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/embedding-001:embedContent?key={GEMINI_API_KEY}"
-    payload = {
-        "model": "models/embedding-001",
-        "content": {"parts": [{"text": text}]},
-        "taskType": task_type
-    }
-    response = requests.post(url, json=payload)
-    if response.status_code != 200:
-        raise Exception(f"Embedding API error {response.status_code}: {response.text}")
-    return response.json()["embedding"]["values"]
+def get_embedding(text: str, task_type: str = "retrieval_document") -> list:
+    """Get 768-dim embedding using Gemini."""
+    try:
+        result = genai.embed_content(
+            model="models/text-embedding-004",
+            content=text,
+            task_type=task_type
+        )
+        return result["embedding"]
+    except Exception as e:
+        print(f"Gemini embedding error: {e}")
+        raise
 
 
 def chunk_text(text: str, chunk_size: int = 300, overlap: int = 50) -> list:
@@ -43,7 +45,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
             f"{chat_id}_{pdf_name}_{i}".encode()
         ).hexdigest()
         try:
-            vector = get_embedding(chunk, task_type="RETRIEVAL_DOCUMENT")
+            vector = get_embedding(chunk, task_type="retrieval_document")
             vectors.append({
                 "id": chunk_id,
                 "values": vector,
@@ -69,7 +71,7 @@ def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
 
 def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
     try:
-        question_vector = get_embedding(question, task_type="RETRIEVAL_QUERY")
+        question_vector = get_embedding(question, task_type="retrieval_query")
 
         results = index.query(
             vector=question_vector,
