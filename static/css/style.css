@@ -1928,8 +1928,7 @@ body.dark .suggestion-item {
   color: var(--title-color);
 }
 
-
-
+/*regenerate response button */
 .regenerate-btn {
   all: unset;
   cursor: pointer;
@@ -1942,15 +1941,11 @@ body.dark .suggestion-item {
   color: var(--label-color);
   border: 1px solid var(--divider);
   margin-top: 4px;
-  opacity: 0;
+  opacity: 1;   /* changed from 0 to 1 */
   transition: opacity 0.15s;
   height: auto;
   min-width: unset;
   background: transparent;
-}
-
-.msg-row.gemini:hover .regenerate-btn {
-  opacity: 1;
 }
 
 .regenerate-btn:hover {
