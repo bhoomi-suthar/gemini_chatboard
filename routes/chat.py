@@ -108,12 +108,12 @@ async def chat_ui(
                     relevant_chunks = get_relevant_chunks(message, chat_id, pdf_name)
                     if relevant_chunks:
                         full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant_chunks}"
-                        print("✅ Using RAG chunks for response.")
+                        print("Using RAG chunks for response.")
                     else:
                         full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
-                        print("⚠️ RAG returned nothing, using fallback.")
+                        print(" RAG returned nothing, using fallback.")
                 except Exception as rag_error:
-                    print(f"❌ RAG failed, using fallback: {rag_error}")
+                    print(f" RAG failed, using fallback: {rag_error}")
                     full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
 
 
@@ -232,14 +232,16 @@ async def serve_pdf(filename: str):
 
 
 @router.post("/chat/edit", response_class=HTMLResponse)
+@router.post("/chat/edit", response_class=HTMLResponse)
 async def chat_edit(
     request: Request,
     message: str = Form(...),
     chat_id: str = Form(None),
     response_mode: str = Form("table"),
     topic: str = Form(""),
-    edit_from_index: str = Form("0")
-):
+    edit_from_index: str = Form("0"),
+    pdf_name: str = Form("")
+):    
     user_id = get_user_id(request)
     history = load_history(user_id)
 
@@ -263,9 +265,21 @@ async def chat_edit(
             else:
                 ai_response = get_gemini_response(message, response_mode, history[chat_id]["messages"])
         else:
-            ai_response = get_gemini_response(message, response_mode, history[chat_id]["messages"])
+            # use RAG if pdf_name provided
+            full_message = message
+            if pdf_name:
+                try:
+                    from services.rag import get_relevant_chunks
+                    relevant_chunks = get_relevant_chunks(message, chat_id, pdf_name)
+                    if relevant_chunks:
+                        full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant_chunks}"
+                        print(f"✅ Edit using RAG for {pdf_name}")
+                except Exception as rag_error:
+                    print(f"❌ Edit RAG failed: {rag_error}")
 
-        history[chat_id]["messages"].append({"role": "user", "text": message, "pdf": None})
+            ai_response = get_gemini_response(full_message, response_mode, history[chat_id]["messages"])
+
+        history[chat_id]["messages"].append({"role": "user", "text": message, "pdf": pdf_name or None})
         history[chat_id]["messages"].append({"role": "ai", "text": ai_response})
 
     except Exception as e:
