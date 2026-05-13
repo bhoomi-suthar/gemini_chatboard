@@ -518,13 +518,22 @@ function submitEdit(idx) {
   form.enctype = 'multipart/form-data';
   form.style.display = 'none';
 
-  const fields = {
-    chat_id: document.querySelector('input[name="chat_id"]').value,
-    message: text,
-    response_mode: responseMode === 'chart' ? chartType : 'table',
-    topic: document.querySelector('#topic-hidden') ? document.querySelector('#topic-hidden').value : '',
-    edit_from_index: idx
-  };
+  // get pdf_name cleanly from history data
+  let pdfName = '';
+  const msgIndex = parseInt(idx) - 1;
+  const allMessages = document.querySelectorAll('.msg-row');
+  if (allMessages[msgIndex]) {
+    const pdfBubble = allMessages[msgIndex].querySelector('.pdf-bubble-tag');
+    if (pdfBubble) {
+      const walker = document.createTreeWalker(pdfBubble, NodeFilter.SHOW_TEXT);
+      let node;
+      while (node = walker.nextNode()) {
+        const t = node.textContent.trim();
+        if (t) pdfName = t;
+      }
+    }
+  }
+  
 
   Object.entries(fields).forEach(([name, value]) => {
     const input = document.createElement('input');

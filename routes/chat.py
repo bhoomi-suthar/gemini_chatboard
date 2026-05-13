@@ -232,7 +232,6 @@ async def serve_pdf(filename: str):
 
 
 @router.post("/chat/edit", response_class=HTMLResponse)
-@router.post("/chat/edit", response_class=HTMLResponse)
 async def chat_edit(
     request: Request,
     message: str = Form(...),
@@ -241,7 +240,7 @@ async def chat_edit(
     topic: str = Form(""),
     edit_from_index: str = Form("0"),
     pdf_name: str = Form("")
-):    
+):
     user_id = get_user_id(request)
     history = load_history(user_id)
 
@@ -265,18 +264,16 @@ async def chat_edit(
             else:
                 ai_response = get_gemini_response(message, response_mode, history[chat_id]["messages"])
         else:
-            # use RAG if pdf_name provided
             full_message = message
             if pdf_name:
                 try:
                     from services.rag import get_relevant_chunks
-                    relevant_chunks = get_relevant_chunks(message, chat_id, pdf_name)
-                    if relevant_chunks:
-                        full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant_chunks}"
-                        print(f"✅ Edit using RAG for {pdf_name}")
-                except Exception as rag_error:
-                    print(f"❌ Edit RAG failed: {rag_error}")
-
+                    relevant = get_relevant_chunks(message, chat_id, pdf_name)
+                    if relevant:
+                        full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant}"
+                        print(f"✅ Edit RAG used for {pdf_name}")
+                except Exception as re:
+                    print(f"Edit RAG failed: {re}")
             ai_response = get_gemini_response(full_message, response_mode, history[chat_id]["messages"])
 
         history[chat_id]["messages"].append({"role": "user", "text": message, "pdf": pdf_name or None})
