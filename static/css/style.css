@@ -1958,7 +1958,7 @@ body.dark .suggestion-item {
 .regenerate-btn {
   background: #ffffff;
   color: #444;
-  border: 1px solid #dcdcdc;
+  border: 1px solid #444;
 }
 
 body.dark .regenerate-btn {
