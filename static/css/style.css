@@ -1928,3 +1928,33 @@ body.dark .suggestion-item {
   color: var(--title-color);
 }
 
+
+
+.regenerate-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.73rem;
+  color: var(--label-color);
+  border: 1px solid var(--divider);
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  height: auto;
+  min-width: unset;
+  background: transparent;
+}
+
+.msg-row.gemini:hover .regenerate-btn {
+  opacity: 1;
+}
+
+.regenerate-btn:hover {
+  background: var(--history-hover);
+  color: #4a90e2;
+  border-color: #4a90e2;
+}

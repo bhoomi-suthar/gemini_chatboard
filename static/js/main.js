@@ -411,7 +411,7 @@ function stopSpeech() {
   if (recognition) {
     recognition.stop();
     recognition = null;
-  }sl
+  } sl
 }
 
 
@@ -562,6 +562,32 @@ function submitEdit(idx) {
 
 /* edit button delegation */
 document.addEventListener('click', function (e) {
+
+  const regenBtn = e.target.closest('.regenerate-btn');
+  if (regenBtn) {
+    const idx = regenBtn.dataset.idx;
+    const msgRow = document.getElementById('msgrow-' + idx);
+    const allRows = document.querySelectorAll('.msg-row');
+    let userText = '';
+    for (let i = 0; i < allRows.length; i++) {
+      if (allRows[i].id === 'msgrow-' + idx) {
+        const prevRow = allRows[i - 1];
+        if (prevRow && prevRow.classList.contains('user')) {
+          userText = prevRow.querySelector('.bubble')?.innerText?.trim() || '';
+        }
+        break;
+      }
+    }
+    if (userText) {
+      const textarea = document.querySelector('.msg-input');
+      textarea.value = userText;
+      autoResize(textarea);
+      showLoading();
+      textarea.closest('form').submit();
+    }
+    return;
+  }
+
   const editBtn = e.target.closest('.edit-msg-btn');
   if (editBtn) {
     const idx = editBtn.dataset.idx;
