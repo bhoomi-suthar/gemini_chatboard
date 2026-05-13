@@ -1,12 +1,22 @@
 import hashlib
 from pinecone import Pinecone
-from sentence_transformers import SentenceTransformer
 from config import PINECONE_API_KEY, PINECONE_INDEX
 
-embedder = SentenceTransformer("all-MiniLM-L6-v2")
-
+# Initialize Pinecone
 pc = Pinecone(api_key=PINECONE_API_KEY)
 index = pc.Index(PINECONE_INDEX)
+
+# Lazy load embedder (important for Render)
+embedder = None
+
+
+def get_embedder():
+    global embedder
+    if embedder is None:
+        from sentence_transformers import SentenceTransformer
+        embedder = SentenceTransformer("all-MiniLM-L6-v2")
+        print("✅ Embedder loaded")
+    return embedder
 
 
 def chunk_text(text: str, chunk_size=300, overlap=50):
@@ -17,13 +27,17 @@ def chunk_text(text: str, chunk_size=300, overlap=50):
     while start < len(words):
         end = start + chunk_size
         chunk = " ".join(words[start:end])
-        chunks.append(chunk)
+
+        if chunk.strip():
+            chunks.append(chunk)
+
         start += chunk_size - overlap
 
     return chunks
 
 
 def embed_and_store_pdf(pdf_text, pdf_name, chat_id):
+    embedder = get_embedder()   # load model only when needed
     chunks = chunk_text(pdf_text)
     vectors = []
 
@@ -32,39 +46,53 @@ def embed_and_store_pdf(pdf_text, pdf_name, chat_id):
             f"{chat_id}_{pdf_name}_{i}".encode()
         ).hexdigest()
 
-        vector = embedder.encode(chunk).tolist()
+        try:
+            vector = embedder.encode(chunk).tolist()
 
-        vectors.append({
-            "id": chunk_id,
-            "values": vector,
-            "metadata": {
-                "chat_id": chat_id,
-                "pdf_name": pdf_name,
-                "text": chunk
-            }
-        })
+            vectors.append({
+                "id": chunk_id,
+                "values": vector,
+                "metadata": {
+                    "chat_id": chat_id,
+                    "pdf_name": pdf_name,
+                    "text": chunk
+                }
+            })
 
-    index.upsert(vectors=vectors)
-    print(f"Stored {len(vectors)} vectors in Pinecone")
+        except Exception as e:
+            print(f"Chunk embedding failed: {e}")
+
+    if vectors:
+        index.upsert(vectors=vectors)
+        print(f"✅ Stored {len(vectors)} vectors in Pinecone")
+    else:
+        print("❌ No vectors stored")
 
 
 def get_relevant_chunks(question, chat_id, pdf_name, top_k=3):
-    question_vector = embedder.encode(question).tolist()
+    embedder = get_embedder()   # load model only when needed
 
-    results = index.query(
-        vector=question_vector,
-        top_k=top_k,
-        include_metadata=True,
-        filter={
-            "chat_id": {"$eq": chat_id},
-            "pdf_name": {"$eq": pdf_name}
-        }
-    )
+    try:
+        question_vector = embedder.encode(question).tolist()
 
-    text = ""
+        results = index.query(
+            vector=question_vector,
+            top_k=top_k,
+            include_metadata=True,
+            filter={
+                "chat_id": {"$eq": chat_id},
+                "pdf_name": {"$eq": pdf_name}
+            }
+        )
 
-    for match in results.matches:
-        print("score:", match.score)
-        text += match.metadata["text"] + "\n\n"
+        text = ""
 
-    return text.strip()
+        for match in results.matches:
+            print(f"score: {match.score}")
+            text += match.metadata["text"] + "\n\n"
+
+        return text.strip()
+
+    except Exception as e:
+        print(f"RAG query failed: {e}")
+        return ""
