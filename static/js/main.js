@@ -566,28 +566,48 @@ document.addEventListener('click', function (e) {
   const regenBtn = e.target.closest('.regenerate-btn');
   if (regenBtn) {
     const idx = regenBtn.dataset.idx;
-    const msgRow = document.getElementById('msgrow-' + idx);
     const allRows = document.querySelectorAll('.msg-row');
     let userText = '';
+    let userIdx = '';
     for (let i = 0; i < allRows.length; i++) {
       if (allRows[i].id === 'msgrow-' + idx) {
         const prevRow = allRows[i - 1];
         if (prevRow && prevRow.classList.contains('user')) {
           userText = prevRow.querySelector('.bubble')?.innerText?.trim() || '';
+          userIdx = prevRow.id.replace('msgrow-', '');
         }
         break;
       }
     }
-    if (userText) {
-      const textarea = document.querySelector('.msg-input');
-      textarea.value = userText;
-      autoResize(textarea);
-      showLoading();
-      textarea.closest('form').submit();
-    }
+    if (!userText) return;
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = '/chat/edit';
+    form.enctype = 'multipart/form-data';
+    form.style.display = 'none';
+    const fields = {
+      chat_id: document.querySelector('input[name="chat_id"]').value,
+      message: userText,
+      response_mode: responseMode === 'chart' ? chartType : 'table',
+      topic: document.querySelector('#topic-hidden') ? document.querySelector('#topic-hidden').value : '',
+      edit_from_index: userIdx
+    };
+    Object.entries(fields).forEach(([name, value]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
+    });
+    document.body.appendChild(form);
+    el('btn-text').style.display = 'none';
+    el('dots').style.display = 'flex';
+    el('send-btn').disabled = true;
+    form.submit();
     return;
   }
 
+  
   const editBtn = e.target.closest('.edit-msg-btn');
   if (editBtn) {
     const idx = editBtn.dataset.idx;
