@@ -13,6 +13,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
 PINECONE_INDEX = os.getenv("PINECONE_INDEX", "gemini-chat-pdf")
+COHERE_API_KEY = os.getenv("COHERE_API_KEY")
 
 if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY is missing!")
