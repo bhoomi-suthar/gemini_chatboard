@@ -1,46 +1,70 @@
 import hashlib
-import os
+from pinecone import Pinecone
+from sentence_transformers import SentenceTransformer
+from config import PINECONE_API_KEY, PINECONE_INDEX
 
-# store chunks in memory per session
-_pdf_store = {}
+embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
-def chunk_text(text: str, chunk_size: int = 300, overlap: int = 50) -> list:
+pc = Pinecone(api_key=PINECONE_API_KEY)
+index = pc.Index(PINECONE_INDEX)
+
+
+def chunk_text(text: str, chunk_size=300, overlap=50):
     words = text.split()
     chunks = []
     start = 0
+
     while start < len(words):
         end = start + chunk_size
         chunk = " ".join(words[start:end])
-        if chunk.strip():
-            chunks.append(chunk)
+        chunks.append(chunk)
         start += chunk_size - overlap
+
     return chunks
 
-def embed_and_store_pdf(pdf_text: str, pdf_name: str, chat_id: str):
-    key = f"{chat_id}_{pdf_name}"
-    _pdf_store[key] = chunk_text(pdf_text)
-    print(f"[RAG] Stored {len(_pdf_store[key])} chunks for {pdf_name}")
 
-def get_relevant_chunks(question: str, chat_id: str, pdf_name: str, top_k: int = 3) -> str:
-    key = f"{chat_id}_{pdf_name}"
-    chunks = _pdf_store.get(key, [])
-    if not chunks:
-        return ""
+def embed_and_store_pdf(pdf_text, pdf_name, chat_id):
+    chunks = chunk_text(pdf_text)
+    vectors = []
 
-    # score each chunk by keyword matches
-    question_words = set(question.lower().split())
-    scored = []
-    for chunk in chunks:
-        chunk_words = set(chunk.lower().split())
-        score = len(question_words & chunk_words)
-        scored.append((score, chunk))
+    for i, chunk in enumerate(chunks):
+        chunk_id = hashlib.md5(
+            f"{chat_id}_{pdf_name}_{i}".encode()
+        ).hexdigest()
 
-    # sort by score descending
-    scored.sort(key=lambda x: x[0], reverse=True)
+        vector = embedder.encode(chunk).tolist()
 
-    # return top chunks
-    top_chunks = [c for _, c in scored[:top_k] if _ > 0]
-    if not top_chunks:
-        return chunks[0] if chunks else ""
+        vectors.append({
+            "id": chunk_id,
+            "values": vector,
+            "metadata": {
+                "chat_id": chat_id,
+                "pdf_name": pdf_name,
+                "text": chunk
+            }
+        })
 
-    return "\n\n".join(top_chunks)
+    index.upsert(vectors=vectors)
+    print(f"Stored {len(vectors)} vectors in Pinecone")
+
+
+def get_relevant_chunks(question, chat_id, pdf_name, top_k=3):
+    question_vector = embedder.encode(question).tolist()
+
+    results = index.query(
+        vector=question_vector,
+        top_k=top_k,
+        include_metadata=True,
+        filter={
+            "chat_id": {"$eq": chat_id},
+            "pdf_name": {"$eq": pdf_name}
+        }
+    )
+
+    text = ""
+
+    for match in results.matches:
+        print("score:", match.score)
+        text += match.metadata["text"] + "\n\n"
+
+    return text.strip()

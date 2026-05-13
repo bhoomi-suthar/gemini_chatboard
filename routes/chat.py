@@ -115,7 +115,7 @@ async def chat_ui(
                 except Exception as rag_error:
                     print(f"❌ RAG failed, using fallback: {rag_error}")
                     full_message = f"{message}\n\n[PDF Content]:\n{pdf_text[:3000]}"
-                    
+
 
         #  Topic Filter Logic 
         topic = topic.strip() if topic else ""
@@ -284,8 +284,6 @@ async def chat_edit(
             "current_topic": history.get(chat_id, {}).get("topic", "")
         }
     )
-
-
 
 
 # sharing chart
