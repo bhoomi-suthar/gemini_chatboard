@@ -271,7 +271,7 @@ async def chat_edit(
                     relevant = get_relevant_chunks(message, chat_id, pdf_name)
                     if relevant:
                         full_message = f"{message}\n\n[Relevant PDF Content from RAG]:\n{relevant}"
-                        print(f"✅ Edit RAG used for {pdf_name}")
+                        print(f" Edit RAG used for {pdf_name}")
                 except Exception as re:
                     print(f"Edit RAG failed: {re}")
             ai_response = get_gemini_response(full_message, response_mode, history[chat_id]["messages"])
@@ -396,3 +396,59 @@ async def unshare_chat(request: Request, chat_id: str):
     
     from fastapi.responses import JSONResponse
     return JSONResponse({"status": "ok"})
+
+
+@router.post("/chat/regenerate", response_class=HTMLResponse)
+async def chat_regenerate(
+    request: Request,
+    message: str = Form(...),
+    chat_id: str = Form(None),
+    response_mode: str = Form("table"),
+    topic: str = Form(""),
+    ai_index: str = Form("0")
+):
+    user_id = get_user_id(request)
+    history = load_history(user_id)
+
+    if not chat_id or chat_id not in history:
+        from fastapi.responses import RedirectResponse
+        return RedirectResponse(url="/", status_code=303)
+
+    topic = topic.strip() if topic else ""
+
+    try:
+        ai_idx = int(ai_index) - 1
+    except:
+        ai_idx = len(history[chat_id]["messages"]) - 1
+
+    # get messages before this AI response for context
+    messages_before = history[chat_id]["messages"][:ai_idx]
+
+    try:
+        if topic:
+            is_relevant = check_topic_relevance(message, topic)
+            if not is_relevant:
+                new_response = f"<p>This question is not from selected topic <strong>{topic}</strong>.</p>"
+            else:
+                new_response = get_gemini_response(message, response_mode, messages_before)
+        else:
+            new_response = get_gemini_response(message, response_mode, messages_before)
+
+        # only replace this specific AI message
+        history[chat_id]["messages"][ai_idx]["text"] = new_response
+
+    except Exception as e:
+        history[chat_id]["messages"][ai_idx]["text"] = f"Error: {str(e)}"
+
+    save_history(history, user_id)
+
+    return templates.TemplateResponse(
+        request=request,
+        name="index.html",
+        context={
+            "messages": history[chat_id]["messages"],
+            "chat_id": chat_id,
+            "history": history,
+            "current_topic": history.get(chat_id, {}).get("topic", "")
+        }
+    )

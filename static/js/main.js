@@ -565,34 +565,32 @@ document.addEventListener('click', function (e) {
 
   const regenBtn = e.target.closest('.regenerate-btn');
   if (regenBtn) {
-    const idx = regenBtn.dataset.idx; // Get message index 
-    const allRows = document.querySelectorAll('.msg-row'); // Get all chat rows
+    const idx = regenBtn.dataset.idx;
+    const allRows = document.querySelectorAll('.msg-row');
     let userText = '';
-    let userIdx = '';
-    for (let i = 0; i < allRows.length; i++) {  
-      if (allRows[i].id === 'msgrow-' + idx) {  // Match row id
+    for (let i = 0; i < allRows.length; i++) {
+      if (allRows[i].id === 'msgrow-' + idx) {
         const prevRow = allRows[i - 1];
         if (prevRow && prevRow.classList.contains('user')) {
           userText = prevRow.querySelector('.bubble')?.innerText?.trim() || '';
-          userIdx = allRows[i].id.replace('msgrow-', '');
         }
         break;
       }
     }
     if (!userText) return;
-    const form = document.createElement('form');  // Create hidden form to submit regenerate request
+    const form = document.createElement('form');
     form.method = 'POST';
-    form.action = '/chat/edit';
+    form.action = '/chat/regenerate';
     form.enctype = 'multipart/form-data';
     form.style.display = 'none';
-    const fields = {  //delete messages after this point and regenerate answer
+    const fields = {
       chat_id: document.querySelector('input[name="chat_id"]').value,
       message: userText,
       response_mode: responseMode === 'chart' ? chartType : 'table',
       topic: document.querySelector('#topic-hidden') ? document.querySelector('#topic-hidden').value : '',
-      edit_from_index: userIdx
+      ai_index: idx
     };
-    Object.entries(fields).forEach(([name, value]) => { // Convert fields into hidden inputs
+    Object.entries(fields).forEach(([name, value]) => {
       const input = document.createElement('input');
       input.type = 'hidden';
       input.name = name;
@@ -600,14 +598,12 @@ document.addEventListener('click', function (e) {
       form.appendChild(input);
     });
     document.body.appendChild(form);
-    el('btn-text').style.display = 'none'; 
-   // Show loading animation
+    el('btn-text').style.display = 'none';
     el('dots').style.display = 'flex';
     el('send-btn').disabled = true;
     form.submit();
     return;
   }
-
   
   const editBtn = e.target.closest('.edit-msg-btn');
   if (editBtn) {
